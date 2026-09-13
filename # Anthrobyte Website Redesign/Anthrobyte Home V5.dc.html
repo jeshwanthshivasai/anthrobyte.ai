@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html{background:#08090b}body{margin:0;background:#08090b}
+a{color:#f2f0eb;text-decoration:none}a:hover{color:var(--accent,#ff6a1a)}
+::selection{background:rgba(255,106,26,.3)}
+@media (pointer:fine){body{cursor:none}body a,body [data-h]{cursor:none}}
+</style>
+</helmet>
+<div id="ab-root" data-screen-label="Home V5" style="--accent:#ff6a1a;position:relative;background:#08090b;font-family:'Geist',sans-serif">
+  <div id="sh" style="height:1100vh"></div>
+  <div id="bg-light" style="position:fixed;inset:0;z-index:1;background:#f6f5f2;opacity:0;pointer-events:none"></div>
+  <div id="gl" style="position:fixed;inset:0;z-index:5;pointer-events:none"></div>
+  <div id="hero-layer" data-screen-label="01 Hero" style="position:fixed;inset:0;z-index:6;pointer-events:none">
+    <div id="hero-glow" style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:44vh;height:44vh;background:radial-gradient(circle,rgba(255,106,26,.13),rgba(255,106,26,.04) 42%,transparent 66%)"></div>
+    <div id="hero-title" style="position:absolute;left:4vw;right:4vw;bottom:13vh;text-align:center">
+      <h1 style="margin:0;font:600 6.6vw/1.02 'Geist',sans-serif;letter-spacing:-.045em;color:#f2f0eb">
+        <div>Structured Intelligence</div>
+        <div>for Complex <span id="swap-word" style="display:inline-block;font:italic 400 6.6vw/1.02 'Newsreader',serif;letter-spacing:-.02em">Operations</span></div>
+      </h1>
+    </div>
+    <div id="hero-link" style="position:absolute;bottom:6.5vh;left:0;right:0;display:flex;justify-content:center">
+      <a href="#" data-h="1" data-mag="1" data-scr="1" style="pointer-events:auto;font:500 11px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.75);letter-spacing:.26em;border-bottom:1px solid rgba(255,106,26,.5);padding-bottom:6px">EXPLORE&#160;OUR&#160;AGENTS&#160;&#8594;</a>
+    </div>
+  </div>
+  <div id="panel-ch" data-screen-label="02 The Challenge" style="position:fixed;left:7vw;top:50%;transform:translateY(-50%);z-index:6;width:34vw;opacity:0;pointer-events:none">
+    <div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">01&#160;&#8212;&#160;THE&#160;CHALLENGE</div>
+    <h2 style="margin:2.6vh 0 0;font:600 3.6vw/1.02 'Geist',sans-serif;letter-spacing:-.04em;color:#f2f0eb">Complexity Is Layered.</h2>
+    <p style="margin:3.4vh 0 0;font:400 17px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.6);max-width:34ch">Leadership intent shapes operations below. Ground realities reshape strategy above.</p>
+    <p style="margin:2vh 0 0;font:italic 400 21px/1.4 'Newsreader',serif;color:#f2f0eb">Clarity must precede deployment.</p>
+    <a href="#" data-h="1" data-scr="1" style="pointer-events:auto;display:inline-block;margin-top:4vh;font:500 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.75);letter-spacing:.24em;border-bottom:1px solid rgba(255,106,26,.5);padding-bottom:5px">NAVIGATE&#160;COMPLEXITY&#160;WITH&#160;US&#160;&#8594;</a>
+  </div>
+  <div id="panel-hww" data-screen-label="03 How We Work" style="position:fixed;left:7vw;top:53%;transform:translateY(-50%);z-index:6;width:36vw;max-height:76vh;overflow:hidden;opacity:0;pointer-events:none">
+    <div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">02&#160;&#8212;&#160;HOW&#160;WE&#160;WORK</div>
+    <h2 style="margin:2.4vh 0 0;font:600 3vw/1.04 'Geist',sans-serif;letter-spacing:-.038em;color:#f2f0eb">Structured Intelligence Deployment</h2>
+    <p style="margin:1.6vh 0 0;font:italic 400 18px/1.4 'Newsreader',serif;color:rgba(242,240,235,.5)">Each stage strengthens adoption and durability.</p>
+    <div style="margin-top:3vh;display:flex;flex-direction:column;gap:2.4vh">
+      <div class="hww-step" style="display:flex;gap:18px;opacity:.4">
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em;padding-top:4px">01</span>
+        <div><div style="font:600 clamp(15px,3.2vh,20px) 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Understand the Whole System</div><p style="margin:8px 0 0;font:400 clamp(12px,2.3vh,14.5px)/1.55 'Geist',sans-serif;color:rgba(242,240,235,.55);max-width:44ch">Examine and trace ripple effects across stakeholders and operational, strategic, and cultural layers.</p></div>
+      </div>
+      <div class="hww-step" style="display:flex;gap:18px;opacity:.4">
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em;padding-top:4px">02</span>
+        <div><div style="font:600 clamp(15px,3.2vh,20px) 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Align Decision Architecture</div><p style="margin:8px 0 0;font:400 clamp(12px,2.3vh,14.5px)/1.55 'Geist',sans-serif;color:rgba(242,240,235,.55);max-width:44ch">Clarify ownership, oversight, accountability, and establish governance before capability scales.</p></div>
+      </div>
+      <div class="hww-step" style="display:flex;gap:18px;opacity:.4">
+        <span style="font:400 11px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em;padding-top:4px">03</span>
+        <div><div style="font:600 clamp(15px,3.2vh,20px) 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Evolve with Coherence</div><p style="margin:8px 0 0;font:400 clamp(12px,2.3vh,14.5px)/1.55 'Geist',sans-serif;color:rgba(242,240,235,.55);max-width:44ch">Deploy intelligence gradually with human-centred adoption, expanding as alignment permeates deeper.</p></div>
+      </div>
+    </div>
+  </div>
+  <div id="panel-why" data-screen-label="04 Why Anthrobyte" style="position:fixed;right:7vw;top:50%;transform:translateY(-50%);z-index:6;width:34vw;opacity:0;pointer-events:none">
+    <div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(28,27,24,.5);letter-spacing:.26em">03&#160;&#8212;&#160;WHY&#160;ANTHROBYTE</div>
+    <h2 style="margin:2.4vh 0 0;font:600 3.1vw/1.04 'Geist',sans-serif;letter-spacing:-.038em;color:#141311">Perspective-Led. Governance-Aware.</h2>
+    <p style="margin:2vh 0 0;font:400 16px/1.6 'Geist',sans-serif;color:rgba(28,27,24,.6);max-width:40ch">We do not treat AI as a standalone capability. <em style="font:italic 400 16px 'Newsreader',serif;color:#141311">We treat it as an influence layer within complex systems.</em></p>
+    <div style="margin-top:3.6vh;display:flex;flex-direction:column">
+      <div class="why-item" style="display:flex;gap:16px;align-items:baseline;padding:1.5vh 0;border-top:1px solid rgba(28,27,24,.14);opacity:.45"><span style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em">P&#8211;01</span><span style="font:600 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#141311">Decision architecture</span></div>
+      <div class="why-item" style="display:flex;gap:16px;align-items:baseline;padding:1.5vh 0;border-top:1px solid rgba(28,27,24,.14);opacity:.45"><span style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em">P&#8211;02</span><span style="font:600 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#141311">Stakeholder alignment</span></div>
+      <div class="why-item" style="display:flex;gap:16px;align-items:baseline;padding:1.5vh 0;border-top:1px solid rgba(28,27,24,.14);opacity:.45"><span style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em">P&#8211;03</span><span style="font:600 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#141311">Governance structures</span></div>
+      <div class="why-item" style="display:flex;gap:16px;align-items:baseline;padding:1.5vh 0;border-top:1px solid rgba(28,27,24,.14);opacity:.45"><span style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em">P&#8211;04</span><span style="font:600 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#141311">Modular deployment</span></div>
+      <div class="why-item" style="display:flex;gap:16px;align-items:baseline;padding:1.5vh 0;border-top:1px solid rgba(28,27,24,.14);border-bottom:1px solid rgba(28,27,24,.14);opacity:.45"><span style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.14em">P&#8211;05</span><span style="font:600 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#141311">Human-centered adoption</span></div>
+    </div>
+  </div>
+  <div id="wrap" style="position:fixed;inset:0;z-index:10;will-change:transform;pointer-events:none">
+    <div style="height:660vh;pointer-events:none"></div>
+    <section id="sec-agents" data-screen-label="05 AAtlas Agents" style="position:relative;min-height:140vh;padding:16vh 8vw 8vh;text-align:center">
+      <div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">04&#160;&#8212;&#160;AATLAS&#160;AGENTS</div>
+      <h2 style="margin:2.6vh 0 0;font:600 4vw/1.02 'Geist',sans-serif;letter-spacing:-.04em;color:#f2f0eb">Modular AI Agents for Enterprise Systems</h2>
+      <p style="margin:2vh auto 0;font:400 16px/1.6 'Geist',sans-serif;color:rgba(242,240,235,.55);max-width:56ch">We deploy modular AI agents across supply chains and enterprise environments from pricing and procurement to logistics and compliance.</p>
+      <div id="ag-tabs" style="margin-top:5vh;display:flex;justify-content:center;gap:34px;flex-wrap:wrap">
+        <span class="ag-tab" data-i="0" data-h="1" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#f2f0eb;border-bottom:1px solid var(--accent,#ff6a1a);padding-bottom:6px">RISK&#160;ASSESSMENT</span>
+        <span class="ag-tab" data-i="1" data-h="1" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(242,240,235,.45);border-bottom:1px solid transparent;padding-bottom:6px">PRICING&#160;&amp;&#160;REVENUE</span>
+        <span class="ag-tab" data-i="2" data-h="1" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(242,240,235,.45);border-bottom:1px solid transparent;padding-bottom:6px">INVENTORY&#160;MANAGEMENT</span>
+        <span class="ag-tab" data-i="3" data-h="1" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(242,240,235,.45);border-bottom:1px solid transparent;padding-bottom:6px">COMPLIANCE</span>
+        <span class="ag-tab" data-i="4" data-h="1" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(242,240,235,.45);border-bottom:1px solid transparent;padding-bottom:6px">PROCUREMENT</span>
+      </div>
+      <div id="agent-shape" style="height:38vh;margin-top:2vh"></div>
+      <div style="max-width:64ch;margin:0 auto">
+        <div id="ag-dom" style="font:400 10px 'IBM Plex Mono',monospace;color:var(--accent,#ff6a1a);letter-spacing:.24em">CAPITAL&#160;&amp;&#160;LOGISTICS</div>
+        <div id="ag-name" style="margin-top:1.6vh;font:600 34px 'Geist',sans-serif;letter-spacing:-.03em;color:#f2f0eb">Supplier Risk Intelligence</div>
+        <p id="ag-desc" style="margin:1.8vh auto 0;font:400 16px/1.62 'Geist',sans-serif;color:rgba(242,240,235,.55);max-width:52ch">Detects early disruption signals across supplier networks including financial instability, geopolitical exposure, and operational risk.</p>
+        <div id="ag-metric" style="margin-top:2.4vh;font:italic 400 22px/1.35 'Newsreader',serif;color:#f2f0eb">Reduce disruption penalties &amp; delays up to 50%</div>
+      </div>
+    </section>
+    <section id="sec-faq" data-screen-label="06 FAQ" style="position:relative;padding:14vh 0 10vh;background:transparent">
+      <div style="margin:0 auto;max-width:820px;padding:0 5vw">
+        <div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">05&#160;&#8212;&#160;FAQ</div>
+        <h2 style="margin:2.4vh 0 5vh;font:600 3.4vw/1.02 'Geist',sans-serif;letter-spacing:-.04em;color:#f2f0eb">Before you ask.</h2>
+        <div id="faq-list" style="display:flex;flex-direction:column">
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">01</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Is my company ready for AI transformation?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">Readiness is less about tooling and more about decision clarity. If you can name the decisions that matter most, we can assess the rest with you in a single working session. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">02</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">What makes Anthrobyte different?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">We treat AI as an influence layer within complex systems, not a standalone capability. Structure comes first: decision architecture, governance, and adoption before any model scales. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">03</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Do you build custom solutions or use off-the-shelf tools?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">Both, deliberately. AAtlas agents are modular building blocks; the architecture around them &#8212; governance, integration, ownership &#8212; is always designed for your system. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">04</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">How long does it take to see results?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">First signals typically appear within a quarter of the first agent going live. We sequence deployments so value lands while alignment deepens. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">05</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Is our data secure with you?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">Yes. Agents operate inside your governance perimeter, with access scoped per decision domain and full auditability of every recommendation. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">06</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Do you train our teams too?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">Adoption is half the engagement. We train the people who own each decision, not just the ones who run the tools. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">07</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Can you help us create an AI governance framework?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">Yes &#8212; governance is a first-class deliverable, not an afterthought. We establish ownership, oversight, and accountability before capability scales. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+          <div class="faq-item" style="border-top:1px solid rgba(242,240,235,.14);border-bottom:1px solid rgba(242,240,235,.14)">
+            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:22px;padding:3vh 0;pointer-events:auto"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.14em">08</span><span style="flex:1;font:500 21px 'Geist',sans-serif;letter-spacing:-.02em;color:#f2f0eb">What is the first step to engage with you?</span><span class="faq-x" style="font:400 20px 'Geist',sans-serif;color:var(--accent,#ff6a1a);transition:transform .35s">+</span></div>
+            <div class="faq-a" style="max-height:0;overflow:hidden;transition:max-height .5s cubic-bezier(.65,0,.35,1)"><p style="margin:0 0 3vh 46px;font:400 15.5px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.58);max-width:58ch">A working session. If you&#8217;re seeking clarity before acceleration, we&#8217;d be glad to think with you. <span style="font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.14em">DRAFT&#160;COPY</span></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sec-cta" data-screen-label="07 CTA" style="position:relative;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 8vw">
+      <p style="margin:0;font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">06&#160;&#8212;&#160;START</p>
+      <h2 style="margin:3.4vh 0 0;font:600 4.6vw/1.08 'Geist',sans-serif;letter-spacing:-.042em;color:#f2f0eb;max-width:26ch;text-wrap:balance">If you&#8217;re seeking clarity before acceleration, we&#8217;d be glad to <em style="font:italic 400 4.6vw 'Newsreader',serif;letter-spacing:-.02em">think with you.</em></h2>
+      <a href="https://bookings.cloud.microsoft/book/AnthrobyteAIDiscovery@anthrobyte.ai/?ismsaljsauthenabled" data-h="1" data-mag="1" data-scr="1" style="pointer-events:auto;display:inline-block;margin-top:6vh;font:500 12px 'IBM Plex Mono',monospace;color:#08090b;letter-spacing:.26em;background:var(--accent,#ff6a1a);padding:20px 38px;border-radius:999px">LET&#8217;S&#160;THINK&#160;TOGETHER</a>
+    </section>
+    <footer data-screen-label="08 Footer" style="position:relative;padding:12vh 8vw 6vh">
+      <div id="footer-mark" style="height:26vh"></div>
+      <div style="display:flex;justify-content:space-between;gap:6vw;flex-wrap:wrap;border-top:1px solid rgba(242,240,235,.14);padding-top:6vh">
+        <div style="max-width:34ch"><div style="font:600 19px 'Geist',sans-serif;color:#f2f0eb;letter-spacing:-.01em">anthrobyte</div><p style="margin:2vh 0 0;font:400 14px/1.66 'Geist',sans-serif;color:rgba(242,240,235,.5)">Anthrobyte partners with organizations navigating complexity across people, systems, and intelligence, bringing clarity, trust, and scale.</p></div>
+        <div><div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.38);letter-spacing:.24em">CONNECT</div><div style="margin-top:2vh;display:flex;flex-direction:column;gap:10px"><a href="mailto:hello@anthrobyte.ai" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">hello@anthrobyte.ai</a><a href="mailto:careers@anthrobyte.ai" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">careers@anthrobyte.ai</a></div></div>
+        <div><div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.38);letter-spacing:.24em">COMPANY</div><div style="margin-top:2vh;display:flex;flex-direction:column;gap:10px"><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Home</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">AAtlas Agents</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">AI Transformation</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Journal</a></div></div>
+        <div><div style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.38);letter-spacing:.24em">LEGAL</div><div style="margin-top:2vh;display:flex;flex-direction:column;gap:10px"><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Privacy Policy</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Terms of Use</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Responsible AI</a><a href="#" data-h="1" style="font:400 14px 'Geist',sans-serif;color:rgba(242,240,235,.7)">Security &amp; Trust</a></div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:8vh;border-top:1px solid rgba(242,240,235,.1);padding-top:3vh;flex-wrap:wrap;gap:14px">
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.22em">&#169;&#160;2026&#160;ANTHROBYTE</span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.22em">MINNEAPOLIS&#160;&#183;&#160;HYDERABAD&#160;&#8212;&#160;EST&#160;2025</span>
+        <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.22em">NEXT&#160;&#8212;&#160;AATLAS&#160;AGENTS&#160;&#8594;</span>
+      </div>
+    </footer>
+  </div>
+  <div id="hdr" style="position:fixed;top:0;left:0;right:0;z-index:40;pointer-events:none">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:36px 52px;mix-blend-mode:difference">
+      <span data-h="1" style="pointer-events:auto;font:600 19px 'Geist',sans-serif;color:#f2f0eb;letter-spacing:-.01em">anthrobyte</span>
+      <div style="display:flex;align-items:center;gap:30px">
+        <span id="snd" data-h="1" data-mag="1" style="pointer-events:auto;font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.55);letter-spacing:.24em">SND&#160;&#183;&#160;ON</span>
+        <span id="menu-btn" data-h="1" data-mag="1" style="pointer-events:auto;font:500 11px 'IBM Plex Mono',monospace;color:#f2f0eb;letter-spacing:.28em">MENU</span>
+      </div>
+    </div>
+  </div>
+  <div id="menu" data-screen-label="Menu overlay" style="position:fixed;inset:0;z-index:45;opacity:0;pointer-events:none;background:rgba(8,9,11,.84);backdrop-filter:blur(7px);transition:opacity .45s ease">
+    <div style="position:absolute;left:8vw;top:24vh;display:flex;flex-direction:column;gap:4.2vh">
+      <div style="display:flex;align-items:baseline;gap:22px"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.2em">01</span><a href="#" data-h="1" data-scr="1" data-pg="home" style="font:600 46px 'Geist',sans-serif;letter-spacing:-.03em;color:#f2f0eb">Home</a></div>
+      <div style="display:flex;align-items:baseline;gap:22px"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.2em">02</span><a href="#" data-h="1" data-scr="1" data-pg="agents" style="font:600 46px 'Geist',sans-serif;letter-spacing:-.03em;color:rgba(242,240,235,.66)">AAtlas Agents</a></div>
+      <div style="display:flex;align-items:baseline;gap:22px"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.2em">03</span><a href="#" data-h="1" data-scr="1" data-pg="transform" style="font:600 46px 'Geist',sans-serif;letter-spacing:-.03em;color:rgba(242,240,235,.66)">AI Transformation</a></div>
+      <div style="display:flex;align-items:baseline;gap:22px"><span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.2em">04</span><a href="#" data-h="1" data-scr="1" data-pg="journal" style="font:600 46px 'Geist',sans-serif;letter-spacing:-.03em;color:rgba(242,240,235,.66)">Journal</a></div>
+    </div>
+    <div style="position:absolute;right:8vw;bottom:20vh;width:30vw;text-align:right">
+      <p id="menu-desc" style="margin:0;font:italic 400 24px/1.4 'Newsreader',serif;color:rgba(242,240,235,.55)">Structured intelligence for complex operations.</p>
+      <p style="margin:18px 0 0;font:400 9px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.3);letter-spacing:.24em">MINNEAPOLIS&#160;&#183;&#160;HYDERABAD</p>
+    </div>
+  </div>
+  <div id="grain" style="position:fixed;inset:0;z-index:35;opacity:.07;mix-blend-mode:overlay;pointer-events:none"></div>
+  <svg id="loader" style="position:fixed;inset:0;z-index:50;width:100%;height:100%;display:block">
+    <defs><mask id="lmask"><rect width="100%" height="100%" fill="#ffffff"></rect><g id="lhole"><path d="M 0,-100 Q 25.1,-14.5 86.6,50 Q 0,29 -86.6,50 Q -25.1,-14.5 0,-100 Z" fill="#000000"></path></g></mask></defs>
+    <rect width="100%" height="100%" fill="#08090b" mask="url(#lmask)"></rect>
+    <g id="lart"><path id="lpath" d="M 0,-100 Q 25.1,-14.5 86.6,50 Q 0,29 -86.6,50 Q -25.1,-14.5 0,-100 Z" fill="none" stroke="#ff6a1a" stroke-width="2" stroke-linecap="round"></path></g>
+    <text id="lword" x="50%" y="92%" text-anchor="middle" fill="rgba(242,240,235,.45)" style="font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.3em">ANTHROBYTE</text>
+  </svg>
+  <div id="cur" style="position:fixed;z-index:60;left:0;top:0;width:6px;height:6px;border-radius:50%;background:#ffffff;mix-blend-mode:difference;pointer-events:none;transform:translate(-100px,-100px)"></div>
+  <div id="curr" style="position:fixed;z-index:60;left:0;top:0;width:30px;height:30px;border-radius:50%;border:1px solid rgba(255,255,255,.5);mix-blend-mode:difference;pointer-events:none;transform:translate(-100px,-100px)"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#ff6a1a&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#ff6a1a&quot;,&quot;#e8620c&quot;,&quot;#ff8a3a&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.4,&quot;max&quot;:1.5,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;WebGL&quot;},&quot;replayLoader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;WebGL&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    const win = document.defaultView || window; this.win = win;
+    this.s = 0; this.tgt = 0; this.t = 0; this.raf = 0; this.menuOpen = false; this.muted = false;
+    this.mixV = 1; this.cur = 'scatter'; this.prev = 'scatter'; this.disposed = false; this.agIdx = 0;
+    this.fine = win.matchMedia('(pointer:fine)').matches;
+    this.narrow = win.innerWidth < 900;
+    this.reduced = win.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.accent = this.props.accent ?? '#ff6a1a';
+    const root = document.getElementById('ab-root');
+    if (root) root.style.setProperty('--accent', this.accent);
+    const lp = document.getElementById('lpath'); if (lp) lp.setAttribute('stroke', this.accent);
+    const wr = document.getElementById('wrap');
+    if (wr) wr.querySelectorAll('section,footer').forEach(el => el.style.pointerEvents = 'auto');
+    this.makeGrain(); this.loader(); this.boot(); this.wireUI(); this.swapLoop(); this.measure();
+    this.onResize = () => { this.narrow = win.innerWidth < 900; this.measure(); };
+    win.addEventListener('resize', this.onResize);
+  }
+  componentWillUnmount() {
+    const win = this.win || window;
+    this.disposed = true; win.cancelAnimationFrame(this.raf);
+    win.removeEventListener('resize', this.onResize);
+    if (this.mm) win.removeEventListener('mousemove', this.mm);
+    if (this.ov) document.removeEventListener('mouseover', this.ov);
+    if (this.swapT) win.clearInterval(this.swapT);
+    if (this.renderer) { this.renderer.dispose(); this.renderer.domElement.remove(); }
+  }
+  measure() {
+    const wrap = document.getElementById('wrap'), sh = document.getElementById('sh');
+    if (wrap && sh) sh.style.height = wrap.scrollHeight + 'px';
+  }
+  makeGrain() {
+    const c = document.createElement('canvas'); c.width = c.height = 128;
+    const x = c.getContext('2d'), d = x.createImageData(128, 128);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255 | 0; d.data[i] = d.data[i+1] = d.data[i+2] = v; d.data[i+3] = 255; }
+    x.putImageData(d, 0, 0);
+    const g = document.getElementById('grain');
+    if (g) { g.style.backgroundImage = 'url(' + c.toDataURL() + ')'; g.style.backgroundSize = '128px 128px'; }
+  }
+  swapLoop() {
+    const win = this.win || window;
+    const el = document.getElementById('swap-word'); if (!el) return;
+    const words = ['Operations', 'Enterprises', 'Institutions']; let i = 0;
+    el.style.transition = 'opacity .38s ease, transform .38s ease';
+    this.swapT = win.setInterval(() => {
+      if (this.disposed || this.swapBusy) return;
+      if (this.s > (win.innerHeight * 0.5)) { el.style.opacity = 1; el.style.transform = 'translateY(0)'; return; }
+      this.swapBusy = true;
+      el.style.opacity = 0; el.style.transform = 'translateY(-12px)';
+      win.setTimeout(() => {
+        i = (i + 1) % 3; el.textContent = words[i];
+        el.style.transform = 'translateY(14px)';
+        win.setTimeout(() => { el.style.opacity = 1; el.style.transform = 'translateY(0)'; this.swapBusy = false; }, 40);
+      }, 400);
+    }, 2900);
+  }
+  loader() {
+    const win = this.win || window;
+    const svg = document.getElementById('loader'), hole = document.getElementById('lhole'),
+      art = document.getElementById('lart'), path = document.getElementById('lpath'), word = document.getElementById('lword');
+    if (!svg) return;
+    let seen = false; try { seen = !!sessionStorage.getItem('ab_seen_v5'); if (!seen) sessionStorage.setItem('ab_seen_v5', '1'); } catch (e) {}
+    if (this.props.replayLoader ?? true) seen = false;
+    const cx = () => win.innerWidth / 2, cy = () => win.innerHeight / 2;
+    const L = 700; path.style.strokeDasharray = L; path.style.strokeDashoffset = L;
+    const place = () => { hole.setAttribute('transform', 'translate(' + cx() + ',' + cy() + ') scale(' + this.holeS + ')'); art.setAttribute('transform', 'translate(' + cx() + ',' + cy() + ')'); };
+    this.holeS = 0.001; place();
+    const T0 = win.performance.now();
+    const drawMs = seen ? 0 : 1700, holdMs = seen ? 0 : 500, expMs = seen ? 600 : 800;
+    const ease = (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    const step = (now) => {
+      if (this.disposed) return;
+      const e = now - T0;
+      if (!seen) {
+        const dp = Math.min(1, e / drawMs);
+        path.style.strokeDashoffset = L * (1 - ease(dp));
+        if (e > drawMs && e < drawMs + holdMs) { const k = (e - drawMs) / holdMs; path.style.opacity = 1 - 0.35 * Math.sin(k * Math.PI * 2); }
+      } else { path.style.opacity = 0; word.style.opacity = 0; }
+      if (e > drawMs + holdMs) {
+        const xp = Math.min(1, (e - drawMs - holdMs) / expMs);
+        this.holeS = 0.001 + ease(xp) * 42;
+        art.style.opacity = Math.max(0, 1 - xp * 2.5); word.style.opacity = Math.max(0, 1 - xp * 2.5);
+        place();
+        if (xp >= 1) { svg.style.display = 'none'; return; }
+      }
+      win.requestAnimationFrame(step);
+    };
+    win.requestAnimationFrame(step);
+  }
+  blade(THREE) {
+    const D = 1.0, R = 0.769, CH = 0.620, AX = 0.7546, CY = 0.852, CTL = 0.740;
+    const s = new THREE.Shape();
+    s.moveTo(CH, D); s.lineTo(-CH, D);
+    s.quadraticCurveTo(-CTL, D, -AX, CY);
+    s.absarc(0, D, R, Math.PI * 1.0617, Math.PI * 1.9383, false);
+    s.quadraticCurveTo(CTL, D, CH, D);
+    return s;
+  }
+  targets(N, a) {
+    const T = {}, mk = () => new Float32Array(N * 3);
+    const sc = mk(); for (let i = 0; i < N; i++) { sc[i*3] = (Math.random()*2-1)*a*1.05; sc[i*3+1] = (Math.random()*2-1)*1.05; sc[i*3+2] = (Math.random()*2-1)*0.3; } T.scatter = sc;
+    const rg = mk(); for (let i = 0; i < N; i++) { const th = Math.random()*Math.PI*2, r = 0.34 + (Math.random()-0.5)*0.05; rg[i*3] = Math.cos(th)*r*1.35; rg[i*3+1] = Math.sin(th)*r; rg[i*3+2] = 0; } T.ring = rg;
+    const wv = mk(); for (let i = 0; i < N; i++) { const x = (Math.random()*2-1)*0.62*a, k = (i%5)*0.05; wv[i*3] = x; wv[i*3+1] = 0.16*Math.sin(x*7+ k*9) + k - 0.1 + (Math.random()-0.5)*0.02; wv[i*3+2] = 0; } T.wave = wv;
+    const gd = mk(); for (let i = 0; i < N; i++) { const u = Math.floor(Math.random()*14)/13*2-1, v = Math.floor(Math.random()*10)/9*2-1; gd[i*3] = (u - v*0.4)*0.5*Math.min(a,1.7); gd[i*3+1] = (v*0.72 + u*0.12)*0.42 + (Math.random()-0.5)*0.008; gd[i*3+2] = 0; } T.grid = gd;
+    const bs = mk(); for (let i = 0; i < N; i++) { const k = i%22, th = k/22*Math.PI*2, r = Math.pow(Math.random(),0.6)*0.44; bs[i*3] = Math.cos(th)*r*1.25; bs[i*3+1] = Math.sin(th)*r; bs[i*3+2] = 0; } T.burst = bs;
+    const sp = mk(); for (let i = 0; i < N; i++) { const t = Math.random()*3.4, r = 0.05 + t*0.105; sp[i*3] = Math.cos(t*3.1)*r*1.25; sp[i*3+1] = Math.sin(t*3.1)*r; sp[i*3+2] = 0; } T.spiral = sp;
+    const lg = mk(); for (let i = 0; i < N; i++) { const b = i%3, base = Math.PI/2 + b*Math.PI*2/3, th = base + (Math.random()-0.5)*1.35, r = 0.1 + Math.pow(Math.random(),0.55)*0.32; lg[i*3] = Math.cos(th)*r; lg[i*3+1] = Math.sin(th)*r; lg[i*3+2] = 0; } T.logo = lg;
+    return T;
+  }
+  async boot() {
+    const win = this.win || window;
+    const THREE = await import('https://esm.sh/three@0.161.0');
+    if (this.disposed) return;
+    const el = document.getElementById('gl'); if (!el) return;
+    const W = () => win.innerWidth, H = () => win.innerHeight;
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(win.devicePixelRatio || 1, 1.75));
+    renderer.setSize(W(), H());
+    renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
+    renderer.domElement.style.display = 'block';
+    el.appendChild(renderer.domElement);
+    this.renderer = renderer;
+    const scene = new THREE.Scene();
+    let a = W() / H();
+    const cam = new THREE.OrthographicCamera(-a, a, 1, -1, -40, 60);
+    cam.position.set(0, 0, 10); cam.lookAt(0, 0, 0);
+    const geo = new THREE.ExtrudeGeometry(this.blade(THREE), { depth: 0.14, bevelEnabled: true, bevelThickness: 0.018, bevelSize: 0.02, bevelSegments: 3, curveSegments: 44 });
+    geo.translate(0, 0, -0.07);
+    const AC = new THREE.Color(this.accent);
+    const body = new THREE.MeshStandardMaterial({ color: 0x121317, metalness: 0.58, roughness: 0.38, transparent: true });
+    const edgeGeo = new THREE.EdgesGeometry(geo, 30);
+    const master = new THREE.Group(); this.layers = []; this.edgeMats = [];
+    for (let L = 0; L < 5; L++) {
+      const lay = new THREE.Group();
+      const em = new THREE.LineBasicMaterial({ color: AC, transparent: true, opacity: 0.5 });
+      this.edgeMats.push(em);
+      for (let b = 0; b < 3; b++) {
+        const g = new THREE.Group(); g.rotation.z = b * Math.PI * 2 / 3;
+        g.add(new THREE.Mesh(geo, body));
+        g.add(new THREE.LineSegments(edgeGeo, em));
+        lay.add(g);
+      }
+      master.add(lay); this.layers.push(lay);
+    }
+    scene.add(master);
+    scene.add(new THREE.HemisphereLight(0x3a3f4c, 0x08090b, 0.85));
+    const key = new THREE.DirectionalLight(0xffffff, 1.9); key.position.set(2.4, 3.5, 4.0); scene.add(key);
+    const rim = new THREE.DirectionalLight(0xffe2c8, 0.7); rim.position.set(-3.5, 2, -2.5); scene.add(rim);
+    const glow = new THREE.PointLight(AC, 3.5, 9, 2); glow.position.set(0, -0.5, -1.5); scene.add(glow);
+    const N = Math.round((this.narrow ? 8000 : 22000) * (this.props.density ?? 1));
+    this.T = this.targets(N, a);
+    const pg = new THREE.BufferGeometry();
+    const from = new Float32Array(this.T.scatter), to = new Float32Array(this.T.scatter), seed = new Float32Array(N);
+    for (let i = 0; i < N; i++) seed[i] = Math.random();
+    pg.setAttribute('position', new THREE.BufferAttribute(from, 3));
+    pg.setAttribute('aTo', new THREE.BufferAttribute(to, 3));
+    pg.setAttribute('aSeed', new THREE.BufferAttribute(seed, 1));
+    this.uni = {
+      uMix: { value: 1 }, uT: { value: 0 }, uSize: { value: 2.6 * renderer.getPixelRatio() },
+      uAlphaG: { value: 0 }, uOffA: { value: new THREE.Vector2() }, uOffB: { value: new THREE.Vector2() },
+      uCol: { value: new THREE.Vector3(AC.r, AC.g, AC.b) }
+    };
+    const pm = new THREE.ShaderMaterial({
+      uniforms: this.uni, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
+      vertexShader: 'uniform float uMix;uniform float uT;uniform float uSize;uniform float uAlphaG;uniform vec2 uOffA;uniform vec2 uOffB;attribute vec3 aTo;attribute float aSeed;varying float vA;varying float vC;void main(){float e=smoothstep(0.,1.,uMix);vec3 p=mix(position,aTo,e);vec2 off=mix(uOffA,uOffB,e);p.x+=off.x;p.y+=off.y;p.x+=sin(uT*(0.4+fract(aSeed*7.31))+aSeed*6.28)*0.006;p.y+=cos(uT*(0.3+fract(aSeed*3.17))+aSeed*12.56)*0.006;vec4 mv=modelViewMatrix*vec4(p,1.);gl_Position=projectionMatrix*mv;gl_PointSize=uSize*(0.45+fract(aSeed*13.7));vA=(0.3+0.7*fract(aSeed*5.1))*uAlphaG;vC=step(0.86,fract(aSeed*9.7));}',
+      fragmentShader: 'uniform vec3 uCol;varying float vA;varying float vC;void main(){vec2 q=gl_PointCoord-0.5;float d=length(q);float m=smoothstep(0.5,0.1,d);vec3 c=mix(vec3(0.92,0.91,0.88),uCol,vC);gl_FragColor=vec4(c,vA*m);}'
+    });
+    const pts = new THREE.Points(pg, pm); pts.frustumCulled = false; scene.add(pts);
+    this.setF = (name) => {
+      if (name === this.cur || !this.T[name]) return;
+      pg.attributes.position.array.set(this.T[this.cur]);
+      pg.attributes.aTo.array.set(this.T[name]);
+      pg.attributes.position.needsUpdate = true; pg.attributes.aTo.needsUpdate = true;
+      this.prev = this.cur; this.cur = name; this.mixV = 0;
+    };
+    const ro = () => {
+      a = W() / H(); cam.left = -a; cam.right = a; cam.updateProjectionMatrix();
+      renderer.setSize(W(), H()); this.T = this.targets(N, a);
+      pg.attributes.position.array.set(this.T[this.prev] || this.T.scatter);
+      pg.attributes.aTo.array.set(this.T[this.cur] || this.T.scatter);
+      pg.attributes.position.needsUpdate = true; pg.attributes.aTo.needsUpdate = true;
+      this.measure();
+    };
+    win.addEventListener('resize', ro);
+    const wrap = document.getElementById('wrap');
+    const heroTitle = document.getElementById('hero-title'), heroLink = document.getElementById('hero-link'), heroGlow = document.getElementById('hero-glow');
+    const pCh = document.getElementById('panel-ch'), pHww = document.getElementById('panel-hww'), pWhy = document.getElementById('panel-why');
+    const bgLight = document.getElementById('bg-light');
+    const hwwSteps = Array.from(document.querySelectorAll('.hww-step'));
+    const whyItems = Array.from(document.querySelectorAll('.why-item'));
+    const agZone = document.getElementById('agent-shape'), ftMark = document.getElementById('footer-mark');
+    const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+    const F = (u, lo, hi) => clamp((u - lo) / (hi - lo), 0, 1);
+    const E = (t) => t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2, 3)/2;
+    const anchorOff = (elm) => { const r = elm.getBoundingClientRect(); const px = r.left + r.width/2, py = r.top + r.height/2; return [(px / W() * 2 - 1) * a, 1 - 2 * py / H()]; };
+    const inView = (elm) => { const r = elm.getBoundingClientRect(); return r.top < H()*0.8 && r.bottom > H()*0.2; };
+    this.offOf = (name) => {
+      if (this.menuOpen) return [0, 0];
+      if (name === 'logo' && ftMark) return anchorOff(ftMark);
+      if (name !== 'scatter' && agZone) return anchorOff(agZone);
+      return [0, 0];
+    };
+    const AGF = ['burst', 'wave', 'grid', 'ring', 'spiral'];
+    this.AGF = AGF;
+    const tick = () => {
+      if (this.disposed) return;
+      this.raf = win.requestAnimationFrame(tick);
+      this.t += 0.016;
+      this.tgt = win.scrollY ?? 0;
+      this.s += (this.tgt - this.s) * (this.reduced || this.narrow ? 1 : 0.085);
+      const s = this.s, Hv = H(), u = s / Hv;
+      if (wrap) wrap.style.transform = 'translate3d(0,' + (-s) + 'px,0)';
+      const p0 = E(F(u, 0, 0.7)), p1 = E(F(u, 0.8, 1.8)), p2 = E(F(u, 2.0, 2.9)), p4 = E(F(u, 4.5, 5.4));
+      const chOut = E(F(u, 3.2, 3.7)), hwwIn = E(F(u, 3.6, 4.1)), hwwOut = E(F(u, 4.4, 4.8)), whyIn = E(F(u, 4.7, 5.2)), whyOut = E(F(u, 5.4, 5.75));
+      const exit01 = E(F(u, 3.4, 4.1)), ret01 = E(F(u, 4.6, 5.3));
+      const markFade = E(F(u, 5.5, 5.9));
+      if (heroTitle) { heroTitle.style.opacity = 1 - p0; heroTitle.style.transform = 'translateY(' + (-46*p0) + 'px)'; }
+      if (heroLink) heroLink.style.opacity = 1 - E(F(u, 0, 0.5));
+      if (heroGlow) heroGlow.style.opacity = (1 - p1) * (1 - markFade);
+      const mDia = Math.max(0.5, Math.min(0.66, 0.66 - (a - 1.85) * 0.3));
+      const sc = (mDia + p1 * 0.1) / 2.35 * (1 - markFade);
+      master.scale.setScalar(Math.max(sc, 0.0001));
+      const heroY = 0.14 * (1 - p0);
+      master.position.set(0.46*a*p2 - 0.92*a*p4, heroY, 0);
+      master.rotation.x = -1.02 * p1;
+      master.rotation.y = 0.42 * p1;
+      master.rotation.z = 0.08 * p1;
+      const gap = 0.02 + 1.05 * p1;
+      for (let i = 0; i < 5; i++) {
+        const L = this.layers[i];
+        L.position.z = (i - 2) * gap;
+        if (i === 0 || i === 4) L.position.x = ret01 > 0 ? 9 * (1 - ret01) : -9 * exit01;
+        else L.position.x = 0;
+      }
+      if (pCh) { const o = p2 * (1 - chOut); pCh.style.opacity = o; pCh.style.transform = 'translateY(-50%) translateX(' + (-46 + 46*p2 - 30*chOut) + 'px)'; pCh.style.pointerEvents = o > 0.5 ? 'none' : 'none'; pCh.querySelectorAll('a').forEach(x => x.style.pointerEvents = o > 0.5 ? 'auto' : 'none'); }
+      if (pHww) { const o = hwwIn * (1 - hwwOut); pHww.style.opacity = o; pHww.style.transform = 'translateY(-50%) translateX(' + (-40 + 40*hwwIn - 30*hwwOut) + 'px)'; }
+      if (pWhy) { const o = whyIn * (1 - whyOut); pWhy.style.opacity = o; pWhy.style.transform = 'translateY(-50%) translateX(' + (40 - 40*whyIn) + 'px)'; }
+      if (bgLight) bgLight.style.opacity = p4 * (1 - E(F(u, 5.35, 5.75)));
+      const stepIdx = u > 3.7 && u < 4.5 ? clamp(Math.floor((u - 3.7) / 0.8 * 3), 0, 2) : -1;
+      hwwSteps.forEach((st, i) => { st.style.opacity = i === stepIdx ? 1 : 0.4; st.style.transition = 'opacity .3s'; });
+      const whyIdx = u > 4.8 && u < 5.6 ? clamp(Math.floor((u - 4.8) / 0.8 * 5), 0, 4) : -1;
+      whyItems.forEach((it, i) => { it.style.opacity = i === whyIdx ? 1 : 0.45; it.style.transition = 'opacity .3s'; });
+      for (let i = 0; i < 5; i++) {
+        let hot = 0.5;
+        if (stepIdx >= 0 && i === stepIdx + 1) hot = 1;
+        if (whyIdx >= 0 && i === whyIdx) hot = 1;
+        this.edgeMats[i].opacity = hot * (1 - markFade);
+      }
+      body.opacity = 1 - markFade;
+      if (!this.menuOpen) {
+        let want = 'scatter', alpha = 0;
+        if (ftMark && inView(ftMark)) { want = 'logo'; alpha = 0.95; }
+        else if (agZone && inView(agZone)) { want = AGF[this.agIdx]; alpha = 0.95; }
+        if (want !== this.cur) this.setF(want);
+        this.uni.uAlphaG.value += (alpha - this.uni.uAlphaG.value) * 0.06;
+      } else {
+        this.uni.uAlphaG.value += (0.9 - this.uni.uAlphaG.value) * 0.08;
+      }
+      this.mixV += (1 - this.mixV) * 0.05;
+      this.uni.uMix.value = this.mixV;
+      this.uni.uT.value = this.reduced ? 0 : this.t;
+      const oa = this.offOf(this.prev), ob = this.offOf(this.cur);
+      this.uni.uOffA.value.set(oa[0], oa[1]); this.uni.uOffB.value.set(ob[0], ob[1]);
+      renderer.render(scene, cam);
+    };
+    tick();
+    win.setTimeout(() => this.measure(), 400);
+  }
+  beep(f, d, g) {
+    if (this.muted) return;
+    try {
+      const win = this.win || window;
+      if (!this.actx) this.actx = new (win.AudioContext || win.webkitAudioContext)();
+      const c = this.actx; if (c.state === 'suspended') c.resume();
+      const o = c.createOscillator(), gn = c.createGain();
+      o.frequency.value = f; o.type = 'sine';
+      gn.gain.setValueAtTime(g, c.currentTime);
+      gn.gain.exponentialRampToValueAtTime(0.0001, c.currentTime + d);
+      o.connect(gn); gn.connect(c.destination); o.start(); o.stop(c.currentTime + d);
+    } catch (e) {}
+  }
+  wireUI() {
+    const win = this.win || window;
+    const cur = document.getElementById('cur'), curr = document.getElementById('curr');
+    let mx = -100, my = -100, rx = -100, ry = -100, grow = 1;
+    if (this.fine) {
+      this.mm = (e) => {
+        mx = e.clientX; my = e.clientY;
+        document.querySelectorAll('[data-mag]').forEach(el => {
+          const r = el.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+          const dx = mx - cx, dy = my - cy, dist = Math.hypot(dx, dy);
+          el.style.transform = dist < 90 ? 'translate(' + dx * 0.18 + 'px,' + dy * 0.18 + 'px)' : '';
+          el.style.transition = dist < 90 ? 'transform .08s' : 'transform .3s';
+        });
+      };
+      win.addEventListener('mousemove', this.mm);
+      const cl = () => {
+        rx += (mx - rx) * 0.16; ry += (my - ry) * 0.16;
+        if (cur) cur.style.transform = 'translate(' + (mx - 3) + 'px,' + (my - 3) + 'px)';
+        if (curr) curr.style.transform = 'translate(' + (rx - 15) + 'px,' + (ry - 15) + 'px) scale(' + grow + ')';
+        if (!this.disposed) win.requestAnimationFrame(cl);
+      };
+      cl();
+      this.ov = (e) => {
+        const hit = e.target.closest('a,[data-h]');
+        grow = hit ? 1.9 : 1;
+        if (hit && hit !== this.lastHov) { this.beep(1350, 0.03, 0.02); this.lastHov = hit; this.scramble(hit); }
+        if (!hit) this.lastHov = null;
+      };
+      document.addEventListener('mouseover', this.ov);
+    } else { if (cur) cur.style.display = 'none'; if (curr) curr.style.display = 'none'; }
+    const mb = document.getElementById('menu-btn'), menu = document.getElementById('menu');
+    const descs = { home: 'Structured intelligence for complex operations.', agents: 'Six agents. One operating picture.', transform: 'From pilot to operating model.', journal: 'Perspective precedes implementation.' };
+    const forms = { home: 'logo', agents: 'grid', transform: 'wave', journal: 'spiral' };
+    if (mb && menu) {
+      mb.addEventListener('click', () => {
+        this.menuOpen = !this.menuOpen;
+        this.beep(650, 0.07, 0.03);
+        menu.style.opacity = this.menuOpen ? 1 : 0;
+        menu.style.pointerEvents = this.menuOpen ? 'auto' : 'none';
+        mb.textContent = this.menuOpen ? 'CLOSE' : 'MENU';
+      });
+      menu.querySelectorAll('[data-pg]').forEach(ln => {
+        ln.addEventListener('mouseenter', () => {
+          const pg = ln.getAttribute('data-pg');
+          const d = document.getElementById('menu-desc'); if (d) d.textContent = descs[pg];
+          if (this.setF) this.setF(forms[pg]);
+        });
+        ln.addEventListener('click', (e) => { e.preventDefault(); this.beep(520, 0.08, 0.03); });
+      });
+    }
+    const snd = document.getElementById('snd');
+    if (snd) snd.addEventListener('click', () => { this.muted = !this.muted; snd.textContent = this.muted ? 'SND \u00b7 OFF' : 'SND \u00b7 ON'; if (!this.muted) this.beep(880, 0.06, 0.03); });
+    const AG = [
+      { dom: 'CAPITAL & LOGISTICS', name: 'Supplier Risk Intelligence', desc: 'Detects early disruption signals across supplier networks including financial instability, geopolitical exposure, and operational risk.', metric: 'Reduce disruption penalties & delays up to 50%' },
+      { dom: 'PRICING & COST', name: 'Pricing Intelligence', desc: 'Optimizes pricing decisions using supply chain signals such as demand shifts, supplier cost changes, and inventory availability.', metric: 'Optimize pricing decisions with ~10% margin improvement' },
+      { dom: 'INVENTORY & SUBSTITUTION', name: 'Product Identity Intelligence', desc: 'Creates a unified product identity across fragmented supplier catalogs through automated SKU normalization and cross-referencing.', metric: 'Improve substitution with 5% revenue uplift' },
+      { dom: 'REGULATIONS & COMPLIANCE', name: 'Compliance Intelligence', desc: 'Monitors global regulatory changes affecting products, shipments, suppliers, and logistics operations.', metric: 'Lower regulatory costs with 3\u20137% savings' },
+      { dom: 'PRODUCT & ENGINEERING', name: 'BoM Intelligence', desc: 'Automatically generates and enriches Bills of Materials by interpreting engineering drawings, technical documents, and product specifications.', metric: '60\u201370% faster engineering cycles' }
+    ];
+    const tabs = Array.from(document.querySelectorAll('.ag-tab'));
+    tabs.forEach(tb => {
+      tb.addEventListener('click', () => {
+        const i = parseInt(tb.getAttribute('data-i'), 10);
+        if (i === this.agIdx) return;
+        this.agIdx = i; this.beep(950, 0.05, 0.025);
+        tabs.forEach((t2, j) => { t2.style.color = j === i ? '#f2f0eb' : 'rgba(242,240,235,.45)'; t2.style.borderBottomColor = j === i ? this.accent : 'transparent'; });
+        const A = AG[i];
+        const dm = document.getElementById('ag-dom'), nm = document.getElementById('ag-name'), ds = document.getElementById('ag-desc'), mt = document.getElementById('ag-metric');
+        if (dm) dm.textContent = A.dom;
+        if (nm) { nm.textContent = A.name; nm.setAttribute('data-scr', '1'); delete nm.dataset.orig; this.scramble(nm); }
+        if (ds) ds.textContent = A.desc;
+        if (mt) mt.textContent = A.metric;
+        if (this.setF) this.setF(this.AGF ? this.AGF[i] : 'ring');
+      });
+    });
+    document.querySelectorAll('.faq-q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement, ans = item.querySelector('.faq-a'), x = q.querySelector('.faq-x');
+        const open = ans.style.maxHeight && ans.style.maxHeight !== '0px';
+        document.querySelectorAll('.faq-a').forEach(a2 => a2.style.maxHeight = '0px');
+        document.querySelectorAll('.faq-x').forEach(x2 => x2.style.transform = 'rotate(0deg)');
+        if (!open) { ans.style.maxHeight = ans.scrollHeight + 'px'; x.style.transform = 'rotate(45deg)'; this.beep(760, 0.06, 0.025); }
+        else this.beep(540, 0.05, 0.02);
+        win.setTimeout(() => this.measure(), 550);
+      });
+    });
+  }
+  scramble(el) {
+    const win = this.win || window;
+    if (!el.hasAttribute('data-scr') || el.dataset.busy) return;
+    const orig = el.dataset.orig || el.textContent; el.dataset.orig = orig; el.dataset.busy = '1';
+    const chars = '#/\\<>*+-=';
+    const T0 = win.performance.now(), dur = 420;
+    const st = (now) => {
+      const k = Math.min(1, (now - T0) / dur);
+      const n = Math.floor(orig.length * k);
+      let out = orig.slice(0, n);
+      for (let i = n; i < orig.length; i++) out += orig[i] === ' ' ? ' ' : chars[Math.random() * chars.length | 0];
+      el.textContent = out;
+      if (k < 1 && !this.disposed) win.requestAnimationFrame(st); else { el.textContent = orig; delete el.dataset.busy; }
+    };
+    win.requestAnimationFrame(st);
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body { margin: 0; background: #0b0a09; }
+    a { color: #f2f0eb; text-decoration: none; }
+    a:hover { color: #FF6028; }
+  </style>
+</helmet>
+<div data-screen-label="Menu trigger ideas" style="min-height:100vh;background:#0b0a09;color:#f2f0eb;padding:9vh 6vw;font-family:'Space Grotesk',sans-serif">
+  <div style="display:flex;align-items:baseline;gap:2vw;flex-wrap:wrap">
+    <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.26em;color:#FF6028">MENU&nbsp;TRIGGER&nbsp;&middot;&nbsp;FOUR&nbsp;IDEAS</div>
+    <div style="font:400 12px 'IBM Plex Mono',monospace;letter-spacing:.1em;color:rgba(244,242,238,.42)">hover each tile &mdash; click to see the open state</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(260px,1fr));gap:1px;background:rgba(244,242,238,.14);margin-top:5vh;border:1px solid rgba(244,242,238,.14)">
+    <div id="t-a" data-tile="1" style="background:#0b0a09;padding:5vh 3vw;display:flex;flex-direction:column;gap:4vh;min-height:340px;cursor:pointer">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(244,242,238,.4)">A</span>
+        <span id="s-a" style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.3)">CLOSED</span>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg width="104" height="104" viewBox="-52 -52 104 104" style="overflow:visible">
+          <g transform="scale(2.6)">
+            <g id="a-p0"><g transform="translate(-15.5,-14)"><path id="a-q0" fill="#f2f0eb"></path></g><rect id="a-r0" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+            <g id="a-p1"><g transform="translate(-15.5,-14)"><path id="a-q1" fill="#f2f0eb"></path></g><rect id="a-r1" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+            <g id="a-p2"><g transform="translate(-15.5,-14)"><path id="a-q2" fill="#f2f0eb"></path></g><rect id="a-r2" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div style="font:500 15px 'Space Grotesk',sans-serif;letter-spacing:-.01em">Rules become the mark</div>
+        <p style="margin:8px 0 0;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:rgba(244,242,238,.5)">Three stacked rules travel out and hand off to the real petals.</p>
+      </div>
+    </div>
+    <div id="t-b" data-tile="2" style="background:#0b0a09;padding:5vh 3vw;display:flex;flex-direction:column;gap:4vh;min-height:340px;cursor:pointer">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(244,242,238,.4)">B</span>
+        <span id="s-b" style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.3)">CLOSED</span>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg width="104" height="104" viewBox="-52 -52 104 104" style="overflow:visible">
+          <g transform="scale(2.6)">
+            <g id="b-g">
+              <g id="b-p0"><g transform="translate(-15.5,-14)"><path id="b-q0" fill="#f2f0eb"></path></g><rect id="b-r0" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+              <g id="b-p1"><g transform="translate(-15.5,-14)"><path id="b-q1" fill="#f2f0eb"></path></g><rect id="b-r1" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+              <g id="b-p2"><g transform="translate(-15.5,-14)"><path id="b-q2" fill="#f2f0eb"></path></g><rect id="b-r2" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div style="font:500 15px 'Space Grotesk',sans-serif;letter-spacing:-.01em">Hamburger unwinds into the mark</div>
+        <p style="margin:8px 0 0;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:rgba(244,242,238,.5)">Rests as three rules. Spins 120&deg; and resolves to the petals, in orange.</p>
+      </div>
+    </div>
+    <div id="t-c" data-tile="3" style="background:#0b0a09;padding:5vh 3vw;display:flex;flex-direction:column;gap:4vh;min-height:340px;cursor:pointer">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(244,242,238,.4)">C</span>
+        <span id="s-c" style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.3)">CLOSED</span>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center">
+        <div style="display:flex;align-items:center;gap:16px">
+          <svg width="48" height="48" viewBox="-24 -24 48 48" style="overflow:visible">
+            <rect id="c-b0" x="-16" y="-10" width="22" height="4" fill="#f2f0eb"></rect>
+            <rect id="c-b1" x="-16" y="-2" width="32" height="4" fill="#f2f0eb"></rect>
+            <rect id="c-b2" x="-16" y="6" width="16" height="4" fill="#f2f0eb"></rect>
+          </svg>
+          <span id="c-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.32);white-space:nowrap">&mdash;&mdash;&mdash;</span>
+        </div>
+      </div>
+      <div>
+        <div style="font:500 15px 'Space Grotesk',sans-serif;letter-spacing:-.01em">Petal index</div>
+        <p style="margin:8px 0 0;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:rgba(244,242,238,.5)">Each rule is a page. Hover a rule, jump straight to it.</p>
+      </div>
+    </div>
+    <div id="t-d" data-tile="4" style="background:#0b0a09;padding:5vh 3vw;display:flex;flex-direction:column;gap:4vh;min-height:340px;cursor:pointer">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(244,242,238,.4)">D</span>
+        <span id="s-d" style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.3)">CLOSED</span>
+      </div>
+      <div style="flex:1;display:flex;align-items:center;justify-content:center">
+        <svg width="104" height="104" viewBox="-52 -52 104 104" style="overflow:visible">
+          <g transform="scale(2.6)">
+            <g id="d-p0"><g transform="translate(-15.5,-14)"><path id="d-q0" fill="#f2f0eb"></path></g><rect id="d-r0" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+            <g id="d-p1"><g transform="translate(-15.5,-14)"><path id="d-q1" fill="#f2f0eb"></path></g><rect id="d-r1" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+            <g id="d-p2"><g transform="translate(-15.5,-14)"><path id="d-q2" fill="#f2f0eb"></path></g><rect id="d-r2" x="-6.5" y="-1.05" width="13" height="2.1" fill="#f2f0eb"></rect></g>
+          </g>
+        </svg>
+      </div>
+      <div>
+        <div style="font:500 15px 'Space Grotesk',sans-serif;letter-spacing:-.01em">Exploded mark</div>
+        <p style="margin:8px 0 0;font:400 12.5px/1.6 'Space Grotesk',sans-serif;color:rgba(244,242,238,.5)">The mark with its petals drifted apart. Opening scatters them to rules.</p>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top:6vh;display:flex;gap:10px;align-items:center">
+    <span style="font:400 11px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(244,242,238,.38)">SHOWN&nbsp;AT&nbsp;4&times;&nbsp;&mdash;&nbsp;REAL&nbsp;SIZE&nbsp;IS&nbsp;22PX</span>
+    <span style="flex:1;height:1px;background:rgba(244,242,238,.14)"></span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    // the three real petals, lifted verbatim from assets/logo-footer.svg
+    const P = [
+      'M7.43692 3.35091e-06C6.35895 3.52645e-06 5.46602 0.881876 5.67379 1.93963C5.80208 2.59276 5.99517 3.23313 6.25112 3.85105C6.75684 5.07199 7.4981 6.18135 8.43256 7.11582C9.36702 8.05028 10.4764 8.79153 11.6973 9.29726C12.9183 9.80299 14.2268 10.0633 15.5484 10.0633C16.8699 10.0633 18.1785 9.80299 19.3994 9.29726C20.6204 8.79153 21.7297 8.05027 22.6642 7.11581C23.5986 6.18135 24.3399 5.07198 24.8456 3.85105C25.1016 3.23313 25.2947 2.59276 25.423 1.93962C25.6307 0.881872 24.7378 -2.69777e-07 23.6598 0L7.43692 3.35091e-06Z',
+      'M22.823 26.7423C22.284 27.6758 21.0738 28.0082 20.2617 27.2994C19.7602 26.8617 19.3021 26.3743 18.895 25.8437C18.0905 24.7953 17.5004 23.5986 17.1583 22.3221C16.8163 21.0456 16.729 19.7143 16.9015 18.4041C17.074 17.0938 17.5029 15.8304 18.1637 14.6859C18.8244 13.5415 19.7041 12.5383 20.7526 11.7338C21.801 10.9293 22.9976 10.3392 24.2741 9.9972C25.5506 9.65516 26.882 9.5679 28.1922 9.74039C28.8553 9.82769 29.5065 9.98066 30.1362 10.1961C31.1562 10.5451 31.4734 11.7593 30.9344 12.6928L22.823 26.7423Z',
+      'M0.259461 12.6235C-0.279521 11.69 0.0377339 10.4757 1.05766 10.1268C1.68744 9.91132 2.33856 9.75835 3.00167 9.67105C4.31189 9.49856 5.64326 9.58582 6.91975 9.92786C8.19625 10.2699 9.39288 10.86 10.4413 11.6645C11.4898 12.469 12.3695 13.4721 13.0302 14.6166C13.691 15.7611 14.1199 17.0245 14.2924 18.3347C14.4649 19.6449 14.3776 20.9763 14.0356 22.2528C13.6935 23.5293 13.1034 24.7259 12.2989 25.7744C11.8918 26.305 11.4337 26.7924 10.9322 27.2301C10.1201 27.9389 8.9099 27.6065 8.37091 26.673L0.259461 12.6235Z'
+    ];
+    // each petal's own centroid, for the exploded drift in D
+    const DRIFT = [[0, -1], [0.78, 0.62], [-0.78, 0.62]];
+    const g = id => document.getElementById(id);
+    const E = 'cubic-bezier(.62,.02,.2,1)';
+    const st = {};
+
+    ['a', 'b', 'd'].forEach(k => P.forEach((d, i) => { const p = g(k + '-q' + i); if (p) p.setAttribute('d', d); }));
+
+    const rig = (k) => {
+      const slots = [0, 1, 2].map(i => g(k + '-p' + i));
+      const petals = [0, 1, 2].map(i => g(k + '-q' + i));
+      const bars = [0, 1, 2].map(i => g(k + '-r' + i));
+      [...petals, ...bars].forEach(el => { el.style.transition = 'opacity .42s linear, fill .42s linear'; });
+      slots.forEach(el => { el.style.transition = 'transform .68s ' + E; });
+      const show = (mark, color) => {
+        petals.forEach((p, i) => { p.style.opacity = mark ? 1 : 0; p.style.fill = color; });
+        bars.forEach(b => { b.style.opacity = mark ? 0 : 1; b.style.fill = color === '#FF6028' ? '#f2f0eb' : color; });
+      };
+      return { slots, petals, bars, show };
+    };
+
+    // A — stacked rules travel outward, hand off to the petals
+    (() => {
+      const r = rig('a');
+      st.a = {
+        setClosed: () => {
+          r.slots.forEach((el, i) => { el.style.transform = 'translate(0px,' + ((i - 1) * 4.6) + 'px) rotate(0deg)'; });
+          r.show(false, '#f2f0eb');
+        },
+        setHover: () => {
+          r.slots.forEach((el, i) => { el.style.transform = 'translate(0px,' + ((i - 1) * 6.4) + 'px) rotate(' + ((i - 1) * 9) + 'deg)'; });
+          r.show(false, '#f2f0eb');
+        },
+        setOpen: () => {
+          r.slots.forEach(el => { el.style.transform = 'translate(0px,0px) rotate(0deg)'; });
+          r.show(true, '#f2f0eb');
+        }
+      };
+    })();
+
+    // B — pinwheel of three rules unwinding into the mark
+    (() => {
+      const r = rig('b'), wrap = g('b-g');
+      wrap.style.transition = 'transform .78s ' + E;
+      const stack = (gap, tilt) => r.slots.forEach((el, i) => { el.style.transform = 'translate(0px,' + ((i - 1) * gap) + 'px) rotate(' + ((i - 1) * tilt) + 'deg)'; });
+      st.b = {
+        setClosed: () => { wrap.style.transform = 'rotate(0deg)'; stack(4.6, 0); r.show(false, '#f2f0eb'); },
+        setHover: () => { wrap.style.transform = 'rotate(18deg)'; stack(6, 6); r.show(false, '#f2f0eb'); },
+        setOpen: () => { wrap.style.transform = 'rotate(120deg)'; r.slots.forEach(el => { el.style.transform = 'rotate(0deg) translate(0px,0px)'; }); r.show(true, '#FF6028'); }
+      };
+    })();
+
+    // C — three unequal rules, one per page
+    (() => {
+      const bars = [0, 1, 2].map(i => g('c-b' + i));
+      const lbl = g('c-lbl');
+      const names = ['AATLAS AGENTS', 'AI TRANSFORMATION', 'JOURNAL'];
+      bars.forEach((b, i) => {
+        b.style.transition = 'transform .4s ' + E + ', fill .3s linear';
+        b.style.transformOrigin = '-16px center';
+        b.addEventListener('mouseenter', () => {
+          bars.forEach((o, j) => { o.style.fill = j === i ? '#FF6028' : 'rgba(242,240,235,.3)'; o.style.transform = j === i ? 'scaleX(1.32)' : 'scaleX(1)'; });
+          lbl.textContent = names[i]; lbl.style.color = '#FF6028';
+        });
+      });
+      const reset = () => { bars.forEach(b => { b.style.fill = '#f2f0eb'; b.style.transform = 'scaleX(1)'; }); lbl.textContent = '\u2014\u2014\u2014'; lbl.style.color = 'rgba(244,242,238,.32)'; };
+      g('t-c').addEventListener('mouseleave', reset);
+      st.c = { setClosed: reset, setOpen: () => { lbl.textContent = 'PICK A RULE'; lbl.style.color = '#FF6028'; } };
+    })();
+
+    // D — the mark, petals drifted apart, scattering to rules on open
+    (() => {
+      const r = rig('d');
+      st.d = {
+        setClosed: () => {
+          r.slots.forEach((el, i) => { el.style.transform = 'translate(' + (DRIFT[i][0] * 2.6) + 'px,' + (DRIFT[i][1] * 2.6) + 'px)'; });
+          r.show(true, '#f2f0eb');
+        },
+        setHover: () => { r.slots.forEach(el => { el.style.transform = 'translate(0px,0px)'; }); r.show(true, '#FF6028'); },
+        setOpen: () => {
+          r.slots.forEach((el, i) => { el.style.transform = 'translate(0px,' + ((i - 1) * 4.6) + 'px)'; });
+          r.show(false, '#f2f0eb');
+        }
+      };
+    })();
+
+    ['a', 'b', 'c', 'd'].forEach(k => {
+      const tile = g('t-' + k), badge = g('s-' + k), s = st[k];
+      let open = false;
+      s.setClosed();
+      tile.addEventListener('mouseenter', () => { if (!open) (s.setHover || s.setOpen)(); });
+      tile.addEventListener('mouseleave', () => { if (!open) s.setClosed(); });
+      tile.addEventListener('click', () => {
+        open = !open;
+        (open ? s.setOpen : s.setClosed)();
+        badge.textContent = open ? 'OPEN' : 'CLOSED';
+        badge.style.color = open ? '#FF6028' : 'rgba(244,242,238,.3)';
+      });
+    });
+  }
+}
+</script>
+</body>
+</html>

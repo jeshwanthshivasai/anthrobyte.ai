@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{background:#e3e0d9}body{margin:0;background:#e3e0d9}
+a{color:inherit;text-decoration:none}a:hover{color:#FF6028}
+::selection{background:rgba(255,96,40,.28)}
+</style>
+</helmet>
+<section style="padding:64px;font-family:'Space Grotesk',sans-serif;color:#17130f">
+  <div style="display:flex;align-items:baseline;gap:18px;margin-bottom:40px">
+    <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:#FF6028">TURN 1</span>
+    <span style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.45)">LAYOUT STUDIES — S5 AGENTS (<a href="#1a">1a</a> / <a href="#1b">1b</a>) &amp; FAQ (<a href="#1c">1c</a> / <a href="#1d">1d</a>) — STATIC, DIAGRAM IS A PLACEHOLDER</span>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:56px">
+
+    <div id="1a" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#fff;background:#17130f;padding:5px 9px">1a</span>
+        <span style="font:500 12px 'Space Grotesk',sans-serif;letter-spacing:.02em">Overlay stage — diagram dominates, agents as a bottom rail</span>
+      </div>
+      <div style="position:relative;width:1440px;height:900px;background:#f4f2ee;overflow:hidden;box-shadow:0 24px 60px rgba(26,21,16,.14)">
+        <div style="position:absolute;left:56px;top:42px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.42)">05&nbsp;/&nbsp;AATLAS&nbsp;AGENTS</div>
+        <div style="position:absolute;right:56px;top:42px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.42)">FIG.&nbsp;01&nbsp;—&nbsp;05</div>
+        <div style="position:absolute;left:56px;right:56px;top:74px;height:1px;background:rgba(26,21,16,.14)"></div>
+        <div style="position:absolute;left:470px;top:86px;width:914px;height:600px">
+          <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block">
+            <sc-for list="{{ links }}" as="l" hint-placeholder-count="6"><line x1="{{ l.x1 }}" y1="{{ l.y1 }}" x2="{{ l.x2 }}" y2="{{ l.y2 }}" stroke="rgba(26,21,16,.16)" stroke-width="0.5"></line></sc-for>
+            <sc-for list="{{ dots }}" as="d" hint-placeholder-count="60"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.c }}" opacity="{{ d.o }}"></circle></sc-for>
+          </svg>
+        </div>
+        <h2 style="position:absolute;left:56px;top:108px;margin:0;font:600 104px/0.92 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:#17130f">Our <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.04em;letter-spacing:-.02em;color:#FF6028">AI</em><br>Agents</h2>
+        <p style="position:absolute;left:58px;top:330px;margin:0;width:306px;font:400 14.5px/1.62 'Space Grotesk',sans-serif;color:rgba(26,21,16,.58);text-wrap:pretty">We deploy modular AI agents across supply chains and enterprise environments from pricing and procurement to logistics and compliance.</p>
+        <div style="position:absolute;left:56px;top:470px;width:396px">
+          <div style="height:1px;background:rgba(26,21,16,.18)"></div>
+          <div style="margin-top:18px;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:#FF6028">CAPITAL&nbsp;&amp;&nbsp;LOGISTICS</div>
+          <div style="margin-top:12px;font:600 34px/1.04 'Space Grotesk',sans-serif;letter-spacing:-.035em">Supplier Risk<br>Intelligence</div>
+          <div style="margin-top:16px;font:italic 400 21px/1.34 'Newsreader',serif;color:#17130f">Reduce disruption penalties &amp; delays <em style="font-style:italic;color:#FF6028">up to 50%</em></div>
+        </div>
+        <a href="#1a" style="position:absolute;left:56px;top:718px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:#17130f;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">ALL&nbsp;FIVE&nbsp;AGENTS&nbsp;→</a>
+        <div style="position:absolute;left:56px;right:56px;bottom:56px;display:grid;grid-template-columns:repeat(5,1fr);gap:0">
+          <div style="border-top:1px solid #FF6028;padding:18px 24px 0 0">
+            <div style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#FF6028">01</div>
+            <div style="margin-top:10px;font:500 19px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:#17130f">Risk Assessment</div>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);padding:18px 24px 0 0">
+            <div style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">02</div>
+            <div style="margin-top:10px;font:500 19px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:rgba(26,21,16,.44)">Pricing &amp; Revenue</div>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);padding:18px 24px 0 0">
+            <div style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">03</div>
+            <div style="margin-top:10px;font:500 19px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:rgba(26,21,16,.44)">Inventory Management</div>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);padding:18px 24px 0 0">
+            <div style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">04</div>
+            <div style="margin-top:10px;font:500 19px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:rgba(26,21,16,.44)">Compliance</div>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);padding:18px 0 0 0">
+            <div style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">05</div>
+            <div style="margin-top:10px;font:500 19px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.025em;color:rgba(26,21,16,.44)">Procurement</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="1b" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#fff;background:#17130f;padding:5px 9px">1b</span>
+        <span style="font:500 12px 'Space Grotesk',sans-serif;letter-spacing:.02em">Split ledger — hard vertical rule, index left, plate right</span>
+      </div>
+      <div style="position:relative;width:1440px;height:900px;background:#f4f2ee;overflow:hidden;box-shadow:0 24px 60px rgba(26,21,16,.14)">
+        <div style="position:absolute;left:512px;top:0;bottom:0;width:1px;background:rgba(26,21,16,.14)"></div>
+        <div style="position:absolute;left:56px;top:42px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.42)">05&nbsp;—&nbsp;AATLAS&nbsp;AGENTS</div>
+        <h2 style="position:absolute;left:56px;top:96px;margin:0;font:600 76px/0.96 'Space Grotesk',sans-serif;letter-spacing:-.048em;color:#17130f">Our <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.04em;letter-spacing:-.02em;color:#FF6028">AI</em><br>Agents</h2>
+        <p style="position:absolute;left:58px;top:268px;margin:0;width:368px;font:400 14.5px/1.62 'Space Grotesk',sans-serif;color:rgba(26,21,16,.58);text-wrap:pretty">We deploy modular AI agents across supply chains and enterprise environments from pricing and procurement to logistics and compliance.</p>
+        <div style="position:absolute;left:56px;top:400px;width:400px;display:flex;flex-direction:column">
+          <div style="position:relative;border-top:1px solid rgba(26,21,16,.14);display:flex;align-items:baseline;gap:18px;padding:15px 0">
+            <span style="position:absolute;left:-56px;top:-1px;width:46px;height:1px;background:#FF6028"></span>
+            <span style="flex:none;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#FF6028">01</span>
+            <span style="font:500 21px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Risk Assessment</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.14);display:flex;align-items:baseline;gap:18px;padding:15px 0">
+            <span style="flex:none;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">02</span>
+            <span style="font:500 21px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:rgba(26,21,16,.44)">Pricing &amp; Revenue</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.14);display:flex;align-items:baseline;gap:18px;padding:15px 0">
+            <span style="flex:none;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">03</span>
+            <span style="font:500 21px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:rgba(26,21,16,.44)">Inventory Management</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.14);display:flex;align-items:baseline;gap:18px;padding:15px 0">
+            <span style="flex:none;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">04</span>
+            <span style="font:500 21px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:rgba(26,21,16,.44)">Compliance</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.14);border-bottom:1px solid rgba(26,21,16,.14);display:flex;align-items:baseline;gap:18px;padding:15px 0">
+            <span style="flex:none;font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">05</span>
+            <span style="font:500 21px/1.2 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:rgba(26,21,16,.44)">Procurement</span>
+          </div>
+        </div>
+        <a href="#1b" style="position:absolute;left:56px;bottom:56px;font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:#17130f;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">ALL&nbsp;FIVE&nbsp;AGENTS&nbsp;→</a>
+        <div style="position:absolute;right:56px;top:42px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.42)">FIG.&nbsp;01&nbsp;·&nbsp;CAPITAL&nbsp;&amp;&nbsp;LOGISTICS</div>
+        <div style="position:absolute;left:568px;right:56px;top:96px;height:544px">
+          <svg viewBox="0 0 600 400" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block">
+            <sc-for list="{{ links }}" as="l" hint-placeholder-count="6"><line x1="{{ l.x1 }}" y1="{{ l.y1 }}" x2="{{ l.x2 }}" y2="{{ l.y2 }}" stroke="rgba(26,21,16,.16)" stroke-width="0.5"></line></sc-for>
+            <sc-for list="{{ dots }}" as="d" hint-placeholder-count="60"><circle cx="{{ d.cx }}" cy="{{ d.cy }}" r="{{ d.r }}" fill="{{ d.c }}" opacity="{{ d.o }}"></circle></sc-for>
+          </svg>
+        </div>
+        <div style="position:absolute;left:568px;right:56px;top:660px;border-top:1px solid rgba(26,21,16,.18);padding-top:24px;display:flex;align-items:flex-start;gap:44px">
+          <div style="flex:none;width:312px">
+            <div style="font:600 30px/1.05 'Space Grotesk',sans-serif;letter-spacing:-.035em">Supplier Risk Intelligence</div>
+            <div style="margin-top:14px;font:italic 400 19px/1.32 'Newsreader',serif">Reduce penalties &amp; delays <em style="font-style:italic;color:#FF6028;white-space:nowrap">up to 50%</em></div>
+          </div>
+          <p style="margin:0;flex:1;min-width:0;font:400 14.5px/1.62 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);text-wrap:pretty">Detects early disruption signals across supplier networks including financial instability, geopolitical exposure, and operational risk.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="1c" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#fff;background:#17130f;padding:5px 9px">1c</span>
+        <span style="font:500 12px 'Space Grotesk',sans-serif;letter-spacing:.02em">FAQ — full-bleed numbered rows, oversized head</span>
+      </div>
+      <div style="position:relative;width:1440px;height:1250px;background:#f4f2ee;overflow:hidden;box-shadow:0 24px 60px rgba(26,21,16,.14)">
+        
+        
+        <h2 style="position: absolute; left: 52px; top: 52px; margin: 0; font: 600 128px/0.9 'Space Grotesk',sans-serif; letter-spacing: -.052em; color: #17130f">The&nbsp;<em style="font-family: Newsreader, serif; font-weight: 400; font-size: 1.02em; letter-spacing: -0.02em; color: rgb(255, 96, 40);">curiosity&nbsp;</em><span style="letter-spacing: -0.052em;">corner</span><br></h2>
+        <div style="position:absolute;right:56px;top:150px;width:330px;text-align:right">
+          
+          
+          
+        </div>
+        <div style="position: absolute; left: 56px; right: 56px; top: 220px; display: flex; flex-direction: column">
+          <div style="border-top:1px solid rgba(26,21,16,.16)">
+            <div style="display:flex;align-items:baseline;gap:38px;padding:24px 0">
+              <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#FF6028">01</span>
+              <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">Is my company ready for AI transformation?</span>
+              <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:#FF6028">−</span>
+            </div>
+            <p style="margin:0 0 32px 72px;max-width:660px;font:400 16px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6)">Readiness is less about tooling and more about decision clarity. If you can name the decisions that matter most, we can assess the rest with you in a single working session.</p>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">02</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">What makes Anthrobyte different?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">03</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">Do you build custom solutions or use off-the-shelf tools?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">04</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">How long does it take to see results?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">05</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">Is our data secure with you?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">06</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">Do you train our teams too?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">07</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">Can you help us create an AI governance framework?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);border-bottom:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:38px;padding:24px 0">
+            <span style="flex:none;width:34px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">08</span>
+            <span style="flex:1;font:500 27px/1.18 'Space Grotesk',sans-serif;letter-spacing:-.03em;color:#17130f">What is the first step to engage with you?</span>
+            <span style="font:400 24px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="1d" style="display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;align-items:baseline;gap:14px">
+        <span style="font:600 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#fff;background:#17130f;padding:5px 9px">1d</span>
+        <span style="font:500 12px 'Space Grotesk',sans-serif;letter-spacing:.02em">FAQ — split with sticky head, rows indented into a column</span>
+      </div>
+      <div style="position:relative;width:1440px;height:920px;background:#f4f2ee;overflow:hidden;box-shadow:0 24px 60px rgba(26,21,16,.14)">
+        <div style="position:absolute;left:56px;top:42px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.42)">06&nbsp;—&nbsp;FAQ</div>
+        <div style="position:absolute;left:56px;right:56px;top:74px;height:1px;background:rgba(26,21,16,.14)"></div>
+        <div style="position:absolute;left:508px;top:74px;bottom:0;width:1px;background:rgba(26,21,16,.1)"></div>
+        <h2 style="position:absolute;left:52px;top:150px;margin:0;font:600 82px/0.94 'Space Grotesk',sans-serif;letter-spacing:-.05em;color:#17130f">Before<br>you <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.02em;letter-spacing:-.02em;color:#FF6028">ask.</em></h2>
+        <p style="position:absolute;left:56px;top:400px;margin:0;width:300px;font:italic 400 20px/1.46 'Newsreader',serif;color:rgba(26,21,16,.58)">Straight answers, before the first working session.</p>
+        <a href="mailto:hello@anthrobyte.ai" style="position:absolute;left:56px;top:500px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.7);border-bottom:1px solid rgba(255,96,40,.7);padding-bottom:6px">HELLO@ANTHROBYTE.AI&nbsp;→</a>
+        <div style="position:absolute;left:56px;bottom:48px;font:400 9px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.35)">DRAFT&nbsp;ANSWERS&nbsp;—&nbsp;FINAL&nbsp;COPY&nbsp;PENDING</div>
+        <div style="position:absolute;left:580px;right:56px;top:150px;display:flex;flex-direction:column">
+          <div style="position:relative;border-top:1px solid rgba(26,21,16,.16)">
+            <span style="position:absolute;left:0;top:-1px;width:100%;height:1px;background:#FF6028"></span>
+            <div style="display:flex;align-items:baseline;gap:28px;padding:22px 0">
+              <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#FF6028">01</span>
+              <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is my company ready for AI transformation?</span>
+              <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:#FF6028">−</span>
+            </div>
+            <p style="margin:0 0 30px 58px;max-width:600px;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6)">Readiness is less about tooling and more about decision clarity. If you can name the decisions that matter most, we can assess the rest with you in a single working session.</p>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">02</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What makes Anthrobyte different?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">03</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do you build custom solutions or use off-the-shelf tools?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">04</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">How long does it take to see results?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">05</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is our data secure with you?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">06</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do you train our teams too?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">07</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Can you help us create an AI governance framework?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+          <div style="border-top:1px solid rgba(26,21,16,.16);border-bottom:1px solid rgba(26,21,16,.16);display:flex;align-items:baseline;gap:28px;padding:22px 0">
+            <span style="flex:none;width:30px;font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.34)">08</span>
+            <span style="flex:1;font:500 23px/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What is the first step to engage with you?</span>
+            <span style="font:400 22px/1 'Space Grotesk',sans-serif;color:rgba(26,21,16,.4)">+</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    // placeholder stand-in for the WebGL agent diagram: hub + spoke node cloud
+    const cx = 300, cy = 200, dots = [], links = [];
+    const spokes = 5;
+    const nodes = [];
+    for (let s = 0; s < spokes; s++) {
+      const a = -Math.PI / 2 + (s / spokes) * Math.PI * 2;
+      nodes.push({ x: cx + Math.cos(a) * 150, y: cy + Math.sin(a) * 105 });
+    }
+    nodes.forEach((n, i) => {
+      links.push({ x1: cx, y1: cy, x2: n.x, y2: n.y });
+      const m = nodes[(i + 1) % nodes.length];
+      links.push({ x1: n.x, y1: n.y, x2: m.x, y2: m.y });
+    });
+    let seed = 7;
+    const rnd = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647; };
+    for (let i = 0; i < 190; i++) {
+      const a = rnd() * Math.PI * 2, r = 18 + Math.pow(rnd(), 0.6) * 160;
+      dots.push({ cx: cx + Math.cos(a) * r, cy: cy + Math.sin(a) * r * 0.7, r: 0.8 + rnd() * 1.2, o: 0.18 + rnd() * 0.45, c: rnd() > 0.88 ? '#FF6028' : '#17130f' });
+    }
+    nodes.forEach(n => dots.push({ cx: n.x, cy: n.y, r: 3.4, o: 0.9, c: '#17130f' }));
+    dots.push({ cx: cx, cy: cy, r: 5, o: 1, c: '#FF6028' });
+    return { dots, links };
+  }
+}
+
+</script>
+</body>
+</html>

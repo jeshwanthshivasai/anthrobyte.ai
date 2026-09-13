@@ -1,0 +1,138 @@
+---
+// Custom Cursor Component with smooth interpolation and link snapping
+---
+<div id="cur" class="pointer-dot" aria-hidden="true"></div>
+<div id="curr" class="pointer-ring" aria-hidden="true"></div>
+
+<style>
+  .pointer-dot {
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #ffffff;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-100px, -100px);
+    transition: transform 0.04s linear, opacity 0.2s ease, width 0.2s ease, height 0.2s ease;
+  }
+
+  .pointer-ring {
+    position: fixed;
+    z-index: 9998;
+    left: 0;
+    top: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transform: translate(-100px, -100px);
+    transition: transform 0.12s cubic-bezier(0.2, 1, 0.3, 1), border-color 0.2s ease, width 0.2s ease, height 0.2s ease;
+  }
+
+  @media (pointer: coarse) {
+    .pointer-dot, .pointer-ring {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  function initCursor() {
+    if (window.matchMedia('(pointer: coarse)').matches) return;
+
+    const cur = document.getElementById('cur');
+    const curr = document.getElementById('curr');
+    if (!cur || !curr) return;
+
+    let mouseX = -100, mouseY = -100;
+    let ringX = -100, ringY = -100;
+    let isHovering = false;
+
+    const onMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      cur.style.transform = `translate(${mouseX - 3}px, ${mouseY - 3}px)`;
+    };
+
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+
+    // Smooth RAF loop for outer ring
+    let rafId: number;
+    function renderRing() {
+      ringX += (mouseX - ringX) * 0.2;
+      ringY += (mouseY - ringY) * 0.2;
+      
+      const offset = isHovering ? 20 : 16;
+      curr.style.transform = `translate(${ringX - offset}px, ${ringY - offset}px)`;
+      rafId = requestAnimationFrame(renderRing);
+    }
+    renderRing();
+
+    // Hover detection
+    const handleMouseOver = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest('a, button, [data-h]');
+      if (target) {
+        isHovering = true;
+        curr.style.width = '40px';
+        curr.style.height = '40px';
+        curr.style.borderColor = 'var(--accent)';
+      }
+    };
+
+    const handleMouseOut = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement)?.closest('a, button, [data-h]');
+      if (target) {
+        isHovering = false;
+        curr.style.width = '32px';
+        curr.style.height = '32px';
+        curr.style.borderColor = 'rgba(255, 255, 255, 0.45)';
+      }
+    };
+
+    document.addEventListener('mouseover', handleMouseOver);
+    document.addEventListener('mouseout', handleMouseOut);
+
+    // Text scramble logic
+    const scramble = (el: HTMLElement) => {
+      if (el.dataset.busy === '1') return;
+      const orig = el.dataset.orig || el.textContent || '';
+      el.dataset.orig = orig;
+      el.dataset.busy = '1';
+      const chars = '#/\\<>*+-=';
+      const t0 = performance.now();
+      const dur = 380;
+
+      const step = (now: number) => {
+        const k = Math.min(1, (now - t0) / dur);
+        const n = Math.floor(orig.length * k);
+        let out = orig.slice(0, n);
+        for (let i = n; i < orig.length; i++) {
+          out += orig[i] === ' ' ? ' ' : chars[Math.floor(Math.random() * chars.length)];
+        }
+        el.textContent = out;
+        if (k < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = orig;
+          delete el.dataset.busy;
+        }
+      };
+      requestAnimationFrame(step);
+    };
+
+    document.addEventListener('mouseenter', (e) => {
+      const target = (e.target as HTMLElement)?.closest('[data-scr]') as HTMLElement;
+      if (target) scramble(target);
+    }, true);
+  }
+
+  // Support both normal load and view transitions
+  initCursor();
+  document.addEventListener('astro:page-load', initCursor);
+</script>

@@ -1,0 +1,109 @@
+---
+import { ClientRouter } from 'astro:transitions';
+import CustomCursor from '../components/CustomCursor.astro';
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  theme?: 'dark' | 'light';
+  nextPage?: {
+    name: string;
+    path: string;
+  };
+}
+
+const {
+  title = "Anthrobyte — Structured Intelligence for Complex Operations",
+  description = "Anthrobyte designs autonomous supply-chain AI agents and decision architecture for enterprise operations. Clarity before acceleration.",
+  theme = 'dark',
+  nextPage = { name: 'AATLAS AGENTS', path: '/agents' }
+} = Astro.props;
+
+const currentPath = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/svg+xml" href="/assets/mark.svg" />
+    
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/assets/logo-dark.svg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+
+    <ClientRouter />
+  </head>
+  <body>
+    <!-- Custom Cursor -->
+    <CustomCursor />
+
+    <!-- Film Grain Background Overlay -->
+    <div id="grain" class="film-grain" aria-hidden="true"></div>
+
+    <!-- Navigation Header + Menu -->
+    <Navigation currentPath={currentPath} theme={theme} />
+
+    <!-- Main Page Content -->
+    <slot />
+
+    <!-- Global Footer -->
+    <Footer nextPage={nextPage} />
+
+    <style>
+      .film-grain {
+        position: fixed;
+        inset: 0;
+        z-index: 50;
+        opacity: 0.045;
+        mix-blend-mode: overlay;
+        pointer-events: none;
+        background-repeat: repeat;
+      }
+    </style>
+
+    <script>
+      // Generate dynamic 128x128 procedural noise grain canvas
+      function setupGrain() {
+        const grain = document.getElementById('grain');
+        if (!grain) return;
+        
+        const gc = document.createElement('canvas');
+        gc.width = gc.height = 128;
+        const gx = gc.getContext('2d');
+        if (!gx) return;
+        
+        const gd = gx.createImageData(128, 128);
+        for (let i = 0; i < gd.data.length; i += 4) {
+          const v = Math.random() * 255 | 0;
+          gd.data[i] = gd.data[i+1] = gd.data[i+2] = v;
+          gd.data[i+3] = 255;
+        }
+        gx.putImageData(gd, 0, 0);
+        grain.style.backgroundImage = 'url(' + gc.toDataURL() + ')';
+      }
+
+      setupGrain();
+      document.addEventListener('astro:page-load', setupGrain);
+    </script>
+  </body>
+</html>

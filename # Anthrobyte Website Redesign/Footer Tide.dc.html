@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Newsreader:ital,wght@0,300;1,300&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#0b0a09; }
+  a { color:inherit; text-decoration:none; }
+  a:hover { color:#FF6028; }
+</style>
+</helmet>
+<footer id="ft" data-screen-label="Footer Tide" style="--accent:#FF6028;--g:12px;--fa:.55;--fh:100vh;position:relative;box-sizing:border-box;min-height:var(--fh);background:#0b0a09;color:#f2f0eb;font-family:'Space Grotesk',sans-serif;padding:var(--g);display:flex;flex-direction:column;gap:var(--g);overflow:hidden">
+
+  <div id="tile-word" style="position:relative;z-index:1;flex:1 1 42%;min-height:230px;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));display:flex;align-items:center;justify-content:center;overflow:hidden">
+    <pre id="word" aria-label="Anthrobyte" style="margin:0;font-family:'IBM Plex Mono',monospace;font-size:9px;line-height:1.05;color:var(--accent);white-space:pre;user-select:none">       +8#######################+                                                                          :8%%8                                                        +8%%:
+       +########################+                                                                          +%%%%                                                       :%%%%:
+        8######################8                                                             +%%%:         +%%%%                                                       :%%%%:                                          8%%%:
+         +####################8                                                              %%%%+         +%%%%                                                       :%%%%:                                         +%%%%:
+          +##################+                      ::::+::::                :::+::          %%%%+         +%%%%   :::+:::             :::::::          ::::::         :%%%%:    ::+::                                +%%%%:               :::::::
+            ++############8:                      8%%%%%%%%%%%8+:        :8%%%%%%%%%%++      %%%%%%%%%%%%+ +%%%%:8%%%%%%%%%++       :8%%%%%%%%%+    :8%%%%%%%%%%+:     :%%%%::8%%%%%%%%%+:      8%%%:          8%%%:  +%%%%%%%%%%%%:   ::8%%%%%%%%%++
+ ::++++++:     :++++8++::     :::+++++:           %%888++++8%%%%%+     :8%%%%%888%%%%%%%+    %%%%%%%%%%%%+ +%%%%%%%%888%%%%%%+     8%%%%%8888%%%  +%%%%%%8888%%%%%%+   :%%%%8%%%%888%%%%%%+    :%%%%:         :%%%%:  +%%%%%%%%%%%%: :8%%%%88+++8%%%%8:
++##########8+              :88##########           :         +%%%%+   :%%%%%:      +%%%%%:   %%%%+         +%%%%%8:     :+%%%%8   +%%%%+:        +%%%%8:      ++%%%%+  :%%%%%%8:      +%%%%%:  :%%%%:         :%%%%:  +%%%%:        :%%%%8:       8%%%8
++#############+          +#############8                ::::  8%%%8   +%%%%:         %%%%8   %%%%+         +%%%%+         8%%%8   %%%%8         +%%%%+          +%%%%: :%%%%%:         :%%%%8  :%%%%:         :%%%%:  +%%%%:        %%%%+         +%%%8
+ +##############+      :8#############+           :88%%%%%%%%%%%%%%   8%%%8          8%%%8   %%%%+         +%%%%          8%%%%   %%%%+         %%%%%            %%%%8 :%%%%+           :%%%%: :%%%%:         :%%%%:  +%%%%:       +%%%%:::::+++8%%%%8:
+  +##############:     ##############+          :8%%%%88++++++%%%%%   8%%%8          8%%%8   %%%%+         +%%%%          +%%%%   %%%%+         %%%%8            %%%%%  %%%%:           +%%%%+ :%%%%:         :%%%%:  +%%%%:       :%%%%%%%%%%%%%%88:
+   +#############8    +#############+           8%%%%:        +%%%%   8%%%8          8%%%8   %%%%+         +%%%%          +%%%%   %%%%+         8%%%%:          +%%%%+  8%%%8           8%%%%  :%%%%8         +%%%%:  +%%%%:       :%%%%8:::::::
+    :#############:  :#############+            %%%%8         +%%%%   8%%%8          8%%%8   %%%%8         +%%%%          +%%%%   %%%%+         :8%%%%+       :+%%%%8   :%%%%8+       :8%%%%+   8%%%%+       +%%%%%:  :%%%%+        +%%%%+
+     :8###########+  :############:             +%%%%++::  :::+%%%%   8%%%8          8%%%8   +%%%%%++++8%+ +%%%%          +%%%%   %%%%+           +%%%%%8+++88%%%%%+      8%%%%%8++88%%%%%%:     +%%%%%88888%%%%%%%:   %%%%%8+++888: +%%%%%8+++:++88%:
+       8##########:   ###########:               +8%%%%%%%%%%%%%%%%   8%%%8          8%%%8    +%%%%%%%%%%%:+%%%%          +%%%%   %%%%+            :+%%%%%%%%%%%8::        ++%%%%%%%%%%%8:        ++%%%%%%%%%8+%%%%:    +%%%%%%%%%%8   +8%%%%%%%%%%%%8
+        +########+    +########8:                   :++++++++++++::   :::::          :::::      :++++++::   ::::           ::::   :::::               ::+++++:::              :++++++::              ::::::   +%%%%       +++++++:        :+++++++::
+         +######+      +######8                                                                                                                                                                              +%%%%+
+          +###8:        +####8                                                                                                                                                                   ++++::::::88%%%%+
+            ::            :+:                                                                                                                                                                   :%%%%%%%%%%%%%%8:
+                                                                                                                                                                                                  :++++888+++:</pre>
+  </div>
+
+  <canvas id="tide" style="position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none"></canvas>
+
+  <div style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g)">
+    <div style="grid-column:span 6;display:flex;flex-direction:column;gap:var(--g)">
+      <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:26px 28px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="./assets/mark.svg" alt="" style="height:22px;width:auto;display:block">
+          <span style="font:600 18px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Anthrobyte</span>
+        </div>
+        <p style="margin: 0; max-width: 48ch; font: 300 17px/1.5 'Newsreader',serif; font-style: italic; color: rgba(244,242,238,.72); text-wrap: pretty">Anthrobyte partners with organizations navigating complexity across people, systems, and intelligence, bringing clarity, trust, and scale.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--g)">
+        <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">CONNECT&nbsp;WITH&nbsp;US</div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <a class="lk" href="mailto:hello@anthrobyte.ai" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">hello@anthrobyte.ai</a>
+            <a class="lk" href="mailto:careers@anthrobyte.ai" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">careers@anthrobyte.ai</a>
+          </div>
+        </div>
+        <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
+          <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">SUPPORT</div>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Vendor Portal</a>
+            <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Support Desk</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
+      <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">COMPANY</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Home</a>
+        <a class="lk" href="Anthrobyte AAtlas Agents.dc.html" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">AATLAS Agents</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Careers</a>
+        <a class="lk" href="Anthrobyte Journal.dc.html" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Journal</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Case Studies</a>
+      </div>
+    </div>
+    <div style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
+      <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">LEGAL</div>
+      <div style="display:flex;flex-direction:column;gap:11px">
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Privacy Policy</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Terms of Use</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Responsible AI</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Security and Trust Policy</a>
+        <a class="lk" href="#" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content">Cookie Policy</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:relative;z-index:3;height:1px;background:rgba(244,242,238,.18)"></div>
+
+  <div style="position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--g)">
+    <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.5);letter-spacing:.22em">©&nbsp;2026&nbsp;ANTHROBYTE</span>
+    </div>
+    <a class="mk" href="https://www.linkedin.com/company/anthrobyte" target="_blank" rel="noreferrer" aria-label="Anthrobyte on LinkedIn" title="Anthrobyte on LinkedIn" style="display:block;line-height:0;padding:8px;transition:transform .4s cubic-bezier(.7,0,.2,1)" style-hover="transform:scale(1.12)"><img src="./assets/mark.svg" alt="" style="height:26px;width:auto;display:block"></a>
+    <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px;text-align:right">
+      <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.62);letter-spacing:.22em">KEEP&nbsp;SCROLLING&nbsp;—&nbsp;NEXT&nbsp;·&nbsp;AATLAS&nbsp;AGENTS&nbsp;→</span>
+    </div>
+  </div>
+</footer>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6028&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FF6028&quot;,&quot;#E8442A&quot;,&quot;#FF8A3D&quot;,&quot;#F2F0EB&quot;],&quot;section&quot;:&quot;Colour&quot;},&quot;tideGrey&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#9a9791&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#9a9791&quot;,&quot;#6f6c67&quot;,&quot;#c4c1ba&quot;,&quot;#3f3c38&quot;],&quot;section&quot;:&quot;Colour&quot;},&quot;cycleSec&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:14,&quot;min&quot;:6,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;swellSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.3,&quot;max&quot;:2.5,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;highTide&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.4,&quot;max&quot;:1.2,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;ebbFloor&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.3,&quot;min&quot;:0.1,&quot;max&quot;:0.75,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;floodBias&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.9,&quot;min&quot;:0.6,&quot;max&quot;:4,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;drainChance&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.25,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Tide&quot;},&quot;foam&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;waveScale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.5,&quot;min&quot;:0.4,&quot;max&quot;:2.5,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;chop&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.6,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.15,&quot;max&quot;:1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;glyphSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.5,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;glyphSet&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;Density ramp&quot;,&quot;options&quot;:[&quot;Mixed punctuation&quot;,&quot;Density ramp&quot;,&quot;Braille dots&quot;],&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Wave&quot;},&quot;frost&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:75,&quot;min&quot;:15,&quot;max&quot;:95,&quot;step&quot;:5,&quot;unit&quot;:&quot;%&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Grid&quot;},&quot;gutter&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:12,&quot;min&quot;:4,&quot;max&quot;:32,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Grid&quot;},&quot;footerHeight&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:100,&quot;min&quot;:70,&quot;max&quot;:130,&quot;step&quot;:5,&quot;unit&quot;:&quot;vh&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Grid&quot;},&quot;wordScale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.6,&quot;max&quot;:1.4,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Grid&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.ft = document.getElementById('ft');
+    if (!this.ft) return;
+    this.applyProps();
+    this.rigLinks();
+    this.initTide();
+    this.settle(0);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.settle(0));
+    this._ro = new ResizeObserver(() => { this.fitWord(); this.sizeCanvas(); });
+    this._ro.observe(this.ft);
+    this._vis = () => this.settle(0);
+    document.addEventListener('visibilitychange', this._vis);
+    window.addEventListener('resize', this._vis);
+  }
+  settle(n) {
+    const ok = this.fitWord() && this.sizeCanvas();
+    if (ok) { this.draw(); return; }
+    if (n < 60) this._st = window.setTimeout(() => this.settle(n + 1), 120);
+  }
+  componentDidUpdate() { this.applyProps(); this.fitWord(); }
+  componentWillUnmount() {
+    cancelAnimationFrame(this._raf); window.clearTimeout(this._st);
+    if (this._ro) this._ro.disconnect();
+    document.removeEventListener('visibilitychange', this._vis);
+    window.removeEventListener('resize', this._vis);
+  }
+
+  applyProps() {
+    const p = this.props, ft = this.ft;
+    ft.style.setProperty('--accent', p.accent ?? '#FF6028');
+    ft.style.setProperty('--g', (p.gutter ?? 12) + 'px');
+    ft.style.setProperty('--fa', ((p.frost ?? 75) / 100).toFixed(3));
+    ft.style.setProperty('--fh', (p.footerHeight ?? 100) + 'vh');
+    this.cycle = p.cycleSec ?? 14;
+    this.high = p.highTide ?? 1;
+    this.density = p.density ?? 1;
+    this.foam = p.foam ?? 1;
+    this.grey = p.tideGrey ?? '#9a9791';
+    this.ebb = p.ebbFloor ?? 0.42;
+    this.bias = p.floodBias ?? 1.9;
+    this.drain = p.drainChance ?? 0.25;
+    this.wscale = p.waveScale ?? 1;
+    this.chop = p.chop ?? 0.5;
+    this.swell = p.swellSpeed ?? 1;
+    this.fs = 8 + 8 * (p.glyphSize ?? 0.5);
+    if (this.cv) this.sizeCanvas();
+    this.chars = this.charSet(p.glyphSet ?? 'Density ramp');
+    if (this.cv) this.seed();
+  }
+  charSet(name) {
+    if (name === 'Density ramp') return '..::--==++**##%%@';
+    if (name === 'Braille dots') return '\u2801\u2803\u2807\u2819\u2839\u2847\u2857\u286f\u28b6\u28ff';
+    return '.,\'":;~-_^*`+=/\\|()[]{}!?<>';
+  }
+
+  fitWord() {
+    const pre = document.getElementById('word'), tile = document.getElementById('tile-word');
+    if (!pre || !tile) return false;
+    const scale = this.props.wordScale ?? 1;
+    pre.style.fontSize = '9px';
+    const r = pre.getBoundingClientRect();
+    if (!r.width || !tile.clientWidth || !tile.clientHeight) return false;
+    const avail = (tile.clientWidth - 48) * scale;
+    const fs = 9 * (avail / r.width);
+    const hCap = (tile.clientHeight - 32) / (r.height / 9);
+    pre.style.fontSize = Math.max(3, Math.min(fs, hCap)).toFixed(2) + 'px';
+    return true;
+  }
+
+  rigLinks() {
+    this.ft.querySelectorAll('a.lk').forEach(a => {
+      a.style.transition = 'color .3s ease, transform .38s cubic-bezier(.7,0,.2,1)';
+      a.addEventListener('mouseenter', () => { a.style.color = 'var(--accent)'; a.style.transform = 'translateX(5px)'; });
+      a.addEventListener('mouseleave', () => { a.style.color = 'rgba(244,242,238,.8)'; a.style.transform = 'translateX(0)'; });
+    });
+  }
+
+  initTide() {
+    this.cv = document.getElementById('tide');
+    if (!this.cv) return;
+    this.ctx = this.cv.getContext('2d');
+    this.t0 = performance.now();
+    const loop = () => { this.draw(); this._raf = requestAnimationFrame(loop); };
+    this._raf = requestAnimationFrame(loop);
+  }
+  sizeCanvas() {
+    if (!this.cv) return false;
+    const r = this.ft.getBoundingClientRect();
+    if (!r.width || !r.height) return false;
+    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    this.W = r.width; this.H = r.height;
+    this.cv.width = Math.round(r.width * dpr);
+    this.cv.height = Math.round(r.height * dpr);
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    this.cw = this.fs * 0.6; this.ch = this.fs * 1.16;
+    this.cols = Math.ceil(this.W / this.cw) + 1;
+    this.rows = Math.ceil(this.H / this.ch) + 1;
+    this.tops = null;
+    this.seed();
+    return true;
+  }
+  seed() {
+    if (!this.cols) return;
+    const n = this.cols * this.rows;
+    this.gi = new Uint8Array(n);
+    this.gk = new Float32Array(n);
+    for (let i = 0; i < n; i++) { this.gi[i] = (Math.random() * this.chars.length) | 0; this.gk[i] = Math.random(); }
+    this.ph = new Float32Array(this.cols);
+    for (let c = 0; c < this.cols; c++) this.ph[c] = Math.random() * 6.283;
+  }
+
+  level(t) {
+    const k = (6.28318 / Math.max(4, this.cycle)) * this.swell;
+    const v = 0.50 * Math.sin(k * t)
+      + 0.27 * Math.sin(k * t * 0.61803 + 1.7)
+      + 0.15 * Math.sin(k * t * 1.61803 + 0.42)
+      + 0.09 * Math.sin(k * t * 2.41421 + 2.93)
+      + 0.12 * Math.sin(k * t * 0.23607 + 5.11)
+      + 0.05 * Math.sin(k * t * 4.33013 + 3.7);
+    let s = Math.pow(Math.max(0, Math.min(1, 0.5 + 0.5 * (v / 1.03))), this.bias);
+    const floor = this.ebb, hi = Math.max(floor + 0.1, this.high);
+    let lv = floor + (hi - floor) * s;
+    if (this.drain > 0) {
+      const g = Math.max(0, Math.sin(k * t * 0.0731 + 2.1));
+      const spike = Math.pow(g, 26 - 18 * this.drain) * (1 - s);
+      lv += (-0.14 - lv) * Math.min(1, spike * 1.6);
+    }
+    return lv;
+  }
+  draw() {
+    const ctx = this.ctx;
+    if (!ctx || !this.gi || !this.cv.width) return;
+    const t = (performance.now() - this.t0) / 1000;
+    ctx.clearRect(0, 0, this.W, this.H);
+    ctx.font = '400 ' + this.fs + "px 'IBM Plex Mono', monospace";
+    ctx.textBaseline = 'top';
+    const lvl = this.level(t);
+    const surface = this.H * (1 - lvl);
+    const amp = 8 + 34 * this.foam;
+    const tops = this.tops || (this.tops = new Float32Array(this.cols));
+    for (let c = 0; c < this.cols; c++) {
+      const x = c * this.cw;
+      const q = 1 / Math.max(0.2, this.wscale), sp = this.swell, ch = this.chop;
+      const w = Math.sin(x * 0.0113 * q + t * 0.61 * sp + this.ph[c] * 0.12)
+        + 0.62 * Math.sin(x * 0.0271 * q - t * 0.97 * sp + 1.3)
+        + (0.16 + 0.44 * ch) * Math.sin(x * 0.0523 * q + t * 1.53 * sp + 2.7)
+        + (0.06 + 0.34 * ch) * Math.sin(x * 0.0907 * q - t * 2.29 * sp + 0.6)
+        + 0.28 * Math.sin(x * 0.0041 * q + t * 0.23 * sp);
+      tops[c] = surface + (w / 2.45) * amp;
+    }
+    ctx.beginPath();
+    ctx.moveTo(0, this.H + 2);
+    for (let c = 0; c < this.cols; c++) ctx.lineTo(c * this.cw, tops[c]);
+    ctx.lineTo(this.W + 2, tops[this.cols - 1]);
+    ctx.lineTo(this.W + 2, this.H + 2);
+    ctx.closePath();
+    ctx.fillStyle = 'rgba(9,8,8,.95)';
+    ctx.fill();
+    const deep = [], foam = [];
+    for (let r = 0; r < this.rows; r++) {
+      const y = r * this.ch;
+      deep.length = 0; foam.length = 0;
+      let anyD = false, anyF = false;
+      for (let c = 0; c < this.cols; c++) {
+        const i = r * this.cols + c;
+        const d = y - tops[c];
+        if (d < -this.ch || this.gk[i] > this.density) { deep.push(' '); foam.push(' '); continue; }
+        const ch = this.chars[this.gi[i]];
+        if (d < this.ch * 2.6) { foam.push(ch); deep.push(' '); anyF = true; }
+        else { deep.push(ch); foam.push(' '); anyD = true; }
+      }
+      if (anyD) { ctx.fillStyle = this.rgba(this.grey, 0.3); ctx.fillText(deep.join(''), 0, y); }
+      if (anyF) { ctx.fillStyle = this.rgba(this.grey, 0.92); ctx.fillText(foam.join(''), 0, y); }
+    }
+    const n = this.gi.length;
+    for (let k = 0; k < 90; k++) { const i = (Math.random() * n) | 0; this.gi[i] = (Math.random() * this.chars.length) | 0; }
+  }
+  rgba(hex, a) {
+    const h = (hex || '#9a9791').replace('#', '');
+    const v = h.length === 3 ? h.split('').map(x => x + x).join('') : h;
+    return 'rgba(' + parseInt(v.slice(0, 2), 16) + ',' + parseInt(v.slice(2, 4), 16) + ',' + parseInt(v.slice(4, 6), 16) + ',' + a + ')';
+  }
+  renderVals() { return {}; }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Geist:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>body{margin:0;background:#0a0a0b}a{color:#f2f0eb;text-decoration:none}a:hover{color:#ff6a1a}</style>
+</helmet>
+<div style="position:relative;width:100%;height:100vh;min-height:800px;background:#0a0a0b;overflow:hidden;font-family:'Geist',sans-serif">
+  <div style="position:absolute;top:40px;left:56px;right:56px;display:flex;align-items:center;justify-content:space-between;z-index:4">
+    <span style="font:600 19px 'Geist',sans-serif;color:#f2f0eb;letter-spacing:-.01em">anthrobyte</span>
+    <span style="font:500 11px 'IBM Plex Mono',monospace;color:#f2f0eb;letter-spacing:.28em">MENU</span>
+  </div>
+  <div style="position:absolute;left:50%;top:37%;transform:translate(-50%,-50%);width:34vh;height:34vh">
+    <div style="position:absolute;inset:-55%;background:radial-gradient(circle,rgba(255,106,26,.16),rgba(255,106,26,.05) 42%,transparent 66%)"></div>
+    <div id="mark" style="position:absolute;inset:0"></div>
+  </div>
+  <div style="position:absolute;left:2vw;right:2vw;bottom:9vh;text-align:center;z-index:3">
+    <h1 style="margin:0;font:600 10.6vw/0.93 'Geist',sans-serif;letter-spacing:-.05em;color:#f2f0eb">
+      <div>Structured Intelligence</div>
+      <div>for Complex Operations</div>
+    </h1>
+  </div>
+  <div style="position:absolute;bottom:34px;left:0;right:0;display:flex;justify-content:center;z-index:3">
+    <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.4);letter-spacing:.26em">MINNEAPOLIS&#160;&#183;&#160;HYDERABAD&#160;&#160;&#8212;&#160;&#160;EST&#160;2025</span>
+  </div>
+  <div id="grain" style="position:absolute;inset:0;pointer-events:none;opacity:.08;mix-blend-mode:overlay;z-index:5"></div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() { this.t = 0; this.boot(); this.makeGrain(); }
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    if (this.ro) this.ro.disconnect();
+    if (this.renderer) { this.renderer.dispose(); this.renderer.domElement.remove(); }
+  }
+  makeGrain() {
+    const c = document.createElement('canvas'); c.width = c.height = 128;
+    const x = c.getContext('2d'), d = x.createImageData(128, 128);
+    for (let i = 0; i < d.data.length; i += 4) { const v = Math.random() * 255 | 0; d.data[i] = d.data[i+1] = d.data[i+2] = v; d.data[i+3] = 255; }
+    x.putImageData(d, 0, 0);
+    const g = document.getElementById('grain');
+    if (g) { g.style.backgroundImage = 'url(' + c.toDataURL() + ')'; g.style.backgroundSize = '128px 128px'; }
+  }
+  blade(THREE) {
+    const D = 1.0, R = 0.769, CH = 0.620, AX = 0.7546, CY = 0.852, CTL = 0.740;
+    const s = new THREE.Shape();
+    s.moveTo(CH, D); s.lineTo(-CH, D);
+    s.quadraticCurveTo(-CTL, D, -AX, CY);
+    s.absarc(0, D, R, Math.PI * 1.0617, Math.PI * 1.9383, false);
+    s.quadraticCurveTo(CTL, D, CH, D);
+    return s;
+  }
+  async boot() {
+    const THREE = await import('https://esm.sh/three@0.161.0');
+    const el = document.getElementById('mark'); if (!el) return;
+    const w = el.clientWidth || 400, h = el.clientHeight || 400;
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(w, h);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    renderer.domElement.style.display = 'block';
+    el.appendChild(renderer.domElement);
+    this.renderer = renderer;
+    const scene = new THREE.Scene();
+    const F = 2.05;
+    const camera = new THREE.OrthographicCamera(-F, F, F, -F, -30, 60);
+    camera.position.set(0.18, 6, 1.05); camera.lookAt(0, 0, 0);
+    const geo = new THREE.ExtrudeGeometry(this.blade(THREE), { depth: 0.16, bevelEnabled: true, bevelThickness: 0.02, bevelSize: 0.024, bevelSegments: 3, curveSegments: 48 });
+    geo.rotateX(-Math.PI / 2);
+    const body = new THREE.MeshStandardMaterial({ color: 0x121317, metalness: 0.58, roughness: 0.38 });
+    const edgeGeo = new THREE.EdgesGeometry(geo, 30);
+    const edgeMat = new THREE.LineBasicMaterial({ color: 0xFF6A1A, transparent: true, opacity: 0.55 });
+    const mark = new THREE.Group();
+    for (let b = 0; b < 3; b++) {
+      const m = new THREE.Mesh(geo, body); m.rotation.y = (b / 3) * Math.PI * 2; mark.add(m);
+      const ln = new THREE.LineSegments(edgeGeo, edgeMat); ln.rotation.y = m.rotation.y; mark.add(ln);
+    }
+    scene.add(mark);
+    scene.add(new THREE.HemisphereLight(0x3a3f4c, 0x08090b, 0.85));
+    const key = new THREE.DirectionalLight(0xffffff, 1.9); key.position.set(2.4, 6, 3.0); scene.add(key);
+    const rim = new THREE.DirectionalLight(0xffe2c8, 0.7); rim.position.set(-3.5, 2, -2.5); scene.add(rim);
+    const glow = new THREE.PointLight(0xFF6A1A, 16, 10, 2); glow.position.set(0, -1.4, 0.6); scene.add(glow);
+    this.ro = new ResizeObserver(() => {
+      const nw = el.clientWidth, nh = el.clientHeight; if (!nw || !nh) return;
+      renderer.setSize(nw, nh);
+    });
+    this.ro.observe(el);
+    const tick = () => {
+      this.raf = requestAnimationFrame(tick);
+      this.t += 0.016;
+      camera.position.x = 0.18 + Math.sin(this.t * 0.11) * 0.05;
+      camera.position.z = 1.05 + Math.cos(this.t * 0.09) * 0.04;
+      camera.lookAt(0, 0, 0);
+      renderer.render(scene, camera);
+    };
+    tick();
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

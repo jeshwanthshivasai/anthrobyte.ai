@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthrobyte — Mark Style Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    html, body { margin: 0; padding: 0; background: #0b0a09; overflow: hidden; }
+    a { color: #f2f0eb; } a:hover { color: #FF6028; }
+    @keyframes labFade { from { opacity: 0; } to { opacity: 1; } }
+  </style>
+</helmet>
+<div id="lab-root" data-screen-label="Mark Style Lab" style="position:fixed;inset:0;background:#0b0a09;font-family:'Space Grotesk',sans-serif">
+  <div id="lab-gl" style="position:absolute;inset:0"></div>
+  <div style="position:absolute;left:4vw;top:5vh;display:flex;align-items:baseline;gap:14px;pointer-events:none">
+    <span style="font:600 15px 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f2f0eb">anthrobyte</span>
+    <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.28em;color:rgba(242,240,235,.4)">MARK / STYLE LAB</span>
+  </div>
+  <div style="position:absolute;left:0;right:0;bottom:6vh;display:flex;flex-direction:column;align-items:center;gap:10px;pointer-events:none;animation:labFade .8s ease .3s both">
+    <span style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.3em;color:rgba(255,96,40,.85)">{{ styleLabel }}</span>
+    <span style="font:400 12px 'Space Grotesk',sans-serif;color:rgba(242,240,235,.45)">{{ styleNote }}</span>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;style&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;obsidian&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;obsidian&quot;,&quot;copper&quot;,&quot;aurora&quot;],&quot;section&quot;:&quot;Mark&quot;},&quot;gap&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.9,&quot;min&quot;:0.3,&quot;max&quot;:1.6,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Mark&quot;},&quot;autorotate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Mark&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6028&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FF6028&quot;,&quot;#ff6a1a&quot;,&quot;#e8620c&quot;],&quot;section&quot;:&quot;Brand&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const s = this.props.style ?? 'obsidian';
+    const L = { obsidian: 'OBSIDIAN / CLEARCOAT', copper: 'BRUSHED COPPER', aurora: 'IRIDESCENT CARBON' };
+    const N = {
+      obsidian: 'Piano-black lacquer. Studio reflections carry the form; orange lives only in the rim.',
+      copper: 'Full warm metal. The mark itself becomes the light source of the page.',
+      aurora: 'Dark carbon with a thin-film sheen that shifts hue as it turns.'
+    };
+    return { styleLabel: L[s] || L.obsidian, styleNote: N[s] || N.obsidian };
+  }
+  blade(THREE) {
+    const s = new THREE.Shape();
+    s.moveTo(-0.857, 1.510);
+    s.bezierCurveTo(-0.971, 1.510, -1.065, 1.418, -1.043, 1.306);
+    s.bezierCurveTo(-1.029, 1.238, -1.009, 1.170, -0.982, 1.105);
+    s.bezierCurveTo(-0.929, 0.977, -0.851, 0.860, -0.752, 0.762);
+    s.bezierCurveTo(-0.654, 0.663, -0.537, 0.585, -0.409, 0.532);
+    s.bezierCurveTo(-0.280, 0.479, -0.142, 0.451, -0.003, 0.451);
+    s.bezierCurveTo(0.136, 0.451, 0.274, 0.479, 0.402, 0.532);
+    s.bezierCurveTo(0.531, 0.585, 0.647, 0.663, 0.746, 0.762);
+    s.bezierCurveTo(0.844, 0.860, 0.922, 0.977, 0.975, 1.105);
+    s.bezierCurveTo(1.002, 1.170, 1.023, 1.238, 1.036, 1.306);
+    s.bezierCurveTo(1.058, 1.418, 0.964, 1.510, 0.850, 1.510);
+    s.lineTo(-0.857, 1.510);
+    return s;
+  }
+  mat(THREE, style, AC) {
+    if (style === 'copper') return new THREE.MeshStandardMaterial({ color: 0x2a1408, metalness: 1, roughness: 0.22, envMapIntensity: 1.1 });
+    if (style === 'aurora') return new THREE.MeshPhysicalMaterial({ color: 0x0a0a0c, metalness: 0.85, roughness: 0.3, iridescence: 1, iridescenceIOR: 1.5, envMapIntensity: 0.8 });
+    return new THREE.MeshPhysicalMaterial({ color: 0x060606, metalness: 0.35, roughness: 0.3, clearcoat: 1, clearcoatRoughness: 0.08, envMapIntensity: 0.7 });
+  }
+  async componentDidMount() {
+    const win = document.defaultView || window; this.win = win; this.disposed = false; this.t = 0;
+    this.mxN = 0; this.myN = 0; this.pRX = 0; this.pRY = 0;
+    this.mm = (e) => { this.mxN = (e.clientX / win.innerWidth) * 2 - 1; this.myN = (e.clientY / win.innerHeight) * 2 - 1; };
+    win.addEventListener('mousemove', this.mm);
+    let THREE;
+    try { THREE = await import('https://esm.sh/three@0.161.0'); } catch (e) { return; }
+    let RoomEnv = null;
+    try { RoomEnv = (await import('https://esm.sh/three@0.161.0/examples/jsm/environments/RoomEnvironment.js')).RoomEnvironment; } catch (e) {}
+    if (this.disposed) return;
+    const el = document.getElementById('lab-gl'); if (!el) return;
+    const W = () => win.innerWidth, H = () => win.innerHeight;
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+    renderer.setPixelRatio(Math.min(win.devicePixelRatio || 1, 2));
+    renderer.setSize(W(), H());
+    renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = 1.15;
+    el.appendChild(renderer.domElement); this.renderer = renderer;
+    const scene = new THREE.Scene();
+    if (RoomEnv) {
+      const pmrem = new THREE.PMREMGenerator(renderer);
+      scene.environment = pmrem.fromScene(new RoomEnv(), 0.04).texture;
+    }
+    const cam = new THREE.PerspectiveCamera(30, W() / H(), 0.1, 50);
+    cam.position.set(0, 0, 7.2); cam.lookAt(0, 0, 0);
+    const AC = new THREE.Color(this.props.accent ?? '#FF6028');
+    const geo = new THREE.ExtrudeGeometry(this.blade(THREE), { depth: 0.14, bevelEnabled: true, bevelThickness: 0.035, bevelSize: 0.03, bevelSegments: 4, curveSegments: 28 });
+    geo.translate(0, 0, -0.07);
+    const group = new THREE.Group();
+    this.meshes = []; this.layerGroups = [];
+    const mat0 = this.mat(THREE, this.props.style ?? 'obsidian', AC);
+    for (let L = 0; L < 5; L++) {
+      const lay = new THREE.Group();
+      for (let b = 0; b < 3; b++) {
+        const g = new THREE.Group(); g.rotation.z = b * Math.PI * 2 / 3;
+        const m = new THREE.Mesh(geo, mat0);
+        m.position.y = -0.11; g.add(m); lay.add(g); this.meshes.push(m);
+      }
+      group.add(lay); this.layerGroups.push(lay);
+    }
+    scene.add(group);
+    scene.add(new THREE.HemisphereLight(0xfff2e4, 0x14100c, 0.12));
+    const key = new THREE.DirectionalLight(0xffffff, 0.5); key.position.set(2.5, 3.5, 3); scene.add(key);
+    const rimA = new THREE.DirectionalLight(0xffb27a, 2.6); rimA.position.set(-3.4, 1.8, -2.4); scene.add(rimA);
+    const rimB = new THREE.DirectionalLight(AC, 2.2); rimB.position.set(3.4, -0.6, -2.6); scene.add(rimB);
+    const orb = new THREE.PointLight(AC, 14, 16, 2); scene.add(orb);
+    const orb2 = new THREE.PointLight(0xffc490, 8, 16, 2); scene.add(orb2);
+    this.lastStyle = this.props.style ?? 'obsidian';
+    const ro = () => { cam.aspect = W() / H(); cam.updateProjectionMatrix(); renderer.setSize(W(), H()); };
+    win.addEventListener('resize', ro); this.ro = ro;
+    const tick = () => {
+      if (this.disposed) return;
+      this.raf = win.requestAnimationFrame(tick);
+      this.t += 0.016;
+      const t = this.t, st = this.props.style ?? 'obsidian';
+      if (st !== this.lastStyle) {
+        this.lastStyle = st;
+        const nm = this.mat(THREE, st, AC);
+        this.meshes.forEach((m) => { m.material.dispose(); m.material = nm; });
+      }
+      const rv = Math.min(1, t / 2.8), e = 1 - Math.pow(1 - rv, 3);
+      this.pRX += (this.myN * 0.16 - this.pRX) * 0.04;
+      this.pRY += (this.mxN * 0.24 - this.pRY) * 0.04;
+      const spin = (this.props.autorotate ?? true) ? Math.sin(t * 0.16) * 0.32 : 0;
+      group.rotation.set(-0.92 + this.pRX + Math.sin(t * 0.3) * 0.03, spin + this.pRY, 0.14 + 0.02 * Math.sin(t * 0.2));
+      group.position.y = Math.sin(t * 0.5) * 0.04;
+      const gap = (this.props.gap ?? 0.9) * e;
+      for (let i = 0; i < this.layerGroups.length; i++) this.layerGroups[i].position.z = (i - 2) * gap;
+      group.scale.setScalar(0.42 + 0.24 * e);
+      const ang = t * 0.42;
+      orb.position.set(Math.cos(ang) * 2.6, 0.4 + Math.sin(t * 0.31) * 1.1, Math.sin(ang) * 2.6);
+      orb.intensity = 14 * e * (0.8 + 0.2 * Math.sin(t * 0.5));
+      orb2.position.set(Math.cos(ang + Math.PI) * 2.9, -0.5 + Math.sin(t * 0.27 + 1) * 1.1, Math.sin(ang + Math.PI) * 2.9);
+      orb2.intensity = 8 * e * (0.8 + 0.2 * Math.sin(t * 0.44 + 2));
+      rimA.intensity = 2.6 * e; rimB.intensity = 2.2 * e; key.intensity = 0.5 * e;
+      renderer.render(scene, cam);
+    };
+    tick();
+  }
+  componentWillUnmount() {
+    const win = this.win || window; this.disposed = true;
+    if (this.raf) win.cancelAnimationFrame(this.raf);
+    if (this.mm) win.removeEventListener('mousemove', this.mm);
+    if (this.ro) win.removeEventListener('resize', this.ro);
+    if (this.renderer) { this.renderer.dispose(); this.renderer.domElement.remove(); }
+  }
+}
+</script>
+</body>
+</html>

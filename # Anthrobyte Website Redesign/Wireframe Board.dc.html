@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#eceae4}
+body{font-family:'IBM Plex Mono',monospace;-webkit-font-smoothing:antialiased}
+a{color:#1a1614;text-decoration:none}a:hover{color:#d94a1a}
+::selection{background:rgba(217,74,26,.2)}
+*{-webkit-user-select:none;user-select:none}
+</style>
+</helmet>
+
+<section style="padding:44px 48px 40px" data-screen-label="Wireframe board">
+  <div style="display:flex;align-items:baseline;gap:12px;margin:0 0 6px">
+    <span style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;padding:4px 8px;background:#1a1614;color:#fff">T1</span>
+    <span style="font:600 13px 'IBM Plex Mono',monospace;letter-spacing:.04em;color:#1a1614">DRAGGABLE WIREFRAMES — S5 AGENTS &amp; FAQ</span>
+  </div>
+  <div style="font:400 11.5px/1.7 'IBM Plex Mono',monospace;color:rgba(26,22,20,.5);max-width:760px;margin-bottom:22px">Drag any block to move it. Drag the corner to resize. Click to select, <span style="color:#d94a1a">Delete</span> to remove, hold <span style="color:#d94a1a">Alt</span> to move off-grid. Arrangements save automatically. Hit COPY on a board and paste it back to me — I'll build that composition in V7.</div>
+
+  <div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:11px 14px;margin-bottom:30px;background:#f7f5f1;border:1px solid rgba(26,22,20,.14);width:fit-content">
+    <span style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:rgba(26,22,20,.42)">SELECTED</span>
+    <span style="font:500 11px 'IBM Plex Mono',monospace;color:#1a1614;min-width:340px">{{ readout }}</span>
+    <button onClick="{{ toggleSnap }}" style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:6px 10px;background:transparent;border:1px solid rgba(26,22,20,.24);color:#1a1614;cursor:pointer" style-hover="border-color:#d94a1a;color:#d94a1a">{{ snapLabel }}</button>
+    <button onClick="{{ resetAll }}" style="font:500 9.5px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:6px 10px;background:transparent;border:1px solid rgba(26,22,20,.24);color:#1a1614;cursor:pointer" style-hover="border-color:#d94a1a;color:#d94a1a">RESET ALL</button>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:52px;align-items:flex-start">
+    <sc-for list="{{ boards }}" as="bd" hint-placeholder-count="6">
+      <div id="{{ bd.id }}" style="flex:none;display:flex;flex-direction:column;gap:11px;scroll-margin-top:90px">
+        <div style="display:flex;align-items:center;gap:11px">
+          <a href="{{ bd.href }}" style="font:600 10px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:4px 8px;background:rgba(26,22,20,.1);color:#1a1614">{{ bd.id }}</a>
+          <span style="font:500 11.5px 'IBM Plex Mono',monospace;letter-spacing:.02em;color:#1a1614">{{ bd.name }}</span>
+          <span style="font:400 10.5px 'IBM Plex Mono',monospace;color:rgba(26,22,20,.42)">{{ bd.note }}</span>
+          <span style="flex:1"></span>
+          <button onClick="{{ bd.onAdd }}" style="font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:5px 9px;background:transparent;border:1px solid rgba(26,22,20,.2);color:rgba(26,22,20,.7);cursor:pointer" style-hover="border-color:#d94a1a;color:#d94a1a">+ BLOCK</button>
+          <button onClick="{{ bd.onCopy }}" style="font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:5px 9px;background:transparent;border:1px solid rgba(26,22,20,.2);color:rgba(26,22,20,.7);cursor:pointer" style-hover="border-color:#d94a1a;color:#d94a1a">{{ bd.copyLabel }}</button>
+          <button onClick="{{ bd.onReset }}" style="font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.14em;padding:5px 9px;background:transparent;border:1px solid rgba(26,22,20,.2);color:rgba(26,22,20,.7);cursor:pointer" style-hover="border-color:#d94a1a;color:#d94a1a">RESET</button>
+        </div>
+        <div data-board="{{ bd.key }}" style="{{ bd.style }}">
+          <sc-for list="{{ bd.boxes }}" as="b" hint-placeholder-count="8">
+            <div data-box="{{ b.key }}" data-board="{{ b.bkey }}" style="{{ b.style }}">
+              <sc-if value="{{ b.hasLabel }}" hint-placeholder-val="{{ true }}">
+                <div style="position:absolute;top:-8px;left:9px;padding:0 6px;background:#f7f5f1;font:500 8.5px/1 'IBM Plex Mono',monospace;letter-spacing:.14em;white-space:nowrap;color:{{ b.labelColor }}">{{ b.label }}</div>
+              </sc-if>
+              <div style="{{ b.innerStyle }}">
+                <sc-for list="{{ b.bars }}" as="bw" hint-placeholder-count="0">
+                  <div style="height:20px;background:rgba(26,22,20,.18);width:{{ bw }}"></div>
+                </sc-for>
+                <sc-for list="{{ b.lines }}" as="lw" hint-placeholder-count="0">
+                  <div style="height:5px;background:rgba(26,22,20,.13);width:{{ lw }}"></div>
+                </sc-for>
+                <sc-if value="{{ b.cross }}" hint-placeholder-val="{{ false }}">
+                  <div style="flex:1;position:relative;border:1px solid rgba(26,22,20,.12);background-image:linear-gradient(rgba(26,22,20,.055),rgba(26,22,20,.055));min-height:40px">
+                    <svg viewBox="0 0 100 100" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%">
+                      <line x1="0" y1="0" x2="100" y2="100" stroke="rgba(26,22,20,.14)" stroke-width=".4" vector-effect="non-scaling-stroke"></line>
+                      <line x1="100" y1="0" x2="0" y2="100" stroke="rgba(26,22,20,.14)" stroke-width=".4" vector-effect="non-scaling-stroke"></line>
+                    </svg>
+                    <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:5px 10px;background:#f7f5f1;font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(26,22,20,.55);white-space:nowrap">{{ b.crossLabel }}</div>
+                  </div>
+                </sc-if>
+                <sc-for list="{{ b.rows }}" as="r" hint-placeholder-count="0">
+                  <div style="display:flex;align-items:center;gap:14px;padding:9px 0;border-top:1px solid rgba(26,22,20,.14)">
+                    <span style="flex:none;font:500 8.5px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:{{ r.numColor }}">{{ r.num }}</span>
+                    <span style="flex:1;height:8px;background:{{ r.fill }};width:{{ r.w }}"></span>
+                    <span style="flex:none;width:8px;height:8px;border:1px solid rgba(26,22,20,.2)"></span>
+                  </div>
+                </sc-for>
+                <sc-if value="{{ b.hasCells }}" hint-placeholder-val="{{ false }}">
+                  <div style="flex:1;display:flex;align-items:stretch;min-height:36px">
+                    <sc-for list="{{ b.cells }}" as="c" hint-placeholder-count="5">
+                      <div style="flex:1;min-width:0;border-top:2px solid {{ c.top }};padding:10px 14px 0 0;display:flex;flex-direction:column;gap:8px">
+                        <span style="font:500 8.5px 'IBM Plex Mono',monospace;letter-spacing:.12em;color:{{ c.numColor }}">{{ c.num }}</span>
+                        <span style="height:7px;background:{{ c.fill }};width:78%"></span>
+                        <span style="height:7px;background:{{ c.fill }};width:52%"></span>
+                      </div>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ b.pill }}" hint-placeholder-val="{{ false }}">
+                  <div style="display:inline-flex;align-items:center;gap:9px;align-self:flex-start;padding:9px 15px;border:1px solid rgba(26,22,20,.32)">
+                    <span style="height:6px;width:74px;background:rgba(26,22,20,.24)"></span>
+                    <span style="font:500 10px 'IBM Plex Mono',monospace;color:#d94a1a">→</span>
+                  </div>
+                </sc-if>
+                <sc-if value="{{ b.vertical }}" hint-placeholder-val="{{ false }}">
+                  <div style="flex:1;display:flex;align-items:flex-start;justify-content:center">
+                    <div style="width:6px;height:88%;background:rgba(26,22,20,.14)"></div>
+                  </div>
+                </sc-if>
+              </div>
+              <div data-rs="1" data-box="{{ b.key }}" data-board="{{ b.bkey }}" style="{{ b.handleStyle }}"></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <p style="margin:30px 0 0;font:400 11.5px/1.7 'IBM Plex Mono',monospace;color:rgba(26,22,20,.5)">Try next: &ldquo;build <a href="#1b" style="color:#d94a1a">1b</a> in V7&rdquo; · &ldquo;<a href="#1c" style="color:#d94a1a">1c</a> but the plate full-bleed&rdquo; · &ldquo;here&rsquo;s my arrangement of <a href="#1e" style="color:#d94a1a">1e</a>: [paste]&rdquo; · &ldquo;more FAQ directions&rdquo;</p>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1400,&quot;height&quot;:900}}">
+const DEFS = [
+  { key:'a', id:'1a', name:'PINNED VIEWER', note:'index rail left · plate right · caption docked', w:1200, h:790,
+    boxes:[
+      ['SECTION NO','eyebrow',0,26,2,26],
+      ['','rule',0,68,12,1],
+      ['TITLE — "OUR \'AI\' AGENTS"','title',0,100,4.5,170],
+      ['LEAD','body',0,292,3.5,112],
+      ['AGENT INDEX','rows5',0,450,4.5,250],
+      ['DIAGRAM / WEBGL','plate',5,100,7,430],
+      ['ACTIVE CAPTION','caption',5,560,4,140],
+      ['METRIC','metric',9,560,3,110],
+      ['CTA','cta',0,714,3,78]
+    ]},
+  { key:'b', id:'1b', name:'FULL-BLEED STAGE', note:'plate behind everything · agents as bottom ticker', w:1200, h:790,
+    boxes:[
+      ['DIAGRAM / FULL-BLEED','plate',0,0,12,600],
+      ['SECTION NO','eyebrow',0.5,30,2,26],
+      ['TITLE — "OUR \'AI\' AGENTS"','title',0.5,84,5,170],
+      ['LEAD','body',0.5,278,3.5,104],
+      ['CTA','cta',0.5,406,3,78],
+      ['METRIC','metric',8,300,3.5,120],
+      ['ACTIVE CAPTION','caption',8,446,3.5,130],
+      ['AGENT TICKER','cells5',0.5,632,11,112]
+    ]},
+  { key:'c', id:'1c', name:'EDITORIAL GUTTER', note:'wide title · agent table · plate breaks the grid', w:1200, h:860,
+    boxes:[
+      ['SEC','vlabel',0,100,0.6,190],
+      ['TITLE — "OUR \'AI\' AGENTS"','title',1,86,7,190],
+      ['LEAD','body',8.5,102,3.5,120],
+      ['','rule',0,306,12,1],
+      ['AGENT TABLE','cells5',1,338,10.5,150],
+      ['ACTIVE CAPTION','caption',1,542,3,170],
+      ['DIAGRAM / WEBGL','plate',4.5,528,7.5,270],
+      ['CTA','cta',1,760,3,78]
+    ]},
+  { key:'d', id:'1d', name:'FAQ — TWO-UP LEDGER', note:'head column left · rows right of a vertical rule', w:1200, h:880,
+    boxes:[
+      ['SECTION NO','eyebrow',0,26,2,26],
+      ['','rule',0,68,12,1],
+      ['TITLE','title',0,104,4,160],
+      ['NOTE','body',0,300,3,88],
+      ['','vrule',4.4,68,0.05,790],
+      ['EMAIL CTA','cta',0,414,3,78],
+      ['QUESTION ROWS','rows8',5,104,7,556],
+      ['OPEN ANSWER','body',5,688,5.5,130]
+    ]},
+  { key:'e', id:'1e', name:'FAQ — CENTRED STACK', note:'narrow measure · rows run full-bleed', w:1200, h:900,
+    boxes:[
+      ['SECTION NO','eyebrow',5,32,2,26],
+      ['TITLE','title',3,84,6,150],
+      ['NOTE','body',4,256,4,82],
+      ['QUESTION ROWS','rows8',0,382,12,410],
+      ['CTA','cta',4.5,808,3,78]
+    ]},
+  { key:'f', id:'1f', name:'FAQ — INDEX + PANEL', note:'question list left · answer holds a fixed panel', w:1200, h:790,
+    boxes:[
+      ['SECTION NO','eyebrow',0,26,2,26],
+      ['','rule',0,68,12,1],
+      ['TITLE','title',0,100,4,140],
+      ['QUESTION INDEX','rows8',0,272,5,400],
+      ['ANSWER PANEL','panel',6,100,6,470],
+      ['META','body',6,600,3,66],
+      ['CTA','cta',0,700,3,78]
+    ]}
+];
+
+const KEY = 'anthrobyte-wf-board-v2';
+const ACCENT = '#d94a1a';
+const rep = n => Array.from({ length: n }, (_, i) => i);
+
+function clone(defs) {
+  return defs.map(d => ({ ...d, boxes: d.boxes.map((b, i) => ({ key: d.key + i, name: b[0], kind: b[1], x: b[2], y: b[3], w: b[4], h: b[5] })) }));
+}
+
+class Component extends DCLogic {
+  state = { boards: clone(DEFS), sel: null, snap: true, copied: null };
+
+  componentDidMount() {
+    try {
+      const raw = localStorage.getItem(KEY);
+      if (raw) {
+        const saved = JSON.parse(raw);
+        const merged = this.state.boards.map(bd => {
+          const s = saved.find(x => x.key === bd.key);
+          return s ? { ...bd, boxes: s.boxes } : bd;
+        });
+        this.setState({ boards: merged });
+      }
+    } catch (e) {}
+    document.addEventListener('pointerdown', this.down);
+    document.addEventListener('pointermove', this.move);
+    document.addEventListener('pointerup', this.up);
+    document.addEventListener('keydown', this.key);
+  }
+  componentWillUnmount() {
+    document.removeEventListener('pointerdown', this.down);
+    document.removeEventListener('pointermove', this.move);
+    document.removeEventListener('pointerup', this.up);
+    document.removeEventListener('keydown', this.key);
+  }
+
+  persist(boards) {
+    try { localStorage.setItem(KEY, JSON.stringify(boards.map(b => ({ key: b.key, boxes: b.boxes })))); } catch (e) {}
+  }
+  patch(bkey, boxKey, next) {
+    const boards = this.state.boards.map(bd => bd.key !== bkey ? bd
+      : { ...bd, boxes: bd.boxes.map(b => b.key === boxKey ? { ...b, ...next } : b) });
+    this.persist(boards);
+    this.setState({ boards });
+  }
+
+  down = e => {
+    const el = e.target.closest && e.target.closest('[data-box]');
+    if (!el) { if (this.state.sel) this.setState({ sel: null }); return; }
+    const boardEl = el.closest('[data-board]');
+    const bkey = el.getAttribute('data-board');
+    const boxKey = el.getAttribute('data-box');
+    const bd = this.state.boards.find(x => x.key === bkey);
+    const box = bd && bd.boxes.find(x => x.key === boxKey);
+    if (!box) return;
+    const r = boardEl.getBoundingClientRect();
+    this.drag = {
+      mode: (e.target.getAttribute && e.target.getAttribute('data-rs')) ? 'size' : 'move',
+      bkey, boxKey, colW: bd.w / 12, bw: bd.w, bh: bd.h,
+      scale: r.width / boardEl.offsetWidth || 1,
+      cx: e.clientX, cy: e.clientY, s: { ...box }
+    };
+    this.setState({ sel: { bkey, boxKey } });
+    e.preventDefault();
+  };
+
+  move = e => {
+    const d = this.drag;
+    if (!d) return;
+    const free = e.altKey || !this.state.snap;
+    const sx = (v, unit) => free ? Math.round(v * 100) / 100 : Math.round(v / unit) * unit;
+    const dx = (e.clientX - d.cx) / d.scale, dy = (e.clientY - d.cy) / d.scale;
+    if (d.mode === 'move') {
+      let x = sx(d.s.x + dx / d.colW, 0.5), y = sx(d.s.y + dy, 20);
+      x = Math.max(-1, Math.min(12 - d.s.w + 1, x));
+      y = Math.max(-20, Math.min(d.bh - 20, y));
+      this.patch(d.bkey, d.boxKey, { x, y });
+    } else {
+      const w = Math.max(0.5, sx(d.s.w + dx / d.colW, 0.5));
+      const h = Math.max(20, sx(d.s.h + dy, 20));
+      this.patch(d.bkey, d.boxKey, { w, h });
+    }
+    e.preventDefault();
+  };
+
+  up = () => { this.drag = null; };
+
+  key = e => {
+    const s = this.state.sel;
+    if (!s || (e.key !== 'Delete' && e.key !== 'Backspace')) return;
+    const boards = this.state.boards.map(bd => bd.key !== s.bkey ? bd : { ...bd, boxes: bd.boxes.filter(b => b.key !== s.boxKey) });
+    this.persist(boards);
+    this.setState({ boards, sel: null });
+    e.preventDefault();
+  };
+
+  boardVals(bd) {
+    const colW = bd.w / 12;
+    const sel = this.state.sel;
+    const boxes = bd.boxes.map(b => {
+      const on = sel && sel.bkey === bd.key && sel.boxKey === b.key;
+      const bare = b.kind === 'rule' || b.kind === 'vrule';
+      const pad = bare ? '0' : (b.kind === 'cta' ? '14px' : '17px 14px 13px');
+      const base = `position:absolute;left:${(b.x * colW).toFixed(1)}px;top:${b.y}px;width:${(b.w * colW).toFixed(1)}px;height:${b.h}px;box-sizing:border-box;cursor:${on ? 'grabbing' : 'grab'};z-index:${b.kind === 'plate' ? (on ? 30 : 1) : (on ? 30 : 6)};`;
+      const skin = bare
+        ? `background:${on ? ACCENT : 'rgba(26,22,20,.28)'};`
+        : `background:${on ? 'rgba(217,74,26,.05)' : 'rgba(247,245,241,.86)'};border:1px ${on ? 'solid ' + ACCENT : 'dashed rgba(26,22,20,.28)'};`;
+      const v = {
+        key: b.key, bkey: bd.key, label: b.name, hasLabel: !bare && !!b.name,
+        labelColor: on ? ACCENT : 'rgba(26,22,20,.5)',
+        style: base + skin,
+        innerStyle: `display:flex;flex-direction:column;justify-content:${b.kind === 'cta' ? 'center' : 'flex-start'};gap:8px;height:100%;padding:${pad};box-sizing:border-box;overflow:hidden;pointer-events:none`,
+        handleStyle: bare ? 'display:none' : `position:absolute;right:-4px;bottom:-4px;width:11px;height:11px;background:${on ? ACCENT : '#f7f5f1'};border:1px solid ${on ? ACCENT : 'rgba(26,22,20,.4)'};cursor:nwse-resize;pointer-events:auto;z-index:2`,
+        bars: [], lines: [], rows: [], cells: [], hasCells: false, cross: false, crossLabel: '', pill: false, vertical: false
+      };
+      const rows = n => rep(n).map(i => ({ num: String(i + 1).padStart(2, '0'), numColor: i === 0 ? ACCENT : 'rgba(26,22,20,.34)', fill: i === 0 ? 'rgba(26,22,20,.24)' : 'rgba(26,22,20,.13)', w: [78, 62, 88, 54, 70, 46, 82, 58][i % 8] + '%' }));
+      const cells = n => rep(n).map(i => ({ num: String(i + 1).padStart(2, '0'), numColor: i === 0 ? ACCENT : 'rgba(26,22,20,.34)', fill: i === 0 ? 'rgba(26,22,20,.22)' : 'rgba(26,22,20,.12)', top: i === 0 ? ACCENT : 'rgba(26,22,20,.16)' }));
+      switch (b.kind) {
+        case 'eyebrow': v.lines = ['64%']; break;
+        case 'title': v.bars = ['88%', '58%']; break;
+        case 'body': v.lines = ['100%', '96%', '88%', '62%']; break;
+        case 'caption': v.bars = ['72%']; v.lines = ['100%', '92%', '58%']; break;
+        case 'metric': v.bars = ['84%']; v.lines = ['56%']; break;
+        case 'plate': v.cross = true; v.crossLabel = b.name; v.hasLabel = false; break;
+        case 'panel': v.bars = ['62%']; v.lines = ['100%', '97%', '92%', '99%', '84%', '48%']; break;
+        case 'cta': v.pill = true; break;
+        case 'vlabel': v.vertical = true; break;
+        case 'rows5': v.rows = rows(5); break;
+        case 'rows8': v.rows = rows(8); break;
+        case 'cells5': v.cells = cells(5); v.hasCells = true; break;
+      }
+      return v;
+    });
+    return {
+      key: bd.key, id: bd.id, href: '#' + bd.id, name: bd.name, note: bd.note, boxes,
+      copyLabel: this.state.copied === bd.key ? 'COPIED' : 'COPY',
+      style: `position:relative;width:${bd.w}px;height:${bd.h}px;background:#fdfcfa;box-shadow:0 18px 44px rgba(26,22,20,.11);background-image:repeating-linear-gradient(to right,rgba(26,22,20,.055) 0 1px,transparent 1px ${colW}px),repeating-linear-gradient(to bottom,rgba(26,22,20,.028) 0 1px,transparent 1px 20px);touch-action:none`,
+      onAdd: () => {
+        const boards = this.state.boards.map(x => x.key !== bd.key ? x
+          : { ...x, boxes: [...x.boxes, { key: bd.key + 'n' + Date.now(), name: 'BLOCK', kind: 'panel', x: 1, y: 120, w: 3, h: 140 }] });
+        this.persist(boards); this.setState({ boards });
+      },
+      onReset: () => {
+        const fresh = clone(DEFS).find(x => x.key === bd.key);
+        const boards = this.state.boards.map(x => x.key === bd.key ? fresh : x);
+        this.persist(boards); this.setState({ boards, sel: null });
+      },
+      onCopy: () => {
+        const txt = `${bd.id} ${bd.name} — board ${bd.w}x${bd.h}, x/w in 12ths\n` +
+          bd.boxes.map(b => `${b.name || b.kind}: x=${b.x} y=${b.y} w=${b.w} h=${b.h}`).join('\n');
+        try { navigator.clipboard.writeText(txt); } catch (e) {}
+        this.setState({ copied: bd.key });
+        clearTimeout(this._ct); this._ct = setTimeout(() => this.setState({ copied: null }), 1400);
+      }
+    };
+  }
+
+  renderVals() {
+    const s = this.state.sel;
+    let readout = '— click a block —';
+    if (s) {
+      const bd = this.state.boards.find(x => x.key === s.bkey);
+      const b = bd && bd.boxes.find(x => x.key === s.boxKey);
+      if (b) readout = `${bd.id} · ${b.name || b.kind} · x ${b.x} · y ${b.y} · w ${b.w} · h ${b.h}`;
+    }
+    return {
+      boards: this.state.boards.map(bd => this.boardVals(bd)),
+      readout,
+      snapLabel: this.state.snap ? 'SNAP: ON' : 'SNAP: OFF',
+      toggleSnap: () => this.setState({ snap: !this.state.snap }),
+      resetAll: () => { const boards = clone(DEFS); this.persist(boards); this.setState({ boards, sel: null }); }
+    };
+  }
+}
+
+</script>
+</body>
+</html>

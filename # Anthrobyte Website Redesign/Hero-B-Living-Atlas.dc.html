@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#08090A;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:#FF6028;text-decoration:none}
+a:hover{color:#FF8557}
+::selection{background:#FF6028;color:#08090A}
+@keyframes riseIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes pulseRing{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.4);opacity:0}}
+</style>
+</helmet>
+
+<div style="position:relative;background:#08090A;font-family:Archivo,sans-serif">
+
+  <div style="position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:26px 46px">
+    <div style="display:flex;align-items:center;gap:11px">
+      <svg width="26" height="23" viewBox="0 0 32 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M22.823 26.7423C22.284 27.6758 21.0738 28.0082 20.2617 27.2994C19.7602 26.8617 19.3021 26.3743 18.895 25.8437C18.0905 24.7953 17.5004 23.5986 17.1583 22.3221C16.8163 21.0456 16.729 19.7143 16.9015 18.4041C17.074 17.0938 17.5029 15.8304 18.1637 14.6859C18.8244 13.5415 19.7041 12.5383 20.7526 11.7338C21.801 10.9293 22.9976 10.3392 24.2741 9.9972C25.5506 9.65516 26.882 9.5679 28.1922 9.74039C28.8553 9.82769 29.5065 9.98066 30.1362 10.1961C31.1562 10.5451 31.4734 11.7593 30.9344 12.6928L22.823 26.7423Z" fill="#FF6028"></path>
+        <path d="M7.43692 3.35091e-06C6.35895 3.52645e-06 5.46602 0.881876 5.67379 1.93963C5.80208 2.59276 5.99517 3.23313 6.25112 3.85105C6.75684 5.07199 7.4981 6.18135 8.43256 7.11582C9.36702 8.05028 10.4764 8.79153 11.6973 9.29726C12.9183 9.80299 14.2268 10.0633 15.5484 10.0633C16.8699 10.0633 18.1785 9.80299 19.3994 9.29726C20.6204 8.79153 21.7297 8.05027 22.6642 7.11581C23.5986 6.18135 24.3399 5.07198 24.8456 3.85105C25.1016 3.23313 25.2947 2.59276 25.423 1.93962C25.6307 0.881872 24.7378 -2.69777e-07 23.6598 0L7.43692 3.35091e-06Z" fill="#FF6028"></path>
+        <path d="M0.259461 12.6235C-0.279521 11.69 0.0377339 10.4757 1.05766 10.1268C1.68744 9.91132 2.33856 9.75835 3.00167 9.67105C4.31189 9.49856 5.64326 9.58582 6.91975 9.92786C8.19625 10.2699 9.39288 10.86 10.4413 11.6645C11.4898 12.469 12.3695 13.4721 13.0302 14.6166C13.691 15.7611 14.1199 17.0245 14.2924 18.3347C14.4649 19.6449 14.3776 20.9763 14.0356 22.2528C13.6935 23.5293 13.1034 24.7259 12.2989 25.7744C11.8918 26.305 11.4337 26.7924 10.9322 27.2301C10.1201 27.9389 8.9099 27.6065 8.37091 26.673L0.259461 12.6235Z" fill="#FF6028"></path>
+      </svg>
+      <span style="font:600 17px/1 Archivo,sans-serif;font-stretch:95%;letter-spacing:-.035em;color:#F2F0EC">anthrobyte</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:34px">
+      <span style="font:400 12.5px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#8A867E">AAtlas Agents</span>
+      <span style="font:400 12.5px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#8A867E">AI Transformation</span>
+      <span style="font:400 12.5px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#8A867E">Journal</span>
+      <span style="font:500 12.5px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#08090A;background:#FF6028;padding:11px 17px">Let's Talk</span>
+    </div>
+  </div>
+
+  <div ref="{{ setWrap }}" style="position:relative;height:230vh">
+    <div style="position:sticky;top:0;height:100vh;overflow:hidden">
+      <div ref="{{ setMount }}" style="position:absolute;inset:0"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg, rgba(8,9,10,.92) 0%, rgba(8,9,10,.15) 34%, rgba(8,9,10,.35) 70%, rgba(8,9,10,.96) 100%)"></div>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg, rgba(8,9,10,.95) 0%, rgba(8,9,10,.55) 38%, rgba(8,9,10,0) 66%)"></div>
+
+      <div style="position:absolute;left:46px;top:0;bottom:0;display:flex;flex-direction:column;justify-content:center;max-width:700px;pointer-events:none">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:26px;animation:riseIn .8s cubic-bezier(.22,1,.36,1) both">
+          <span style="width:26px;height:1px;background:#FF6028"></span>
+          <span style="font:500 11.5px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#FF6028">LIVE OPERATING TERRITORY</span>
+        </div>
+        <h1 style="font:600 clamp(38px,4.2vw,66px)/1.04 Archivo,sans-serif;font-stretch:92%;letter-spacing:-.036em;color:#F5F3EF;margin:0;text-wrap:pretty;animation:riseIn 1s cubic-bezier(.22,1,.36,1) .08s both">The gap between where you think you are and where you are, that's the work.</h1>
+        <p style="font:400 17px/1.62 Archivo,sans-serif;color:#8F8B83;margin:28px 0 0;max-width:48ch;text-wrap:pretty;animation:riseIn 1s cubic-bezier(.22,1,.36,1) .18s both">Five AAtlas agents working the same territory — suppliers, ports, inventory, demand, risk — as one connected surface.</p>
+        <div style="display:flex;align-items:center;gap:20px;margin-top:38px;animation:riseIn 1s cubic-bezier(.22,1,.36,1) .28s both;pointer-events:auto">
+          <span style="font:500 13px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#08090A;background:#FF6028;padding:15px 24px">Book a working session</span>
+          <span style="font:400 13px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#8A867E;border-bottom:1px solid #232326;padding-bottom:5px">Explore the atlas</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;right:46px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:1px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.07);animation:riseIn 1s cubic-bezier(.22,1,.36,1) .4s both">
+        <div style="background:#0C0D0F;padding:14px 18px;display:flex;align-items:center;gap:26px;justify-content:space-between">
+          <span style="font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#57544E">SIGNAL</span>
+          <span style="font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#57544E">STATE</span>
+        </div>
+        <div style="background:#0C0D0F;padding:14px 18px;display:flex;align-items:center;gap:26px;justify-content:space-between">
+          <span style="font:400 12px/1 'JetBrains Mono',monospace;color:#B8B4AC">Supplier risk</span>
+          <span style="font:500 12px/1 'JetBrains Mono',monospace;color:#FF6028">ELEVATED</span>
+        </div>
+        <div style="background:#0C0D0F;padding:14px 18px;display:flex;align-items:center;gap:26px;justify-content:space-between">
+          <span style="font:400 12px/1 'JetBrains Mono',monospace;color:#B8B4AC">Port dwell</span>
+          <span style="font:400 12px/1 'JetBrains Mono',monospace;color:#6E6A63">NOMINAL</span>
+        </div>
+        <div style="background:#0C0D0F;padding:14px 18px;display:flex;align-items:center;gap:26px;justify-content:space-between">
+          <span style="font:400 12px/1 'JetBrains Mono',monospace;color:#B8B4AC">Inventory drift</span>
+          <span style="font:400 12px/1 'JetBrains Mono',monospace;color:#6E6A63">TRACKING</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;left:46px;bottom:38px;display:flex;gap:44px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 20px/1 Archivo,sans-serif;letter-spacing:-.02em;color:#F5F3EF">5</span>
+          <span style="font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#57544E">AGENTS DEPLOYED</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <span style="font:500 20px/1 Archivo,sans-serif;letter-spacing:-.02em;color:#F5F3EF">1</span>
+          <span style="font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.14em;color:#57544E">SHARED TERRITORY</span>
+        </div>
+      </div>
+
+      <div style="position:absolute;right:46px;bottom:38px">
+        <span style="font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.18em;color:#57544E">SCROLL TO TRAVERSE</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="position:relative;background:#F4F2ED;padding:120px 46px 140px">
+    <div style="display:grid;grid-template-columns:1fr 1.3fr;gap:70px;max-width:1240px">
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;color:#A8532F">01 — THE PREMISE</span>
+        <span style="font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.02em;color:#9A958B">SEED B · LIVING ATLAS</span>
+      </div>
+      <div>
+        <h2 style="font:600 clamp(30px,3.1vw,46px)/1.12 Archivo,sans-serif;font-stretch:94%;letter-spacing:-.028em;color:#14130F;margin:0 0 26px;text-wrap:pretty">Your operation is already a map. Most software just refuses to draw it.</h2>
+        <p style="font:400 17px/1.68 Archivo,sans-serif;color:#4B4741;margin:0;max-width:62ch;text-wrap:pretty">We treat AI as an influence layer within complex systems. Clarity must precede deployment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      setMount: (el) => { this.mount = el; },
+      setWrap: (el) => { this.wrap = el; }
+    };
+  }
+
+  componentDidMount() {
+    this.p = 0; this.pt = 0; this.mx = 0; this.my = 0;
+    this.onScroll = () => {
+      if (!this.wrap) return;
+      const r = this.wrap.getBoundingClientRect();
+      const span = r.height - window.innerHeight;
+      this.pt = span > 0 ? Math.min(1, Math.max(0, -r.top / span)) : 0;
+    };
+    this.onMove = (e) => {
+      this.mx = (e.clientX / window.innerWidth - 0.5) * 2;
+      this.my = (e.clientY / window.innerHeight - 0.5) * 2;
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    window.addEventListener('mousemove', this.onMove, { passive: true });
+    this.onScroll();
+    this.boot();
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    window.removeEventListener('scroll', this.onScroll);
+    window.removeEventListener('mousemove', this.onMove);
+    if (this.ro) this.ro.disconnect();
+    if (this.renderer) { this.renderer.dispose(); this.renderer.domElement.remove(); }
+  }
+
+  async boot() {
+    const THREE = await import('https://esm.sh/three@0.161.0');
+    const el = this.mount;
+    if (!el) return;
+
+    const w = el.clientWidth || window.innerWidth;
+    const h = el.clientHeight || window.innerHeight;
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setSize(w, h);
+    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMappingExposure = 1.15;
+    renderer.domElement.style.display = 'block';
+    el.appendChild(renderer.domElement);
+    this.renderer = renderer;
+
+    const scene = new THREE.Scene();
+    scene.fog = new THREE.Fog(0x08090A, 26, 62);
+
+    const D = 8.2;
+    const aspect = w / h;
+    const camera = new THREE.OrthographicCamera(-D * aspect, D * aspect, D, -D, -60, 140);
+    camera.position.set(20, 16, 20);
+    camera.lookAt(0, 0, 0);
+    this.camera = camera;
+    this.D = D;
+
+    const world = new THREE.Group();
+    scene.add(world);
+    this.world = world;
+
+    const deck = new THREE.Mesh(
+      new THREE.BoxGeometry(46, 0.35, 34),
+      new THREE.MeshStandardMaterial({ color: 0x101114, metalness: 0.2, roughness: 0.88 })
+    );
+    deck.position.y = -0.175;
+    world.add(deck);
+
+    const grid = new THREE.GridHelper(46, 46, 0x2A2C31, 0x1A1C20);
+    grid.position.y = 0.012;
+    grid.material.transparent = true;
+    grid.material.opacity = 0.45;
+    world.add(grid);
+
+    const water = new THREE.Mesh(
+      new THREE.PlaneGeometry(90, 40),
+      new THREE.MeshStandardMaterial({ color: 0x07080A, metalness: 0.85, roughness: 0.22 })
+    );
+    water.rotation.x = -Math.PI / 2;
+    water.position.set(0, -0.36, -26);
+    world.add(water);
+
+    const cBox = new THREE.BoxGeometry(1.0, 0.44, 2.3);
+    const matDark = new THREE.MeshStandardMaterial({ color: 0x1A1B1F, metalness: 0.35, roughness: 0.62 });
+    const matMid = new THREE.MeshStandardMaterial({ color: 0x24262B, metalness: 0.35, roughness: 0.6 });
+    const matHot = new THREE.MeshStandardMaterial({ color: 0xFF6028, emissive: 0xFF3B00, emissiveIntensity: 0.45, metalness: 0.2, roughness: 0.5 });
+
+    let seed = 20260821;
+    const rnd = () => { seed = (seed * 1664525 + 1013904223) % 4294967296; return seed / 4294967296; };
+
+    this.stacks = [];
+    for (let row = 0; row < 6; row++) {
+      for (let col = 0; col < 14; col++) {
+        const hgt = 1 + Math.floor(rnd() * 4);
+        const bx = -13.5 + col * 2.0;
+        const bz = -4.5 + row * 3.1;
+        for (let k = 0; k < hgt; k++) {
+          const hot = rnd() > 0.94;
+          const m = new THREE.Mesh(cBox, hot ? matHot : (rnd() > 0.5 ? matDark : matMid));
+          m.position.set(bx, 0.24 + k * 0.46, bz);
+          m.userData.rest = m.position.y;
+          m.userData.delay = (col / 14) * 0.55 + rnd() * 0.2;
+          world.add(m);
+          this.stacks.push(m);
+        }
+      }
+    }
+
+    const craneMat = new THREE.MeshStandardMaterial({ color: 0x2E3036, metalness: 0.55, roughness: 0.45 });
+    for (let i = 0; i < 3; i++) {
+      const g = new THREE.Group();
+      const legGeo = new THREE.BoxGeometry(0.22, 5.4, 0.22);
+      const l1 = new THREE.Mesh(legGeo, craneMat); l1.position.set(-5.4, 2.7, 0);
+      const l2 = new THREE.Mesh(legGeo, craneMat); l2.position.set(5.4, 2.7, 0);
+      const beam = new THREE.Mesh(new THREE.BoxGeometry(13.6, 0.26, 0.34), craneMat); beam.position.y = 5.4;
+      const boom = new THREE.Mesh(new THREE.BoxGeometry(0.2, 0.2, 7.2), craneMat); boom.position.set(0, 5.0, -3.2);
+      g.add(l1, l2, beam, boom);
+      g.position.set(-4 + i * 8.6, 0, -8.6);
+      world.add(g);
+    }
+
+    const hullShape = new THREE.Shape();
+    hullShape.moveTo(-5.6, 0); hullShape.lineTo(4.6, 0);
+    hullShape.quadraticCurveTo(6.4, 0, 6.6, 0.95);
+    hullShape.lineTo(-5.6, 0.95); hullShape.closePath();
+    const hullGeo = new THREE.ExtrudeGeometry(hullShape, { depth: 2.1, bevelEnabled: false });
+    const hull = new THREE.Mesh(hullGeo, new THREE.MeshStandardMaterial({ color: 0x1C1E23, metalness: 0.5, roughness: 0.5 }));
+    hull.rotation.y = Math.PI / 2;
+    hull.position.set(-9.5, 0.05, -14.5);
+    world.add(hull);
+
+    const routes = [];
+    const mkRoute = (pts, op) => {
+      const curve = new THREE.CatmullRomCurve3(pts.map(p => new THREE.Vector3(p[0], p[1], p[2])));
+      const tube = new THREE.Mesh(
+        new THREE.TubeGeometry(curve, 90, 0.026, 6, false),
+        new THREE.MeshBasicMaterial({ color: 0xFF6028, transparent: true, opacity: op })
+      );
+      world.add(tube);
+      const pulse = new THREE.Mesh(
+        new THREE.SphereGeometry(0.11, 12, 12),
+        new THREE.MeshBasicMaterial({ color: 0xFFB08A })
+      );
+      world.add(pulse);
+      routes.push({ curve, pulse, tube, t: Math.random() });
+    };
+    mkRoute([[-9.5, 1.2, -13], [-4, 2.6, -9], [2, 1.4, -3], [8, 2.2, 3], [15, 1.0, 9]], 0.5);
+    mkRoute([[-14, 0.9, 8], [-7, 2.2, 4], [0, 1.1, 0], [7, 2.4, -4], [13, 1.2, -9]], 0.32);
+    mkRoute([[-12, 1.6, -2], [-5, 1.0, 2], [3, 2.2, 6], [11, 1.1, 10]], 0.22);
+    this.routes = routes;
+
+    const nodeGeo = new THREE.SphereGeometry(0.16, 14, 14);
+    const nodeMat = new THREE.MeshBasicMaterial({ color: 0xFF6028 });
+    this.nodes = [];
+    [[-9.5, 1.2, -13], [2, 1.4, -3], [15, 1.0, 9], [-14, 0.9, 8], [11, 1.1, 10]].forEach((p, i) => {
+      const n = new THREE.Mesh(nodeGeo, nodeMat);
+      n.position.set(p[0], p[1], p[2]);
+      n.userData.ph = i * 1.1;
+      world.add(n);
+      this.nodes.push(n);
+    });
+
+    scene.add(new THREE.HemisphereLight(0x39414F, 0x07080A, 0.9));
+    const key = new THREE.DirectionalLight(0xFFFFFF, 1.9);
+    key.position.set(14, 20, 10);
+    scene.add(key);
+    const fill = new THREE.DirectionalLight(0xFFD9C4, 0.5);
+    fill.position.set(-14, 6, -12);
+    scene.add(fill);
+    const glow = new THREE.PointLight(0xFF6028, 34, 22, 2);
+    glow.position.set(2, 3.4, -2);
+    scene.add(glow);
+
+    this.ro = new ResizeObserver(() => {
+      const nw = el.clientWidth, nh = el.clientHeight;
+      if (!nw || !nh) return;
+      const a = nw / nh;
+      camera.left = -this.D * a; camera.right = this.D * a;
+      camera.top = this.D; camera.bottom = -this.D;
+      camera.updateProjectionMatrix();
+      renderer.setSize(nw, nh);
+    });
+    this.ro.observe(el);
+
+    const clock = new THREE.Clock();
+    let px = 0, pz = 0;
+    const tick = () => {
+      this.raf = requestAnimationFrame(tick);
+      const time = clock.getElapsedTime();
+      this.p += (this.pt - this.p) * 0.075;
+
+      for (let i = 0; i < this.stacks.length; i++) {
+        const m = this.stacks[i];
+        const a = Math.min(1, Math.max(0, (this.p - m.userData.delay * 0.4) * 2.4));
+        m.position.y = m.userData.rest + (1 - a) * 0.0;
+        m.scale.y = 0.14 + 0.86 * Math.min(1, Math.max(0, (0.18 + this.p * 2.2) - m.userData.delay));
+      }
+
+      for (const r of this.routes) {
+        r.t = (r.t + 0.0022) % 1;
+        const pt = r.curve.getPointAt(r.t);
+        r.pulse.position.copy(pt);
+      }
+      for (const n of this.nodes) {
+        const s = 1 + Math.sin(time * 2.1 + n.userData.ph) * 0.28;
+        n.scale.setScalar(s);
+      }
+
+      px += ((-this.p * 9 + this.mx * 0.8) - px) * 0.05;
+      pz += ((this.p * 5 - this.my * 0.6) - pz) * 0.05;
+      world.position.x = px;
+      world.position.z = pz;
+      world.rotation.y = -0.08 + this.p * 0.16;
+      this.D = 8.2 - this.p * 1.5;
+      const a2 = (el.clientWidth || w) / (el.clientHeight || h);
+      camera.left = -this.D * a2; camera.right = this.D * a2;
+      camera.top = this.D; camera.bottom = -this.D;
+      camera.updateProjectionMatrix();
+
+      renderer.render(scene, camera);
+    };
+    tick();
+  }
+}
+
+</script>
+</body>
+</html>
