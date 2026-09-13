@@ -1,235 +1,645 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Anthrobyte — Structured Intelligence for Supply Chain and Enterprise Operations</title>
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<link rel="alternate icon" href="/favicon.ico">
-<script src="/support.js"></script>
-<!-- Vercel Analytics -->
-<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Structured Intelligence for Supply Chain and Enterprise Operations</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="alternate icon" href="/favicon.ico">
+  <script src="/support.js"></script>
+  <!-- Vercel Analytics -->
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
+
 <body>
-<x-dc>
-<helmet>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,600;1,6..72,700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
-<style>
-html{background:#f4f2ee}body{margin:0;background:#f4f2ee}
-a{color:inherit;text-decoration:none}a:hover{color:#FF6028}
-::selection{background:rgba(255,96,40,.28)}
-a:focus-visible,[data-h]:focus-visible{outline:2px solid #FF6028;outline-offset:5px}
-@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;transition-delay:0ms!important}}
-@media (pointer:fine){body{cursor:none}body a,body [data-h]{cursor:none}}
-</style>
-</helmet>
-<div id="ab-root" data-screen-label="Home V7" style="--accent:#FF6028;position:relative;background:#f4f2ee;font-family:'Space Grotesk',sans-serif;color:#17130f">
-  <div id="sh" style="height:2935vh"></div>
-  <div id="bg-dark" style="position:fixed;inset:0;z-index:1;background:#0b0a09;opacity:1;pointer-events:none"></div>
-  <div id="glow-layer" style="position:fixed;inset:0;z-index:2;pointer-events:none;display:none">
-    <div style="position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:130vh;height:130vh;background:radial-gradient(circle,rgba(122,58,28,.34),rgba(74,38,20,.18) 42%,transparent 68%)"></div>
-    <div style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:56vh;height:56vh;background:radial-gradient(circle,rgba(214,96,40,.22),rgba(140,60,26,.1) 50%,transparent 72%)"></div>
-  </div>
-  <div id="ghost" style="position:fixed;inset:0;z-index:7;pointer-events:none">
-    <span id="ghost-t" style="position:absolute;left:50%;top:50%;translate:-50% -50%;font:600 9.4vw/1 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:rgba(23,18,14,.92);white-space:nowrap;opacity:0;mix-blend-mode:darken">THE CHALLENGE</span>
-    <span id="ghost-t2" style="position:absolute;left:50%;top:50%;translate:-50% -50%;font:600 9.4vw/1 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:var(--accent);white-space:nowrap;opacity:0;mix-blend-mode:lighten">THE CHALLENGE</span>
-  </div>
-  <div id="gl" style="position:fixed;inset:0;z-index:5;pointer-events:none"></div>
-  <div id="hero-layer" data-screen-label="01 Hero" style="position:fixed;inset:0;z-index:6;pointer-events:none">
-    <div id="hero-title" style="position:absolute;left:4vw;right:4vw;bottom:16.5vh;text-align:center">
-      <h1 style="margin:0;font:600 6.4vw/1.02 'Space Grotesk',sans-serif;letter-spacing:-.045em;color:#f2f0eb">
-        <div>Structured Intelligence</div>
-        <div>for Complex <span id="swap-word" style="display:inline-block;font:italic 400 6.5vw/1.02 'Newsreader',serif;letter-spacing:-.02em;color:var(--accent)">Operations</span></div>
-      </h1>
-    </div>
-    <div id="hero-link" style="position:absolute;bottom:6.5vh;left:0;right:0;display:flex;justify-content:center">
-      <a id="explore-link" href="#" data-h="1" data-scr="1" style="pointer-events:auto;font:500 11px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.78);letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.55);padding-bottom:6px">EXPLORE&nbsp;OUR&nbsp;AGENTS&nbsp;→</a>
-    </div>
-  </div>
-  <div id="panel-ch" data-screen-label="02 The Challenge" style="position: fixed; left: 2.9vw; top: 30%; transform: translateY(-50%); z-index: 6; width: 54vw; opacity: 0; visibility: hidden; pointer-events: none">
-    <img id="ch-mark" src="/assets/mark.svg" alt="" style="position: absolute; left: 0; top: 0; width: 213px; height: 190px">
-    <div data-chw1="" style="overflow:hidden;position:relative;padding-top:3.4vh;margin-left:11vw"><span data-chline="" data-nfs="7vw" style="display: inline-block; transform: translateY(112%); font: 700 4.15vw/1.06 'Space Grotesk',sans-serif; letter-spacing: -.04em; color: #17130f; text-align: left; font-size: 71.48px">Complexity is</span></div>
-    <div data-chw2="" style="overflow:hidden;position:relative;margin-top:-0.8vh;margin-left:0.4vw"><span data-chline="" data-nfs="13.5vw" style="display:inline-block;transform:translateY(112%);font:italic 400 13.2vw/1.16 'Newsreader',serif;letter-spacing:-.02em;color:#17130f;padding-right:0.15em">Layered</span></div>
-  </div>
-  <div id="ch-desc" style="position: fixed; left: 3.3vw; top: 50vh; z-index: 6; opacity: 0; visibility: hidden; pointer-events: none; width: 468px">
-    <div style="overflow:hidden"><p data-chline="" style="margin:0;transform:translateY(112%);font:400 17px/1.7 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62)">Every enterprise runs as a stack of decisions. <em style="font-style:normal;color:var(--accent)">Leadership intent</em> shapes operations below, while <em style="font-style:normal;color:var(--accent)">ground realities</em> reshape strategy above. When the layers drift apart, complexity compounds — and deployment moves faster than understanding.</p></div>
-  </div>
-  <div id="ch-foot" style="position:fixed;left:3.3vw;bottom:7vh;z-index:6;opacity:0;visibility:hidden;pointer-events:none;display:flex;flex-direction:column;gap:2.2vh">
-    <div style="overflow:hidden"><div data-chline="" data-nfs="5.8vw" style="display: flex; gap: 16px; align-items: stretch; transform: translateY(112%); font: italic 700 2.45vw/1.28 'Newsreader',serif; color: #17130f"><span style="flex: none; width: 0.16em; height: 1.06em; background-color: #16120E"></span><span style="color: #FF6028; font-weight: 500">Clarity must precede deployment.</span></div></div>
-    <div style="overflow:hidden"><div data-chline="" style="transform:translateY(112%)"><a href="#" data-h="1" data-scr="1" style="pointer-events:auto;display:inline-block;font:600 11.5px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">NAVIGATE&nbsp;COMPLEXITY&nbsp;WITH&nbsp;US&nbsp;→</a></div></div>
-  </div>
-  <div id="ch-ladder" style="position:fixed;inset:0;z-index:6;pointer-events:none;opacity:0;visibility:hidden">
-    <div data-chrow="" style="position:absolute;left:56.4vw;top:16vh;opacity:0"><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Leadership Intent</span></span><div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px"><div data-chl="" style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div><div data-chd="" style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom"><div data-chc="" style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom"><span style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span></div></div></div></div>
-    <div data-chrow="" style="position:absolute;left:53.4vw;top:31.8vh;opacity:0"><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">System Integration</span></span><div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px"><div data-chl="" style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div><div data-chd="" style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom"><div data-chc="" style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom"><span style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span></div></div></div></div>
-    <div data-chrow="" style="position:absolute;left:49.5vw;top:47.6vh;opacity:0"><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Capability &amp; Progress</span></span><div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px"><div data-chl="" style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div><div data-chd="" style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom"><div data-chc="" style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom"><span style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span></div></div></div></div>
-    <div data-chrow="" style="position:absolute;left:46.2vw;top:63.4vh;opacity:0"><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Strategic Alignment</span></span><div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px"><div data-chl="" style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div><div data-chd="" style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom"><div data-chc="" style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom"><span style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span></div></div></div></div>
-    <div data-chrow="" style="position:absolute;left:43vw;top:79.2vh;opacity:0"><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Ground Realities</span></span><div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px"><div data-chl="" style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div><div data-chd="" style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom"><div data-chc="" style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom"><span style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span></div></div></div></div>
-  </div>
-  <div id="ch-ladder-n" style="display: none; position: fixed; left: 7vw; bottom: 20vh; z-index: 6; flex-direction: column; gap: 9px; opacity: 0; visibility: hidden; pointer-events: none">
-    <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd="" style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">LEADERSHIP INTENT</span></span></div>
-    <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd="" style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">SYSTEM INTEGRATION</span></span></div>
-    <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd="" style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">CAPABILITY &amp; PROGRESS</span></span></div>
-    <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd="" style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">STRATEGIC ALIGNMENT</span></span></div>
-    <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd="" style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span style="overflow:hidden;display:inline-block"><span data-chlab="" style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">GROUND REALITIES</span></span></div>
-  </div>
-  <div id="hww-head" data-screen-label="03 How We Work" style="position:fixed;left:48px;right:48px;top:9vh;z-index:6;opacity:0;visibility:hidden;pointer-events:none">
-    <h2 style="margin: 0; font: 600 3.4vw/1.04 'Space Grotesk',sans-serif; letter-spacing: -.04em; color: #17130f; position: relative; top: 16px"><span style="display: block; text-align: right">Structured</span><em style="display: block; margin-top: 0.6vh; font-family: 'Newsreader',serif; font-style: italic; font-weight: 400; font-size: 6.4vw; line-height: 1.04; letter-spacing: -.01em; color: var(--accent); white-space: nowrap; position: relative; top: 0px">Intelligence Deployment</em></h2>
-  </div>
-  <div id="hww-steps" style="position: fixed; left: 48px; right: 48px; top: 40vh; z-index: 6; display: grid; grid-template-columns: repeat(3,1fr); gap: 0 3vw; opacity: 0; visibility: hidden; pointer-events: none">
-    <div class="hww-step" style="display:flex;gap:20px;opacity:0">
-      <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
-      <div><div style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">Understand the Whole System</div><p style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">Examine and trace ripple effects across stakeholders and operational, strategic, and cultural layers.</p></div>
-    </div>
-    <div class="hww-step" style="display:flex;gap:20px;opacity:0">
-      <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
-      <div><div style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">Align Decision Architecture</div><p style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">Clarify ownership, oversight, accountability, and establish governance before capability scales.</p></div>
-    </div>
-    <div class="hww-step" style="display:flex;gap:20px;opacity:0">
-      <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
-      <div><div style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">Evolve with Coherence</div><p style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">Deploy intelligence gradually with human-centred adoption, expanding as alignment permeates deeper.</p></div>
-    </div>
-  </div>
-  <div id="why-col" style="position:fixed;left:4vw;top:11vh;bottom:6vh;z-index:6;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;pointer-events:none">
-  <div id="why-head" data-screen-label="04 Why Anthrobyte" style="position:relative;width:100%;flex:none;opacity:0;visibility:hidden;pointer-events:none">
-    <div style="overflow:hidden;position:relative;text-align:right;padding-right:0.95vw"><span data-wline="" data-nfs="5.2vw" style="display:inline-block;transform:translateY(112%);font:700 2.7vw/1.1 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#17130f">Perspective-Led.</span></div>
-    <div style="overflow: hidden; position: relative; margin-top: 0vh"><span data-wline="" data-nfs="9.6vw" style="display:inline-block;transform:translateY(112%);font:italic 400 6.8vw/1.16 'Newsreader',serif;letter-spacing:-.02em;color:var(--accent);white-space:nowrap;padding-right:0.12em">Governance-Aware.</span></div>
-  </div>
-  <div id="why-list" style="position:relative;width:100%;flex:none;margin-top:1vh;opacity:0;visibility:hidden;pointer-events:none">
-    <div style="overflow:hidden"><p data-wline="" style="margin: 0; transform: translateY(112%); font: 400 16.5px/1.66 'Space Grotesk',sans-serif; color: rgba(26,21,16,.7); text-wrap: pretty; text-align: justify; max-width: 94%">We do not treat AI as a <em style="font-style:normal;color:var(--accent)">standalone capability</em>, installed once and measured in isolation. We treat it as an <em style="font-style:normal;color:var(--accent)">influence layer</em> within complex systems, moving decisions, workflows and accountability at every level it touches.</p></div>
-    <div style="overflow:hidden;margin-top:2.4vh"><div data-wline="" style="display:inline-block;transform:translateY(112%)"><div style="font:italic 400 clamp(21px,2.6vw,46px)/1.18 'Newsreader',serif;letter-spacing:-.015em;color:#17130f;white-space:nowrap">Our approach <span id="why-int" style="background-image:linear-gradient(90deg,#FF6028 0%,#8f8880 0%);-webkit-background-clip:text;background-clip:text;color:transparent">integrates</span></div></div></div>
-    <div id="why-rows" style="display:flex;flex-direction:column;margin-top:1.6vh">
-      <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
-        <div class="why-fill" style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform"></div>
-        <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
-          <span class="why-idx" style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">01</span>
-          <span class="why-lbl" style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Decision architecture</span>
+  <x-dc>
+    <helmet>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,600;1,6..72,700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
+        rel="stylesheet">
+      <style>
+        html {
+          background: #f4f2ee
+        }
+
+        body {
+          margin: 0;
+          background: #f4f2ee
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none
+        }
+
+        a:hover {
+          color: #FF6028
+        }
+
+        ::selection {
+          background: rgba(255, 96, 40, .28)
+        }
+
+        a:focus-visible,
+        [data-h]:focus-visible {
+          outline: 2px solid #FF6028;
+          outline-offset: 5px
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+          *,
+          *::before,
+          *::after {
+            transition-duration: .01ms !important;
+            animation-duration: .01ms !important;
+            transition-delay: 0ms !important
+          }
+        }
+
+        @media (pointer:fine) {
+          body {
+            cursor: none
+          }
+
+          body a,
+          body [data-h] {
+            cursor: none
+          }
+        }
+      </style>
+    </helmet>
+    <div id="ab-root" data-screen-label="Home V7"
+      style="--accent:#FF6028;position:relative;background:#f4f2ee;font-family:'Space Grotesk',sans-serif;color:#17130f">
+      <div id="sh" style="height:2935vh"></div>
+      <div id="bg-dark" style="position:fixed;inset:0;z-index:1;background:#0b0a09;opacity:1;pointer-events:none"></div>
+      <div id="glow-layer" style="position:fixed;inset:0;z-index:2;pointer-events:none;display:none">
+        <div
+          style="position:absolute;left:50%;top:38%;transform:translate(-50%,-50%);width:130vh;height:130vh;background:radial-gradient(circle,rgba(122,58,28,.34),rgba(74,38,20,.18) 42%,transparent 68%)">
+        </div>
+        <div
+          style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);width:56vh;height:56vh;background:radial-gradient(circle,rgba(214,96,40,.22),rgba(140,60,26,.1) 50%,transparent 72%)">
         </div>
       </div>
-      <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
-        <div class="why-fill" style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform"></div>
-        <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
-          <span class="why-idx" style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">02</span>
-          <span class="why-lbl" style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Stakeholder alignment</span>
+      <div id="ghost" style="position:fixed;inset:0;z-index:7;pointer-events:none">
+        <span id="ghost-t"
+          style="position:absolute;left:50%;top:50%;translate:-50% -50%;font:600 9.4vw/1 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:rgba(23,18,14,.92);white-space:nowrap;opacity:0;mix-blend-mode:darken">THE
+          CHALLENGE</span>
+        <span id="ghost-t2"
+          style="position:absolute;left:50%;top:50%;translate:-50% -50%;font:600 9.4vw/1 'Space Grotesk',sans-serif;letter-spacing:-.035em;color:var(--accent);white-space:nowrap;opacity:0;mix-blend-mode:lighten">THE
+          CHALLENGE</span>
+      </div>
+      <div id="gl" style="position:fixed;inset:0;z-index:5;pointer-events:none"></div>
+      <div id="hero-layer" data-screen-label="01 Hero" style="position:fixed;inset:0;z-index:6;pointer-events:none">
+        <div id="hero-title" style="position:absolute;left:4vw;right:4vw;bottom:16.5vh;text-align:center">
+          <h1 style="margin:0;font:600 6.4vw/1.02 'Space Grotesk',sans-serif;letter-spacing:-.045em;color:#f2f0eb">
+            <div>Structured Intelligence</div>
+            <div>for Complex <span id="swap-word"
+                style="display:inline-block;font:italic 400 6.5vw/1.02 'Newsreader',serif;letter-spacing:-.02em;color:var(--accent)">Operations</span>
+            </div>
+          </h1>
+        </div>
+        <div id="hero-link" style="position:absolute;bottom:6.5vh;left:0;right:0;display:flex;justify-content:center">
+          <a id="explore-link" href="#" data-h="1" data-scr="1"
+            style="pointer-events:auto;font:500 11px 'IBM Plex Mono',monospace;color:rgba(242,240,235,.78);letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.55);padding-bottom:6px">EXPLORE&nbsp;OUR&nbsp;AGENTS&nbsp;→</a>
         </div>
       </div>
-      <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
-        <div class="why-fill" style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform"></div>
-        <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
-          <span class="why-idx" style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">03</span>
-          <span class="why-lbl" style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Governance structures</span>
+      <div id="panel-ch" data-screen-label="02 The Challenge"
+        style="position: fixed; left: 2.9vw; top: 30%; transform: translateY(-50%); z-index: 6; width: 54vw; opacity: 0; visibility: hidden; pointer-events: none">
+        <img id="ch-mark" src="/assets/mark.svg" alt=""
+          style="position: absolute; left: 0; top: 0; width: 213px; height: 190px">
+        <div data-chw1="" style="overflow:hidden;position:relative;padding-top:3.4vh;margin-left:11vw"><span
+            data-chline="" data-nfs="7vw"
+            style="display: inline-block; transform: translateY(112%); font: 700 4.15vw/1.06 'Space Grotesk',sans-serif; letter-spacing: -.04em; color: #17130f; text-align: left; font-size: 71.48px">Complexity
+            is</span></div>
+        <div data-chw2="" style="overflow:hidden;position:relative;margin-top:-0.8vh;margin-left:0.4vw"><span
+            data-chline="" data-nfs="13.5vw"
+            style="display:inline-block;transform:translateY(112%);font:italic 400 13.2vw/1.16 'Newsreader',serif;letter-spacing:-.02em;color:#17130f;padding-right:0.15em">Layered</span>
         </div>
       </div>
-      <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
-        <div class="why-fill" style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform"></div>
-        <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
-          <span class="why-idx" style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">04</span>
-          <span class="why-lbl" style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Modular deployment</span>
+      <div id="ch-desc"
+        style="position: fixed; left: 3.3vw; top: 50vh; z-index: 6; opacity: 0; visibility: hidden; pointer-events: none; width: 468px">
+        <div style="overflow:hidden">
+          <p data-chline=""
+            style="margin:0;transform:translateY(112%);font:400 17px/1.7 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62)">
+            Every enterprise runs as a stack of decisions. <em style="font-style:normal;color:var(--accent)">Leadership
+              intent</em> shapes operations below, while <em style="font-style:normal;color:var(--accent)">ground
+              realities</em> reshape strategy above. When the layers drift apart, complexity compounds — and deployment
+            moves faster than understanding.</p>
         </div>
       </div>
-      <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);border-bottom:1px solid rgba(26,21,16,.16);opacity:0">
-        <div class="why-fill" style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform"></div>
-        <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
-          <span class="why-idx" style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">05</span>
-          <span class="why-lbl" style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Human-centered adoption</span>
+      <div id="ch-foot"
+        style="position:fixed;left:3.3vw;bottom:7vh;z-index:6;opacity:0;visibility:hidden;pointer-events:none;display:flex;flex-direction:column;gap:2.2vh">
+        <div style="overflow:hidden">
+          <div data-chline="" data-nfs="5.8vw"
+            style="display: flex; gap: 16px; align-items: stretch; transform: translateY(112%); font: italic 700 2.45vw/1.28 'Newsreader',serif; color: #17130f">
+            <span style="flex: none; width: 0.16em; height: 1.06em; background-color: #16120E"></span><span
+              style="color: #FF6028; font-weight: 500">Clarity must precede deployment.</span></div>
         </div>
-      </div>
-    </div>
-  </div>
-  <div id="why-foot" style="position:relative;width:100%;flex:none;margin-top:auto;padding-top:3.4vh;opacity:0;visibility:hidden;pointer-events:none;display:flex;flex-direction:column;gap:1.8vh;align-items:flex-start">
-    <div style="overflow:hidden"><div data-wline="" data-nfs="5.8vw" style="display:flex;gap:16px;align-items:stretch;transform:translateY(112%);font:italic 700 2.1vw/1.3 'Newsreader',serif;color:#17130f"><span style="flex:none;width:0.16em;height:1.06em;background-color:#16120E"></span><span style="color:#FF6028;font-weight:500">Intelligence becomes durable when structure remains clear.</span></div></div>
-    <div style="overflow:hidden"><div data-wline="" style="transform:translateY(112%)"><a id="meet-agents-link" href="#" data-h="1" data-scr="1" style="pointer-events:auto;display:inline-block;font:600 11.5px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">MEET&nbsp;THE&nbsp;AATLAS&nbsp;AGENTS&nbsp;→</a></div></div>
-  </div>
-  </div>
-  <div id="agents-layer" data-screen-label="05 AAtlas Agents" style="position:fixed;inset:0;z-index:6;opacity:0;visibility:hidden;pointer-events:none">
-    <div id="ag-top" style="position:absolute;left:7vw;right:7vw;top:11vh;text-align:center">
-      <h2 style="margin:0;font:600 3.5vw/1.04 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#17130f">Modular <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.05em;letter-spacing:-.01em;color:var(--accent)">AI Agents</em> for Enterprise Systems</h2>
-      <p style="margin:2.2vh auto 0;font:400 16.5px/1.62 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:68ch;text-wrap:balance">We deploy modular AI agents across supply chains and enterprise environments from pricing and procurement to logistics and compliance.</p>
-    </div>
-    <div id="ag-tabs" style="position:absolute;left:7vw;right:7vw;top:28.5vh;display:flex;justify-content:center;flex-wrap:wrap;gap:1.6vh 2.6vw">
-      <span class="ag-tab" data-i="0" data-h="1" style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
-        <span class="ag-bar" style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(1);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
-        <span class="ag-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#17130f;transition:color .4s ease">RISK&nbsp;ASSESSMENT</span>
-      </span>
-      <span class="ag-tab" data-i="1" data-h="1" style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
-        <span class="ag-bar" style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
-        <span class="ag-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">PRICING&nbsp;&amp;&nbsp;REVENUE</span>
-      </span>
-      <span class="ag-tab" data-i="2" data-h="1" style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
-        <span class="ag-bar" style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
-        <span class="ag-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">INVENTORY&nbsp;MANAGEMENT</span>
-      </span>
-      <span class="ag-tab" data-i="3" data-h="1" style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
-        <span class="ag-bar" style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
-        <span class="ag-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">COMPLIANCE</span>
-      </span>
-      <span class="ag-tab" data-i="4" data-h="1" style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
-        <span class="ag-bar" style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
-        <span class="ag-lbl" style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">PROCUREMENT</span>
-      </span>
-    </div>
-    <div id="ag-slot" style="position:absolute;left:11vw;right:11vw;top:31.5vh;bottom:26vh"></div>
-    <div id="ag-cap" style="position:absolute;left:7vw;right:7vw;bottom:3vh;text-align:center">
-      <div id="ag-dom" style="display:none;font:500 10px 'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:.26em">CAPITAL&nbsp;&amp;&nbsp;LOGISTICS</div>
-      <div id="ag-name" style="margin-top:1.2vh;font:600 clamp(24px,2.05vw,34px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.032em;color:#17130f">Supplier Risk Intelligence</div>
-      <p id="ag-desc" style="margin:1.6vh auto 0;max-width:76ch;font:400 15px/1.55 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);text-wrap:pretty">Detects early disruption signals across supplier networks including financial instability, geopolitical exposure, and operational risk.</p>
-      <div id="ag-metric" style="margin-top:1.8vh;font:italic 400 clamp(17px,1.3vw,21px)/1.34 'Newsreader',serif;color:#17130f">Reduce disruption penalties &amp; delays <em style="font-style:italic;color:var(--accent)">up to 50%</em></div>
-    </div>
-  </div>
-  <div id="wrap" style="position:fixed;inset:0;z-index:10;will-change:transform;pointer-events:none">
-    <div style="height:1660vh;pointer-events:none"></div>
-    <section id="sec-faq" data-screen-label="06 FAQ" style="position:relative;background:#f4f2ee;padding:13vh 4vw 10vh">
-      <div style="max-width:1680px;margin:0 auto">
-        <div>
-          <h2 style="margin:0;font:600 7.2vw/0.9 'Space Grotesk',sans-serif;letter-spacing:-.052em;color:#17130f">The <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.02em;letter-spacing:-.02em;color:var(--accent)">curiosity</em> corner</h2>
-        </div>
-        <div id="faq-list" style="margin-top:6vh;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(26,21,16,.16);border:1px solid rgba(26,21,16,.16)">
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is my company ready for AI transformation?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">Readiness is less about tooling and more about decision clarity. If you can name the decisions that matter most, we can assess the rest with you in a single working session.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What makes Anthrobyte different?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">We treat AI as an influence layer within complex systems, not a standalone capability. Structure comes first: decision architecture, governance, and adoption before any model scales.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do you build custom solutions or use off-the-shelf tools?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">Both, deliberately. AAtlas agents are modular building blocks; the architecture around them — governance, integration, ownership — is always designed for your system.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">How long does it take to see results?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">First signals typically appear within a quarter of the first agent going live. We sequence deployments so value lands while alignment deepens.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is our data secure with you?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">Yes. Agents operate inside your governance perimeter, with access scoped per decision domain and full auditability of every recommendation.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do you train our teams too?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">Adoption is half the engagement. We train the people who own each decision, not just the ones who run the tools.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Can you help us create an AI governance framework?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">Yes — governance is a first-class deliverable, not an afterthought. We establish ownership, oversight, and accountability before capability scales.</p></div>
-          </div>
-          <div class="faq-item" style="background:#f4f2ee">
-            <div class="faq-q" data-h="1" style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease" style-hover="transform:translateX(6px)"><span style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What is the first step to engage with you?</span><span class="faq-x" style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span></div>
-            <div class="faq-a" style="max-height:0;overflow:hidden"><p style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">A working session. If you’re seeking clarity before acceleration, we’d be glad to think with you.</p></div>
+        <div style="overflow:hidden">
+          <div data-chline="" style="transform:translateY(112%)"><a href="#" data-h="1" data-scr="1"
+              style="pointer-events:auto;display:inline-block;font:600 11.5px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">NAVIGATE&nbsp;COMPLEXITY&nbsp;WITH&nbsp;US&nbsp;→</a>
           </div>
         </div>
       </div>
-    </section>
-    <section id="sec-cta" data-screen-label="07 CTA" style="position:relative;background:#f4f2ee;min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 8vw">
-      <img src="/assets/mark.svg" alt="" style="height:48px;display:block">
-      <h2 style="margin:5vh 0 0;font:600 4.4vw/1.1 'Space Grotesk',sans-serif;letter-spacing:-.042em;color:#17130f;max-width:26ch;text-wrap:balance">If you’re seeking clarity before acceleration, we’d be glad to <em style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.05em;letter-spacing:-.01em;color:var(--accent)">think with you.</em></h2>
-      <a href="https://bookings.cloud.microsoft/book/AnthrobyteAIDiscovery@anthrobyte.ai/?ismsaljsauthenabled" data-h="1" data-scr="1" style="pointer-events:auto;display:inline-block;margin-top:6vh;font:500 12px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;background:var(--accent);padding:20px 38px;border-radius:999px">LET’S&nbsp;THINK&nbsp;TOGETHER</a>
-    </section>
-    <footer id="ft" data-screen-label="08 Footer" style="--g:12px;--fa:.75;position:relative;box-sizing:border-box;min-height:100vh;background:#0b0a09;color:#f2f0eb;margin-top:12vh;padding:var(--g);display:flex;flex-direction:column;gap:var(--g);overflow:hidden">
-      <div id="tile-word" style="position:relative;z-index:1;flex:1 1 42%;min-height:230px;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));display:flex;align-items:center;justify-content:center;overflow:hidden">
-        <div id="ft-ascii-wrap" style="width:calc(100% - 48px);margin:0 auto;overflow:hidden;line-height:0">
-          <pre aria-label="Anthrobyte" id="ft-ascii" style="margin:0;display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;line-height:1.05;letter-spacing:0;color:var(--accent);white-space:pre;-webkit-user-select:none;user-select:none">       +8#######################+                                                                          :8%%8                                                        +8%%:
+      <div id="ch-ladder" style="position:fixed;inset:0;z-index:6;pointer-events:none;opacity:0;visibility:hidden">
+        <div data-chrow="" style="position:absolute;left:56.4vw;top:16vh;opacity:0"><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Leadership
+              Intent</span></span>
+          <div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px">
+            <div data-chl=""
+              style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div>
+            <div data-chd=""
+              style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom">
+              <div data-chc=""
+                style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom">
+                <span
+                  style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-chrow="" style="position:absolute;left:53.4vw;top:31.8vh;opacity:0"><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">System
+              Integration</span></span>
+          <div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px">
+            <div data-chl=""
+              style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div>
+            <div data-chd=""
+              style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom">
+              <div data-chc=""
+                style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom">
+                <span
+                  style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-chrow="" style="position:absolute;left:49.5vw;top:47.6vh;opacity:0"><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Capability
+              &amp; Progress</span></span>
+          <div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px">
+            <div data-chl=""
+              style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div>
+            <div data-chd=""
+              style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom">
+              <div data-chc=""
+                style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom">
+                <span
+                  style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-chrow="" style="position:absolute;left:46.2vw;top:63.4vh;opacity:0"><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Strategic
+              Alignment</span></span>
+          <div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px">
+            <div data-chl=""
+              style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div>
+            <div data-chd=""
+              style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom">
+              <div data-chc=""
+                style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom">
+                <span
+                  style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-chrow="" style="position:absolute;left:43vw;top:79.2vh;opacity:0"><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:600 14px/1.3 'IBM Plex Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#17130f">Ground
+              Realities</span></span>
+          <div style="position:absolute;left:0;top:calc(100% + 0.5vh);width:13.8vw;height:2px">
+            <div data-chl=""
+              style="width:100%;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left"></div>
+            <div data-chd=""
+              style="opacity:0;position:absolute;left:100%;bottom:0;width:4.7vw;height:2px;background:var(--accent);transform:rotate(-33deg);transform-origin:left bottom">
+              <div data-chc=""
+                style="position:absolute;left:100%;bottom:0;width:40px;height:2px;background:var(--accent);transform:rotate(33deg);transform-origin:left bottom">
+                <span
+                  style="position:absolute;right:-5px;top:-4.5px;width:11px;height:11px;border-radius:50%;background:var(--accent)"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="ch-ladder-n"
+        style="display: none; position: fixed; left: 7vw; bottom: 20vh; z-index: 6; flex-direction: column; gap: 9px; opacity: 0; visibility: hidden; pointer-events: none">
+        <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd=""
+            style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">LEADERSHIP
+              INTENT</span></span></div>
+        <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd=""
+            style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">SYSTEM
+              INTEGRATION</span></span></div>
+        <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd=""
+            style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">CAPABILITY
+              &amp; PROGRESS</span></span></div>
+        <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd=""
+            style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">STRATEGIC
+              ALIGNMENT</span></span></div>
+        <div data-chrow="" style="display:flex;align-items:center;gap:8px;opacity:0"><span data-chd=""
+            style="flex:none;width:4px;height:4px;border-radius:50%;background:var(--accent)"></span><span
+            style="overflow:hidden;display:inline-block"><span data-chlab=""
+              style="display:inline-block;transform:translateY(112%);font:500 9px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:rgba(26,21,16,.62)">GROUND
+              REALITIES</span></span></div>
+      </div>
+      <div id="hww-head" data-screen-label="03 How We Work"
+        style="position:fixed;left:48px;right:48px;top:9vh;z-index:6;opacity:0;visibility:hidden;pointer-events:none">
+        <h2
+          style="margin: 0; font: 600 3.4vw/1.04 'Space Grotesk',sans-serif; letter-spacing: -.04em; color: #17130f; position: relative; top: 16px">
+          <span style="display: block; text-align: right">Structured</span><em
+            style="display: block; margin-top: 0.6vh; font-family: 'Newsreader',serif; font-style: italic; font-weight: 400; font-size: 6.4vw; line-height: 1.04; letter-spacing: -.01em; color: var(--accent); white-space: nowrap; position: relative; top: 0px">Intelligence
+            Deployment</em></h2>
+      </div>
+      <div id="hww-steps"
+        style="position: fixed; left: 48px; right: 48px; top: 40vh; z-index: 6; display: grid; grid-template-columns: repeat(3,1fr); gap: 0 3vw; opacity: 0; visibility: hidden; pointer-events: none">
+        <div class="hww-step" style="display:flex;gap:20px;opacity:0">
+          <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
+          <div>
+            <div
+              style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">
+              Understand the Whole System</div>
+            <p
+              style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">
+              Examine and trace ripple effects across stakeholders and operational, strategic, and cultural layers.</p>
+          </div>
+        </div>
+        <div class="hww-step" style="display:flex;gap:20px;opacity:0">
+          <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
+          <div>
+            <div
+              style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">
+              Align Decision Architecture</div>
+            <p
+              style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">
+              Clarify ownership, oversight, accountability, and establish governance before capability scales.</p>
+          </div>
+        </div>
+        <div class="hww-step" style="display:flex;gap:20px;opacity:0">
+          <div class="st-bar" style="width:2px;border-radius:2px;background:var(--accent);opacity:.2"></div>
+          <div>
+            <div
+              style="font:600 clamp(17px,1.35vw,26px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f">
+              Evolve with Coherence</div>
+            <p
+              style="margin:8px 0 0;font:400 clamp(13px,0.95vw,15.5px)/1.58 'Space Grotesk',sans-serif;color:rgba(26,21,16,.62);max-width:46ch">
+              Deploy intelligence gradually with human-centred adoption, expanding as alignment permeates deeper.</p>
+          </div>
+        </div>
+      </div>
+      <div id="why-col"
+        style="position:fixed;left:4vw;top:11vh;bottom:6vh;z-index:6;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch;pointer-events:none">
+        <div id="why-head" data-screen-label="04 Why Anthrobyte"
+          style="position:relative;width:100%;flex:none;opacity:0;visibility:hidden;pointer-events:none">
+          <div style="overflow:hidden;position:relative;text-align:right;padding-right:0.95vw"><span data-wline=""
+              data-nfs="5.2vw"
+              style="display:inline-block;transform:translateY(112%);font:700 2.7vw/1.1 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#17130f">Perspective-Led.</span>
+          </div>
+          <div style="overflow: hidden; position: relative; margin-top: 0vh"><span data-wline="" data-nfs="9.6vw"
+              style="display:inline-block;transform:translateY(112%);font:italic 400 6.8vw/1.16 'Newsreader',serif;letter-spacing:-.02em;color:var(--accent);white-space:nowrap;padding-right:0.12em">Governance-Aware.</span>
+          </div>
+        </div>
+        <div id="why-list"
+          style="position:relative;width:100%;flex:none;margin-top:1vh;opacity:0;visibility:hidden;pointer-events:none">
+          <div style="overflow:hidden">
+            <p data-wline=""
+              style="margin: 0; transform: translateY(112%); font: 400 16.5px/1.66 'Space Grotesk',sans-serif; color: rgba(26,21,16,.7); text-wrap: pretty; text-align: justify; max-width: 94%">
+              We do not treat AI as a <em style="font-style:normal;color:var(--accent)">standalone capability</em>,
+              installed once and measured in isolation. We treat it as an <em
+                style="font-style:normal;color:var(--accent)">influence layer</em> within complex systems, moving
+              decisions, workflows and accountability at every level it touches.</p>
+          </div>
+          <div style="overflow:hidden;margin-top:2.4vh">
+            <div data-wline="" style="display:inline-block;transform:translateY(112%)">
+              <div
+                style="font:italic 400 clamp(21px,2.6vw,46px)/1.18 'Newsreader',serif;letter-spacing:-.015em;color:#17130f;white-space:nowrap">
+                Our approach <span id="why-int"
+                  style="background-image:linear-gradient(90deg,#FF6028 0%,#8f8880 0%);-webkit-background-clip:text;background-clip:text;color:transparent">integrates</span>
+              </div>
+            </div>
+          </div>
+          <div id="why-rows" style="display:flex;flex-direction:column;margin-top:1.6vh">
+            <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
+              <div class="why-fill"
+                style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform">
+              </div>
+              <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
+                <span class="why-idx"
+                  style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">01</span>
+                <span class="why-lbl"
+                  style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Decision
+                  architecture</span>
+              </div>
+            </div>
+            <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
+              <div class="why-fill"
+                style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform">
+              </div>
+              <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
+                <span class="why-idx"
+                  style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">02</span>
+                <span class="why-lbl"
+                  style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Stakeholder
+                  alignment</span>
+              </div>
+            </div>
+            <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
+              <div class="why-fill"
+                style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform">
+              </div>
+              <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
+                <span class="why-idx"
+                  style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">03</span>
+                <span class="why-lbl"
+                  style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Governance
+                  structures</span>
+              </div>
+            </div>
+            <div class="why-item" style="position:relative;border-top:1px solid rgba(26,21,16,.16);opacity:0">
+              <div class="why-fill"
+                style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform">
+              </div>
+              <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
+                <span class="why-idx"
+                  style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">04</span>
+                <span class="why-lbl"
+                  style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Modular
+                  deployment</span>
+              </div>
+            </div>
+            <div class="why-item"
+              style="position:relative;border-top:1px solid rgba(26,21,16,.16);border-bottom:1px solid rgba(26,21,16,.16);opacity:0">
+              <div class="why-fill"
+                style="position:absolute;left:-16px;top:-1px;bottom:0;width:calc(100% + 16px);background:var(--accent);transform:scaleX(0);transform-origin:left center;will-change:transform">
+              </div>
+              <div style="position:relative;display:flex;align-items:center;gap:22px;padding:1.8vh 0">
+                <span class="why-idx"
+                  style="flex:none;font:500 10.5px 'IBM Plex Mono',monospace;letter-spacing:.22em;color:rgba(26,21,16,.4);transition:color .42s cubic-bezier(.4,0,.2,1)">05</span>
+                <span class="why-lbl"
+                  style="font:600 clamp(15px,2.7vh,21px) 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#17130f;transition:color .42s cubic-bezier(.4,0,.2,1)">Human-centered
+                  adoption</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="why-foot"
+          style="position:relative;width:100%;flex:none;margin-top:auto;padding-top:3.4vh;opacity:0;visibility:hidden;pointer-events:none;display:flex;flex-direction:column;gap:1.8vh;align-items:flex-start">
+          <div style="overflow:hidden">
+            <div data-wline="" data-nfs="5.8vw"
+              style="display:flex;gap:16px;align-items:stretch;transform:translateY(112%);font:italic 700 2.1vw/1.3 'Newsreader',serif;color:#17130f">
+              <span style="flex:none;width:0.16em;height:1.06em;background-color:#16120E"></span><span
+                style="color:#FF6028;font-weight:500">Intelligence becomes durable when structure remains clear.</span>
+            </div>
+          </div>
+          <div style="overflow:hidden">
+            <div data-wline="" style="transform:translateY(112%)"><a id="meet-agents-link" href="#" data-h="1"
+                data-scr="1"
+                style="pointer-events:auto;display:inline-block;font:600 11.5px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;border-bottom:1px solid rgba(255,96,40,.8);padding-bottom:6px">MEET&nbsp;THE&nbsp;AATLAS&nbsp;AGENTS&nbsp;→</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="agents-layer" data-screen-label="05 AAtlas Agents"
+        style="position:fixed;inset:0;z-index:6;opacity:0;visibility:hidden;pointer-events:none">
+        <div id="ag-top" style="position:absolute;left:7vw;right:7vw;top:11vh;text-align:center">
+          <h2 style="margin:0;font:600 3.5vw/1.04 'Space Grotesk',sans-serif;letter-spacing:-.04em;color:#17130f">
+            Modular <em
+              style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.05em;letter-spacing:-.01em;color:var(--accent)">AI
+              Agents</em> for Enterprise Systems</h2>
+          <p
+            style="margin:2.2vh auto 0;font:400 16.5px/1.62 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:68ch;text-wrap:balance">
+            We deploy modular AI agents across supply chains and enterprise environments from pricing and procurement to
+            logistics and compliance.</p>
+        </div>
+        <div id="ag-tabs"
+          style="position:absolute;left:7vw;right:7vw;top:28.5vh;display:flex;justify-content:center;flex-wrap:wrap;gap:1.6vh 2.6vw">
+          <span class="ag-tab" data-i="0" data-h="1"
+            style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
+            <span class="ag-bar"
+              style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(1);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
+            <span class="ag-lbl"
+              style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:#17130f;transition:color .4s ease">RISK&nbsp;ASSESSMENT</span>
+          </span>
+          <span class="ag-tab" data-i="1" data-h="1"
+            style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
+            <span class="ag-bar"
+              style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
+            <span class="ag-lbl"
+              style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">PRICING&nbsp;&amp;&nbsp;REVENUE</span>
+          </span>
+          <span class="ag-tab" data-i="2" data-h="1"
+            style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
+            <span class="ag-bar"
+              style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
+            <span class="ag-lbl"
+              style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">INVENTORY&nbsp;MANAGEMENT</span>
+          </span>
+          <span class="ag-tab" data-i="3" data-h="1"
+            style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
+            <span class="ag-bar"
+              style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
+            <span class="ag-lbl"
+              style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">COMPLIANCE</span>
+          </span>
+          <span class="ag-tab" data-i="4" data-h="1"
+            style="position:relative;pointer-events:auto;padding-bottom:7px;transition:transform .5s cubic-bezier(.65,0,.35,1)">
+            <span class="ag-bar"
+              style="position:absolute;left:0;bottom:0;width:100%;height:1px;background:var(--accent);transform:scaleX(0);transform-origin:left center;transition:transform .55s cubic-bezier(.65,0,.35,1)"></span>
+            <span class="ag-lbl"
+              style="font:500 11px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(26,21,16,.45);transition:color .4s ease">PROCUREMENT</span>
+          </span>
+        </div>
+        <div id="ag-slot" style="position:absolute;left:11vw;right:11vw;top:31.5vh;bottom:26vh"></div>
+        <div id="ag-cap" style="position:absolute;left:7vw;right:7vw;bottom:3vh;text-align:center">
+          <div id="ag-dom"
+            style="display:none;font:500 10px 'IBM Plex Mono',monospace;color:var(--accent);letter-spacing:.26em">
+            CAPITAL&nbsp;&amp;&nbsp;LOGISTICS</div>
+          <div id="ag-name"
+            style="margin-top:1.2vh;font:600 clamp(24px,2.05vw,34px)/1.05 'Space Grotesk',sans-serif;letter-spacing:-.032em;color:#17130f">
+            Supplier Risk Intelligence</div>
+          <p id="ag-desc"
+            style="margin:1.6vh auto 0;max-width:76ch;font:400 15px/1.55 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);text-wrap:pretty">
+            Detects early disruption signals across supplier networks including financial instability, geopolitical
+            exposure, and operational risk.</p>
+          <div id="ag-metric"
+            style="margin-top:1.8vh;font:italic 400 clamp(17px,1.3vw,21px)/1.34 'Newsreader',serif;color:#17130f">Reduce
+            disruption penalties &amp; delays <em style="font-style:italic;color:var(--accent)">up to 50%</em></div>
+        </div>
+      </div>
+      <div id="wrap" style="position:fixed;inset:0;z-index:10;will-change:transform;pointer-events:none">
+        <div style="height:1660vh;pointer-events:none"></div>
+        <section id="sec-faq" data-screen-label="06 FAQ"
+          style="position:relative;background:#f4f2ee;padding:13vh 4vw 10vh">
+          <div style="max-width:1680px;margin:0 auto">
+            <div>
+              <h2 style="margin:0;font:600 7.2vw/0.9 'Space Grotesk',sans-serif;letter-spacing:-.052em;color:#17130f">
+                The <em
+                  style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.02em;letter-spacing:-.02em;color:var(--accent)">curiosity</em>
+                corner</h2>
+            </div>
+            <div id="faq-list"
+              style="margin-top:6vh;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(26,21,16,.16);border:1px solid rgba(26,21,16,.16)">
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is
+                    my company ready for AI transformation?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    Readiness is less about tooling and more about decision clarity. If you can name the decisions that
+                    matter most, we can assess the rest with you in a single working session.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What
+                    makes Anthrobyte different?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    We treat AI as an influence layer within complex systems, not a standalone capability. Structure
+                    comes first: decision architecture, governance, and adoption before any model scales.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do
+                    you build custom solutions or use off-the-shelf tools?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    Both, deliberately. AAtlas agents are modular building blocks; the architecture around them —
+                    governance, integration, ownership — is always designed for your system.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">How
+                    long does it take to see results?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    First signals typically appear within a quarter of the first agent going live. We sequence
+                    deployments so value lands while alignment deepens.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Is
+                    our data secure with you?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    Yes. Agents operate inside your governance perimeter, with access scoped per decision domain and
+                    full auditability of every recommendation.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Do
+                    you train our teams too?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    Adoption is half the engagement. We train the people who own each decision, not just the ones who
+                    run the tools.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">Can
+                    you help us create an AI governance framework?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    Yes — governance is a first-class deliverable, not an afterthought. We establish ownership,
+                    oversight, and accountability before capability scales.</p>
+                </div>
+              </div>
+              <div class="faq-item" style="background:#f4f2ee">
+                <div class="faq-q" data-h="1"
+                  style="display:flex;align-items:baseline;gap:28px;padding:3.4vh 2.2vw;pointer-events:auto;transition:transform .35s ease"
+                  style-hover="transform:translateX(6px)"><span
+                    style="flex:1;font:500 clamp(19px,1.42vw,26px)/1.22 'Space Grotesk',sans-serif;letter-spacing:-.028em;color:#17130f">What
+                    is the first step to engage with you?</span><span class="faq-x"
+                    style="font:400 26px/1 'Space Grotesk',sans-serif;color:var(--accent);transition:transform .35s">+</span>
+                </div>
+                <div class="faq-a" style="max-height:0;overflow:hidden">
+                  <p
+                    style="margin:0 2.2vw 3.4vh;font:400 15.5px/1.68 'Space Grotesk',sans-serif;color:rgba(26,21,16,.6);max-width:52ch">
+                    A working session. If you’re seeking clarity before acceleration, we’d be glad to think with you.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="sec-cta" data-screen-label="07 CTA"
+          style="position:relative;background:#f4f2ee;min-height:88vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 8vw">
+          <img src="/assets/mark.svg" alt="" style="height:48px;display:block">
+          <h2
+            style="margin:5vh 0 0;font:600 4.4vw/1.1 'Space Grotesk',sans-serif;letter-spacing:-.042em;color:#17130f;max-width:26ch;text-wrap:balance">
+            If you’re seeking clarity before acceleration, we’d be glad to <em
+              style="font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:1.05em;letter-spacing:-.01em;color:var(--accent)">think
+              with you.</em></h2>
+          <a href="https://bookings.cloud.microsoft/book/AnthrobyteAIDiscovery@anthrobyte.ai/?ismsaljsauthenabled"
+            data-h="1" data-scr="1"
+            style="pointer-events:auto;display:inline-block;margin-top:6vh;font:500 12px 'IBM Plex Mono',monospace;color:#17130f;letter-spacing:.26em;background:var(--accent);padding:20px 38px;border-radius:999px">LET’S&nbsp;THINK&nbsp;TOGETHER</a>
+        </section>
+        <footer id="ft" data-screen-label="08 Footer"
+          style="--g:12px;--fa:.75;position:relative;box-sizing:border-box;min-height:100vh;background:#0b0a09;color:#f2f0eb;margin-top:12vh;padding:var(--g);display:flex;flex-direction:column;gap:var(--g);overflow:hidden">
+          <div id="tile-word"
+            style="position:relative;z-index:1;flex:1 1 42%;min-height:230px;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));display:flex;align-items:center;justify-content:center;overflow:hidden">
+            <div id="ft-ascii-wrap" style="width:calc(100% - 48px);margin:0 auto;overflow:hidden;line-height:0">
+              <pre aria-label="Anthrobyte" id="ft-ascii"
+                style="margin:0;display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:9px;line-height:1.05;letter-spacing:0;color:var(--accent);white-space:pre;-webkit-user-select:none;user-select:none">       +8#######################+                                                                          :8%%8                                                        +8%%:
        +########################+                                                                          +%%%%                                                       :%%%%:
         8######################8                                                             +%%%:         +%%%%                                                       :%%%%:                                          8%%%:
          +####################8                                                              %%%%+         +%%%%                                                       :%%%%:                                         +%%%%:
@@ -249,118 +659,258 @@ a:focus-visible,[data-h]:focus-visible{outline:2px solid #FF6028;outline-offset:
           +###8:        +####8                                                                                                                                                                   ++++::::::88%%%%+
             ::            :+:                                                                                                                                                                   :%%%%%%%%%%%%%%8:
                                                                                                                                                                                                   :++++888+++:</pre>
-        </div>
-      </div>
-      <canvas id="tide-cv" style="position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none"></canvas>
-      <div style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g)">
-        <div style="grid-column:span 6;display:flex;flex-direction:column;gap:var(--g)">
-          <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:26px 28px;display:flex;flex-direction:column;gap:20px">
-            <div style="display:flex;align-items:center;gap:12px">
-              <img src="/assets/mark.svg" alt="" style="height:22px;width:auto;display:block" />
-              <span style="font:600 18px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Anthrobyte</span>
-            </div>
-            <p style="margin:0;max-width:48ch;font:300 17px/1.5 'Newsreader',serif;font-style:italic;color:rgba(244,242,238,.72);text-wrap:pretty">Anthrobyte partners with organizations navigating complexity across people, systems, and intelligence, bringing clarity, trust, and scale.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--g)">
-            <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
-              <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">CONNECT&nbsp;WITH&nbsp;US</div>
-              <div style="display:flex;flex-direction:column;gap:11px"><a href="mailto:hello@anthrobyte.ai" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">hello@anthrobyte.ai</a><a href="mailto:careers@anthrobyte.ai" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">careers@anthrobyte.ai</a></div>
-            </div>
-            <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
-              <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">SUPPORT</div>
-              <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Vendor Portal</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Support Desk</a></div>
             </div>
           </div>
-        </div>
-        <div style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
-          <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">COMPANY</div>
-          <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Home</a><a href="#" data-nav="#agents" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">AATLAS Agents</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Careers</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Journal</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Case Studies</a></div>
-        </div>
-        <div style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
-          <div style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">LEGAL</div>
-          <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Privacy Policy</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Terms of Use</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Responsible AI</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Security and Trust Policy</a><a href="#" data-nav="#" data-h="1" style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)" style-hover="color:var(--accent);transform:translateX(5px)">Cookie Policy</a></div>
+          <canvas id="tide-cv"
+            style="position:absolute;inset:0;z-index:2;width:100%;height:100%;pointer-events:none"></canvas>
+          <div
+            style="position:relative;z-index:3;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:var(--g)">
+            <div style="grid-column:span 6;display:flex;flex-direction:column;gap:var(--g)">
+              <div
+                style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:26px 28px;display:flex;flex-direction:column;gap:20px">
+                <div style="display:flex;align-items:center;gap:12px">
+                  <img src="/assets/mark.svg" alt="" style="height:22px;width:auto;display:block" />
+                  <span
+                    style="font:600 18px/1 'Space Grotesk',sans-serif;letter-spacing:-.02em;color:#f2f0eb">Anthrobyte</span>
+                </div>
+                <p
+                  style="margin:0;max-width:48ch;font:300 17px/1.5 'Newsreader',serif;font-style:italic;color:rgba(244,242,238,.72);text-wrap:pretty">
+                  Anthrobyte partners with organizations navigating complexity across people, systems, and intelligence,
+                  bringing clarity, trust, and scale.</p>
+              </div>
+              <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:var(--g)">
+                <div
+                  style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
+                  <div
+                    style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">
+                    CONNECT&nbsp;WITH&nbsp;US</div>
+                  <div style="display:flex;flex-direction:column;gap:11px"><a href="mailto:hello@anthrobyte.ai"
+                      data-h="1"
+                      style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                      style-hover="color:var(--accent);transform:translateX(5px)">hello@anthrobyte.ai</a><a
+                      href="mailto:careers@anthrobyte.ai" data-h="1"
+                      style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                      style-hover="color:var(--accent);transform:translateX(5px)">careers@anthrobyte.ai</a></div>
+                </div>
+                <div
+                  style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px">
+                  <div
+                    style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">
+                    SUPPORT</div>
+                  <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1"
+                      style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                      style-hover="color:var(--accent);transform:translateX(5px)">Vendor Portal</a><a href="#"
+                      data-nav="#" data-h="1"
+                      style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                      style-hover="color:var(--accent);transform:translateX(5px)">Support Desk</a></div>
+                </div>
+              </div>
+            </div>
+            <div
+              style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
+              <div
+                style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">
+                COMPANY</div>
+              <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Home</a><a href="#" data-nav="#agents"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">AATLAS Agents</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Careers</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Journal</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Case Studies</a></div>
+            </div>
+            <div
+              style="grid-column:span 3;box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:24px 26px 28px;display:flex;flex-direction:column">
+              <div
+                style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.24em;color:var(--accent);margin-bottom:20px">
+                LEGAL</div>
+              <div style="display:flex;flex-direction:column;gap:11px"><a href="#" data-nav="#" data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Privacy Policy</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Terms of Use</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Responsible AI</a><a href="#" data-nav="#"
+                  data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Security and Trust Policy</a><a href="#"
+                  data-nav="#" data-h="1"
+                  style="font:400 15px/1.25 'Space Grotesk',sans-serif;color:rgba(244,242,238,.8);width:max-content;pointer-events:auto;transition:color .3s ease,transform .38s cubic-bezier(.7,0,.2,1)"
+                  style-hover="color:var(--accent);transform:translateX(5px)">Cookie Policy</a></div>
+            </div>
+          </div>
+          <div style="position:relative;z-index:3;height:1px;background:rgba(244,242,238,.18)"></div>
+          <div
+            style="position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--g)">
+            <div
+              style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px">
+              <span
+                style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.5);letter-spacing:.22em">&copy;&nbsp;2026&nbsp;ANTHROBYTE</span>
+            </div>
+            <a href="https://www.linkedin.com/company/anthrobyte" target="_blank" rel="noreferrer" data-h="1"
+              aria-label="Anthrobyte on LinkedIn" title="Anthrobyte on LinkedIn"
+              style="display:block;line-height:0;padding:8px;pointer-events:auto;transition:transform .4s cubic-bezier(.7,0,.2,1)"
+              style-hover="transform:scale(1.12)"><img src="/assets/mark.svg" alt=""
+                style="height:26px;width:auto;display:block" /></a>
+            <div
+              style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px;display:flex;flex-direction:column;align-items:flex-end;gap:9px">
+              <a id="back-to-top" href="#" data-h="1"
+                style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.75);letter-spacing:.22em;text-decoration:none;pointer-events:auto;transition:color .25s ease"
+                style-hover="color:var(--accent)">BACK&nbsp;TO&nbsp;TOP&nbsp;&uarr;</a>
+              <div style="width:200px;height:2px;background:rgba(244,242,238,.15)">
+                <div id="next-fill" style="width:0%;height:100%;background:var(--accent)"></div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <div id="hdr" style="position:fixed;top:0;left:0;right:0;z-index:40;pointer-events:none">
+        <div style="display:flex;align-items:center;justify-content:space-between;padding:30px 48px">
+          <a id="logo-home" href="#" data-h="1"
+            style="pointer-events:auto;position:relative;display:block;height:24px;width:156px">
+            <img id="lg-d" src="/assets/logo-dark.svg" alt="Anthrobyte"
+              style="position:absolute;left:0;top:0;height:24px;opacity:1;transition:opacity .35s ease">
+            <img id="lg-l" src="/assets/logo-light.svg" alt=""
+              style="position:absolute;left:0;top:0;height:24px;opacity:0;transition:opacity .35s ease">
+          </a>
+          <span id="menu-btn" data-h="1" aria-label="Menu"
+            style="pointer-events:auto;display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin:-6px">
+            <svg width="26" height="26" viewBox="-13 -13 26 26" style="overflow:visible">
+              <g id="mb-g">
+                <g id="mb-p0">
+                  <g id="mb-w0" transform="translate(-14.2,-11.8)">
+                    <path id="mb-q0"></path>
+                  </g>
+                  <rect id="mb-r0" x="-14" y="-1.35" width="28" height="2.7"></rect>
+                </g>
+                <g id="mb-p1">
+                  <g id="mb-w1" transform="translate(-14.2,-11.8)">
+                    <path id="mb-q1"></path>
+                  </g>
+                  <rect id="mb-r1" x="-14" y="-1.35" width="28" height="2.7"></rect>
+                </g>
+                <g id="mb-p2">
+                  <g id="mb-w2" transform="translate(-14.2,-11.8)">
+                    <path id="mb-q2"></path>
+                  </g>
+                  <rect id="mb-r2" x="-14" y="-1.35" width="28" height="2.7"></rect>
+                </g>
+              </g>
+            </svg>
+          </span>
         </div>
       </div>
-      <div style="position:relative;z-index:3;height:1px;background:rgba(244,242,238,.18)"></div>
-      <div style="position:relative;z-index:3;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:var(--g)">
-        <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px">
-          <span style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.5);letter-spacing:.22em">&copy;&nbsp;2026&nbsp;ANTHROBYTE</span>
-        </div>
-        <a href="https://www.linkedin.com/company/anthrobyte" target="_blank" rel="noreferrer" data-h="1" aria-label="Anthrobyte on LinkedIn" title="Anthrobyte on LinkedIn" style="display:block;line-height:0;padding:8px;pointer-events:auto;transition:transform .4s cubic-bezier(.7,0,.2,1)" style-hover="transform:scale(1.12)"><img src="/assets/mark.svg" alt="" style="height:26px;width:auto;display:block" /></a>
-        <div style="box-sizing:border-box;border:1px solid rgba(244,242,238,.13);background:rgba(20,19,17,var(--fa));padding:14px 18px;display:flex;flex-direction:column;align-items:flex-end;gap:9px">
-          <a id="back-to-top" href="#" data-h="1" style="font:400 10px 'IBM Plex Mono',monospace;color:rgba(244,242,238,.75);letter-spacing:.22em;text-decoration:none;pointer-events:auto;transition:color .25s ease" style-hover="color:var(--accent)">BACK&nbsp;TO&nbsp;TOP&nbsp;&uarr;</a>
-          <div style="width:200px;height:2px;background:rgba(244,242,238,.15)"><div id="next-fill" style="width:0%;height:100%;background:var(--accent)"></div></div>
+      <div id="menu" data-screen-label="Menu overlay" style="position:fixed;inset:0;z-index:45;pointer-events:none">
+        <div id="menu-panel"
+          style="position:absolute;top:70px;right:48px;width:426px;background:#111010;border:1px solid rgba(244,242,238,.14);box-shadow:0 24px 60px rgba(0,0,0,.55);opacity:0;transform:translate(0,-10px) scale(.97);transform-origin:100% 0;transition:opacity .34s cubic-bezier(.62,.02,.2,1),transform .34s cubic-bezier(.62,.02,.2,1);pointer-events:none">
+          <div style="display:flex;flex-direction:column">
+            <a href="#" data-nav="#" data-h="1" data-mrow="1"
+              style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
+              <span data-mname="1" data-scr="1"
+                style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">Home</span>
+              <span data-mdesc="1"
+                style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Structured
+                intelligence for complex operations.</span>
+            </a>
+            <a href="#" data-nav="#agents" data-h="1" data-mrow="1"
+              style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
+              <span data-mname="1" data-scr="1"
+                style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">AAtlas
+                Agents</span>
+              <span data-mdesc="1"
+                style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Modular
+                agents. One operating picture.</span>
+            </a>
+            <a href="#" data-nav="#" data-h="1" data-mrow="1"
+              style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
+              <span data-mname="1" data-scr="1"
+                style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">AI
+                Transformation</span>
+              <span data-mdesc="1"
+                style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">From
+                pilot to operating model.</span>
+            </a>
+            <a href="#" data-nav="#" data-h="1" data-mrow="1"
+              style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;color:#f2f0eb;transition:background .28s linear">
+              <span data-mname="1" data-scr="1"
+                style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">Journal</span>
+              <span data-mdesc="1"
+                style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Perspective
+                precedes implementation.</span>
+            </a>
+          </div>
+          <div
+            style="border-top:1px solid rgba(244,242,238,.14);padding:12px 20px 13px;display:flex;justify-content:space-between;align-items:center">
+            <a href="mailto:hello@anthrobyte.ai"
+              style="font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(244,242,238,.5)">HELLO@ANTHROBYTE.AI</a>
+            <span
+              style="font:400 9px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.5)">ESC</span>
+          </div>
         </div>
       </div>
-    </footer>
-  </div>
-  <div id="hdr" style="position:fixed;top:0;left:0;right:0;z-index:40;pointer-events:none">
-    <div style="display:flex;align-items:center;justify-content:space-between;padding:30px 48px">
-      <a id="logo-home" href="#" data-h="1" style="pointer-events:auto;position:relative;display:block;height:24px;width:156px">
-        <img id="lg-d" src="/assets/logo-dark.svg" alt="Anthrobyte" style="position:absolute;left:0;top:0;height:24px;opacity:1;transition:opacity .35s ease">
-        <img id="lg-l" src="/assets/logo-light.svg" alt="" style="position:absolute;left:0;top:0;height:24px;opacity:0;transition:opacity .35s ease">
-      </a>
-      <span id="menu-btn" data-h="1" aria-label="Menu" style="pointer-events:auto;display:flex;align-items:center;justify-content:center;width:34px;height:34px;margin:-6px">
-        <svg width="26" height="26" viewBox="-13 -13 26 26" style="overflow:visible">
-          <g id="mb-g">
-            <g id="mb-p0"><g id="mb-w0" transform="translate(-14.2,-11.8)"><path id="mb-q0"></path></g><rect id="mb-r0" x="-14" y="-1.35" width="28" height="2.7"></rect></g>
-            <g id="mb-p1"><g id="mb-w1" transform="translate(-14.2,-11.8)"><path id="mb-q1"></path></g><rect id="mb-r1" x="-14" y="-1.35" width="28" height="2.7"></rect></g>
-            <g id="mb-p2"><g id="mb-w2" transform="translate(-14.2,-11.8)"><path id="mb-q2"></path></g><rect id="mb-r2" x="-14" y="-1.35" width="28" height="2.7"></rect></g>
+      <div id="grain" style="position:fixed;inset:0;z-index:35;opacity:.05;mix-blend-mode:overlay;pointer-events:none">
+      </div>
+      <svg id="loader" style="position:fixed;inset:0;z-index:50;width:100%;height:100%;display:block">
+        <rect id="lrect" width="100%" height="100%" fill="#0b0a09"></rect>
+        <g id="lart" transform="translate(-500,-500)">
+          <g transform="translate(-15.597,-13.84)">
+            <path class="lp"
+              d="M7.43692 3.35091e-06C6.35895 3.52645e-06 5.46602 0.881876 5.67379 1.93963C5.80208 2.59276 5.99517 3.23313 6.25112 3.85105C6.75684 5.07199 7.4981 6.18135 8.43256 7.11582C9.36702 8.05028 10.4764 8.79153 11.6973 9.29726C12.9183 9.80299 14.2268 10.0633 15.5484 10.0633C16.8699 10.0633 18.1785 9.80299 19.3994 9.29726C20.6204 8.79153 21.7297 8.05027 22.6642 7.11581C23.5986 6.18135 24.3399 5.07198 24.8456 3.85105C25.1016 3.23313 25.2947 2.59276 25.423 1.93962C25.6307 0.881872 24.7378 -2.69777e-07 23.6598 0L7.43692 3.35091e-06Z"
+              fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
+            <path class="lp"
+              d="M22.823 26.7423C22.284 27.6758 21.0738 28.0082 20.2617 27.2994C19.7602 26.8617 19.3021 26.3743 18.895 25.8437C18.0905 24.7953 17.5004 23.5986 17.1583 22.3221C16.8163 21.0456 16.729 19.7143 16.9015 18.4041C17.074 17.0938 17.5029 15.8304 18.1637 14.6859C18.8244 13.5415 19.7041 12.5383 20.7526 11.7338C21.801 10.9293 22.9976 10.3392 24.2741 9.9972C25.5506 9.65516 26.882 9.5679 28.1922 9.74039C28.8553 9.82769 29.5065 9.98066 30.1362 10.1961C31.1562 10.5451 31.4734 11.7593 30.9344 12.6928L22.823 26.7423Z"
+              fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
+            <path class="lp"
+              d="M0.259461 12.6235C-0.279521 11.69 0.0377339 10.4757 1.05766 10.1268C1.68744 9.91132 2.33856 9.75835 3.00167 9.67105C4.31189 9.49856 5.64326 9.58582 6.91975 9.92786C8.19625 10.2699 9.39288 10.86 10.4413 11.6645C11.4898 12.469 12.3695 13.4721 13.0302 14.6166C13.691 15.7611 14.1199 17.0245 14.2924 18.3347C14.4649 19.6449 14.3776 20.9763 14.0356 22.2528C13.6935 23.5293 13.1034 24.7259 12.2989 25.7744C11.8918 26.305 11.4337 26.7924 10.9322 27.2301C10.1201 27.9389 8.9099 27.6065 8.37091 26.673L0.259461 12.6235Z"
+              fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
+          </g>
+        </g>
+        <text id="lword" x="50%" y="90%" dx="0.15em" text-anchor="middle" fill="rgba(242,240,235,.5)"
+          style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.3em">ANTHROBYTE</text>
+      </svg>
+      <div id="cur"
+        style="position:fixed;z-index:60;left:0;top:0;width:5px;height:5px;border-radius:50%;background:#ffffff;mix-blend-mode:difference;pointer-events:none;transform:translate(-100px,-100px);transition:opacity .26s linear">
+      </div>
+      <div id="cpt-wrap"
+        style="position:fixed;z-index:61;left:0;top:0;width:44px;height:44px;pointer-events:none;transform:translate(-200px,-200px)">
+        <svg id="cpt" viewBox="-24 -24 48 48"
+          style="display:block;width:44px;height:44px;pointer-events:none;overflow:visible">
+          <g id="cpt-g">
+            <g id="cpt-p0">
+              <g id="cpt-w0">
+                <path id="cpt-q0" fill="#FF6028"></path>
+              </g>
+            </g>
+            <g id="cpt-p1">
+              <g id="cpt-w1">
+                <path id="cpt-q1" fill="#FF6028"></path>
+              </g>
+            </g>
+            <g id="cpt-p2">
+              <g id="cpt-w2">
+                <path id="cpt-q2" fill="#FF6028"></path>
+              </g>
+            </g>
           </g>
         </svg>
-      </span>
-    </div>
-  </div>
-  <div id="menu" data-screen-label="Menu overlay" style="position:fixed;inset:0;z-index:45;pointer-events:none">
-    <div id="menu-panel" style="position:absolute;top:70px;right:48px;width:426px;background:#111010;border:1px solid rgba(244,242,238,.14);box-shadow:0 24px 60px rgba(0,0,0,.55);opacity:0;transform:translate(0,-10px) scale(.97);transform-origin:100% 0;transition:opacity .34s cubic-bezier(.62,.02,.2,1),transform .34s cubic-bezier(.62,.02,.2,1);pointer-events:none">
-      <div style="display:flex;flex-direction:column">
-      <a href="#" data-nav="#" data-h="1" data-mrow="1" style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
-        <span data-mname="1" data-scr="1" style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">Home</span>
-        <span data-mdesc="1" style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Structured intelligence for complex operations.</span>
-      </a>
-      <a href="#" data-nav="#agents" data-h="1" data-mrow="1" style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
-        <span data-mname="1" data-scr="1" style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">AAtlas Agents</span>
-        <span data-mdesc="1" style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Modular agents. One operating picture.</span>
-      </a>
-      <a href="#" data-nav="#" data-h="1" data-mrow="1" style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;border-bottom:1px solid rgba(244,242,238,.1);color:#f2f0eb;transition:background .28s linear">
-        <span data-mname="1" data-scr="1" style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">AI Transformation</span>
-        <span data-mdesc="1" style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">From pilot to operating model.</span>
-      </a>
-      <a href="#" data-nav="#" data-h="1" data-mrow="1" style="display:flex;align-items:baseline;justify-content:space-between;gap:22px;padding:15px 20px;color:#f2f0eb;transition:background .28s linear">
-        <span data-mname="1" data-scr="1" style="flex:none;font:500 18px/1.15 'Space Grotesk',sans-serif;letter-spacing:-.02em;transition:color .24s linear">Journal</span>
-        <span data-mdesc="1" style="text-align:right;font:italic 400 12.5px/1.35 'Newsreader',serif;color:rgba(242,240,235,.58);transition:color .24s linear">Perspective precedes implementation.</span>
-      </a>
       </div>
-      <div style="border-top:1px solid rgba(244,242,238,.14);padding:12px 20px 13px;display:flex;justify-content:space-between;align-items:center">
-        <a href="mailto:hello@anthrobyte.ai" style="font:400 10px 'IBM Plex Mono',monospace;letter-spacing:.16em;color:rgba(244,242,238,.5)">HELLO@ANTHROBYTE.AI</a>
-        <span style="font:400 9px 'IBM Plex Mono',monospace;letter-spacing:.2em;color:rgba(244,242,238,.5)">ESC</span>
+      <div id="curr"
+        style="position: fixed; z-index: 60; left: 0px; top: 0px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); box-sizing: content-box; mix-blend-mode: difference; pointer-events: none; transform: translate(-100px,-100px)">
       </div>
     </div>
-  </div>
-  <div id="grain" style="position:fixed;inset:0;z-index:35;opacity:.05;mix-blend-mode:overlay;pointer-events:none"></div>
-  <svg id="loader" style="position:fixed;inset:0;z-index:50;width:100%;height:100%;display:block">
-    <rect id="lrect" width="100%" height="100%" fill="#0b0a09"></rect>
-    <g id="lart" transform="translate(-500,-500)"><g transform="translate(-15.597,-13.84)">
-      <path class="lp" d="M7.43692 3.35091e-06C6.35895 3.52645e-06 5.46602 0.881876 5.67379 1.93963C5.80208 2.59276 5.99517 3.23313 6.25112 3.85105C6.75684 5.07199 7.4981 6.18135 8.43256 7.11582C9.36702 8.05028 10.4764 8.79153 11.6973 9.29726C12.9183 9.80299 14.2268 10.0633 15.5484 10.0633C16.8699 10.0633 18.1785 9.80299 19.3994 9.29726C20.6204 8.79153 21.7297 8.05027 22.6642 7.11581C23.5986 6.18135 24.3399 5.07198 24.8456 3.85105C25.1016 3.23313 25.2947 2.59276 25.423 1.93962C25.6307 0.881872 24.7378 -2.69777e-07 23.6598 0L7.43692 3.35091e-06Z" fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
-      <path class="lp" d="M22.823 26.7423C22.284 27.6758 21.0738 28.0082 20.2617 27.2994C19.7602 26.8617 19.3021 26.3743 18.895 25.8437C18.0905 24.7953 17.5004 23.5986 17.1583 22.3221C16.8163 21.0456 16.729 19.7143 16.9015 18.4041C17.074 17.0938 17.5029 15.8304 18.1637 14.6859C18.8244 13.5415 19.7041 12.5383 20.7526 11.7338C21.801 10.9293 22.9976 10.3392 24.2741 9.9972C25.5506 9.65516 26.882 9.5679 28.1922 9.74039C28.8553 9.82769 29.5065 9.98066 30.1362 10.1961C31.1562 10.5451 31.4734 11.7593 30.9344 12.6928L22.823 26.7423Z" fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
-      <path class="lp" d="M0.259461 12.6235C-0.279521 11.69 0.0377339 10.4757 1.05766 10.1268C1.68744 9.91132 2.33856 9.75835 3.00167 9.67105C4.31189 9.49856 5.64326 9.58582 6.91975 9.92786C8.19625 10.2699 9.39288 10.86 10.4413 11.6645C11.4898 12.469 12.3695 13.4721 13.0302 14.6166C13.691 15.7611 14.1199 17.0245 14.2924 18.3347C14.4649 19.6449 14.3776 20.9763 14.0356 22.2528C13.6935 23.5293 13.1034 24.7259 12.2989 25.7744C11.8918 26.305 11.4337 26.7924 10.9322 27.2301C10.1201 27.9389 8.9099 27.6065 8.37091 26.673L0.259461 12.6235Z" fill="#FF6028" fill-opacity="0" stroke="#FF6028" stroke-width="0.55"></path>
-    </g></g>
-    <text id="lword" x="50%" y="90%" dx="0.15em" text-anchor="middle" fill="rgba(242,240,235,.5)" style="font:500 10px 'IBM Plex Mono',monospace;letter-spacing:.3em">ANTHROBYTE</text>
-  </svg>
-  <div id="cur" style="position:fixed;z-index:60;left:0;top:0;width:5px;height:5px;border-radius:50%;background:#ffffff;mix-blend-mode:difference;pointer-events:none;transform:translate(-100px,-100px);transition:opacity .26s linear"></div>
-  <div id="cpt-wrap" style="position:fixed;z-index:61;left:0;top:0;width:44px;height:44px;pointer-events:none;transform:translate(-200px,-200px)">
-  <svg id="cpt" viewBox="-24 -24 48 48" style="display:block;width:44px;height:44px;pointer-events:none;overflow:visible">
-    <g id="cpt-g">
-      <g id="cpt-p0"><g id="cpt-w0"><path id="cpt-q0" fill="#FF6028"></path></g></g>
-      <g id="cpt-p1"><g id="cpt-w1"><path id="cpt-q1" fill="#FF6028"></path></g></g>
-      <g id="cpt-p2"><g id="cpt-w2"><path id="cpt-q2" fill="#FF6028"></path></g></g>
-    </g>
-  </svg>
-  </div>
-  <div id="curr" style="position: fixed; z-index: 60; left: 0px; top: 0px; width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); box-sizing: content-box; mix-blend-mode: difference; pointer-events: none; transform: translate(-100px,-100px)"></div>
-</div>
-</x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;composeAgents&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Compose&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6028&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FF6028&quot;,&quot;#ff6a1a&quot;,&quot;#e8620c&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;replayLoader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Loader&quot;},&quot;ladDotPos&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-72,&quot;min&quot;:-150,&quot;max&quot;:150,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladPlus&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.95,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladWallRot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-30,&quot;min&quot;:-45,&quot;max&quot;:45,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;deg&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladBotY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:8,&quot;min&quot;:5,&quot;max&quot;:20,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLineStub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:18,&quot;min&quot;:0,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelGap&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:3,&quot;min&quot;:-30,&quot;max&quot;:30,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:14,&quot;min&quot;:-200,&quot;max&quot;:200,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:12,&quot;min&quot;:9,&quot;max&quot;:26,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;r1DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r2DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r3DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r4DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r5DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;s3Y&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-0.45,&quot;min&quot;:-0.8,&quot;max&quot;:0.2,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;},&quot;s3Scale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.25,&quot;min&quot;:0.1,&quot;max&quot;:0.5,&quot;step&quot;:0.005,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;},&quot;s3Spread&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.69,&quot;min&quot;:0.3,&quot;max&quot;:1.1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;}}">
+  </x-dc>
+  <script type="text/x-dc" data-dc-script
+    data-props="{&quot;composeAgents&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Compose&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#FF6028&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;#FF6028&quot;,&quot;#ff6a1a&quot;,&quot;#e8620c&quot;],&quot;section&quot;:&quot;Brand&quot;},&quot;replayLoader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Loader&quot;},&quot;ladDotPos&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:0,&quot;max&quot;:1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-72,&quot;min&quot;:-150,&quot;max&quot;:150,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:20,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladPlus&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1.95,&quot;min&quot;:0,&quot;max&quot;:3,&quot;step&quot;:0.05,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladWallRot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-30,&quot;min&quot;:-45,&quot;max&quot;:45,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;deg&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladBotY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:60,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladDotSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:8,&quot;min&quot;:5,&quot;max&quot;:20,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLineStub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:18,&quot;min&quot;:0,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelGap&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:3,&quot;min&quot;:-30,&quot;max&quot;:30,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:14,&quot;min&quot;:-200,&quot;max&quot;:200,&quot;step&quot;:2,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;ladLabelSize&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:12,&quot;min&quot;:9,&quot;max&quot;:26,&quot;step&quot;:0.5,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Ladder hairlines&quot;},&quot;r1DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r1Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 1 — Leadership Intent&quot;},&quot;r2DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r2Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 2 — System Integration&quot;},&quot;r3DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r3Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 3 — Capability &amp; Progress&quot;},&quot;r4DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r4Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 4 — Strategic Alignment&quot;},&quot;r5DX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5DY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-80,&quot;max&quot;:80,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5Stub&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-60,&quot;max&quot;:160,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5LabDX&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-120,&quot;max&quot;:120,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5LabDY&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-40,&quot;max&quot;:40,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;r5Dot&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0,&quot;min&quot;:-6,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Row 5 — Ground Realities&quot;},&quot;s3Y&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:-0.45,&quot;min&quot;:-0.8,&quot;max&quot;:0.2,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;},&quot;s3Scale&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.25,&quot;min&quot;:0.1,&quot;max&quot;:0.5,&quot;step&quot;:0.005,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;},&quot;s3Spread&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:0.69,&quot;min&quot;:0.3,&quot;max&quot;:1.1,&quot;step&quot;:0.01,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Section 3 logos&quot;}}">
 class Component extends DCLogic {
   rigMenuBtn() {
     const P = [
@@ -1849,4 +2399,5 @@ class Component extends DCLogic {
 }
 </script>
 </body>
+
 </html>
